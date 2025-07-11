@@ -1,0 +1,245 @@
+/* Dynamic Theme Colors - Professional Muted Color Palette */
+
+/* Android Theme - Muted Greens */
+.theme-android {
+  --color-primary-50: #e6f0eb;
+  --color-primary-100: #cce1d7;
+  --color-primary-200: #99c3af;
+  --color-primary-300: #669587;
+  --color-primary-400: #33675f;
+  --color-primary-500: #123524;
+  --color-primary-600: #0e291c;
+  --color-primary-700: #0a1d14;
+  --color-primary-800: #05100b;
+  --color-primary-900: #000000;
+
+  --color-secondary-50: #e6f0eb;
+  --color-secondary-100: #cce1d7;
+  --color-secondary-200: #99c3af;
+  --color-secondary-300: #669587;
+  --color-secondary-400: #33675f;
+  --color-secondary-500: #123524;
+  --color-secondary-600: #0e291c;
+  --color-secondary-700: #0a1d14;
+  --color-secondary-800: #05100b;
+  --color-secondary-900: #000000;
+
+  --color-accent-50: #e6f0eb;
+  --color-accent-100: #cce1d7;
+  --color-accent-200: #99c3af;
+  --color-accent-300: #33675f;
+  --color-accent-400: #234b3a;
+  --color-accent-500: #123524;
+  --color-accent-600: #0e291c;
+  --color-accent-700: #0a1d14;
+  --color-accent-800: #05100b;
+  --color-accent-900: #000000;
+}
+
+/* React Native Theme - Muted Blues (Updated with #222831, #DCD7C9) */
+.theme-react-native {
+  --color-primary-50: #f8f8ea;
+  --color-primary-100: #f3f3d5;
+  --color-primary-200: #eaeab6;
+  --color-primary-300: #e2e2b6;
+  --color-primary-400: #bfc08e;
+  --color-primary-500: #9c9e67;
+  --color-primary-600: #7a7c40;
+  --color-primary-700: #585a19;
+  --color-primary-800: #353700;
+  --color-primary-900: #393d00;
+
+  --color-secondary-50: #e6e8ed;
+  --color-secondary-100: #cdd1db;
+  --color-secondary-200: #a3a8b7;
+  --color-secondary-300: #798093;
+  --color-secondary-400: #4f576f;
+  --color-secondary-500: #25304b;
+  --color-secondary-600: #2a2e3d;
+  --color-secondary-700: #202433;
+  --color-secondary-800: #181a25;
+  --color-secondary-900: #232d4a;
+
+  --color-accent-50: #f8f8ea;
+  --color-accent-100: #e2e2b6;
+  --color-accent-200: #bfc08e;
+  --color-accent-300: #9c9e67;
+  --color-accent-400: #7a7c40;
+  --color-accent-500: #585a19;
+  --color-accent-600: #353700;
+  --color-accent-700: #212300;
+  --color-accent-800: #141826;
+  --color-accent-900: #021526;
+}
+
+/* Mobile App Development Theme - Muted Blues and Greens */
+.theme-mobile-app-development {
+  --color-primary-50: #f5e6c9;
+  --color-primary-100: #e9d4b3;
+  --color-primary-200: #dcbf9c;
+  --color-primary-300: #d0ac86;
+  --color-primary-400: #c39970;
+  --color-primary-500: #b78659;
+  --color-primary-600: #a2774d;
+  --color-primary-700: #8d6841;
+  --color-primary-800: #785935;
+  --color-primary-900: #634a29;
+
+  --color-secondary-50: #f5f5f5;
+  --color-secondary-100: #e1e1e1;
+  --color-secondary-200: #c2c2c2;
+  --color-secondary-300: #a3a3a3;
+  --color-secondary-400: #858585;
+  --color-secondary-500: #1d1616;
+  --color-secondary-600: #1a1414;
+  --color-secondary-700: #171212;
+  --color-secondary-800: #141010;
+  --color-secondary-900: #110c0c;
+
+  --color-accent-50: #f5f5f5;
+  --color-accent-100: #e1e1e1;
+  --color-accent-200: #c2c2c2;
+  --color-accent-300: #a3a3a3;
+  --color-accent-400: #858585;
+  --color-accent-500: #1d1616;
+  --color-accent-600: #1a1414;
+  --color-accent-700: #171212;
+  --color-accent-800: #141010;
+  --color-accent-900: #110c0c;
+}
+
+/* Pinal Theme - Olive (Darker) */
+.theme-pinal {
+  --color-primary-50: #ecebe6;
+  --color-primary-100: #cfcbb2;
+  --color-primary-200: #b3af8c;
+  --color-primary-300: #7a783e; /* darker */
+  --color-primary-400: #64622e; /* darker */
+  --color-primary-500: #595926;
+  --color-primary-600: #45441c;
+  --color-primary-700: #323213;
+  --color-primary-800: #1e1e09;
+  --color-primary-900: #111106;
+
+  --color-secondary-50: #ecebe6;
+  --color-secondary-100: #cfcbb2;
+  --color-secondary-200: #b3af8c;
+  --color-secondary-300: #7a783e; /* darker */
+  --color-secondary-400: #64622e; /* darker */
+  --color-secondary-500: #8c8661;
+  --color-secondary-600: #736d4e;
+  --color-secondary-700: #5a543b;
+  --color-secondary-800: #413b28;
+  --color-secondary-900: #282215;
+
+  --color-accent-50: #ecebe6;
+  --color-accent-100: #cfcbb2;
+  --color-accent-200: #b3af8c;
+  --color-accent-300: #7a783e; /* darker */
+  --color-accent-400: #64622e; /* darker */
+  --color-accent-500: #595926;
+  --color-accent-600: #45441c;
+  --color-accent-700: #323213;
+  --color-accent-800: #1e1e09;
+  --color-accent-900: #111106;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-400);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-500);
+}
+
+/* Utility Classes */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0px;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-500),
+    var(--color-accent-500)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(var(--color-primary-500), 0.3);
+}
+
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0px;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Professional sharp corners for all components */
+.rounded-professional {
+  border-radius: 0px;
+}
+
+.rounded-professional-lg {
+  border-radius: 0px;
+}
+
+.rounded-professional-xl {
+  border-radius: 0px;
+}
+
+/* Card styles with professional appearance and sharp corners */
+.card-professional {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-professional:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
