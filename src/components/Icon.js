@@ -36,6 +36,7 @@ import {
   FaPlay,
   FaChevronLeft,
   FaChevronRight,
+  FaChevronDown,
   FaArrowUp,
   FaDizzy,
   FaDatabase,
@@ -135,6 +136,7 @@ const iconMap = {
   play: FaPlay,
   "chevron-left": FaChevronLeft,
   "chevron-right": FaChevronRight,
+  "chevron-down": FaChevronDown,
   "arrow-up": FaArrowUp,
 
   // Utility icons

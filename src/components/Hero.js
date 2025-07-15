@@ -11,7 +11,7 @@ const Hero = ({ personalInfo }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (sectionId) => {
-   const element = document.getElementById(sectionId);
+    const element = document.getElementById(sectionId);
     if (element) {
       const offsetTop = sectionId === "home" ? 0 : element.offsetTop - 80;
       window.scrollTo({
@@ -254,30 +254,22 @@ const Hero = ({ personalInfo }) => {
           </motion.div>
         </motion.div>
 
-        {/* Scroll Indicator */}
+        {/* Scroll Down Button */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 z-20 cursor-pointer"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
+          onClick={() => scrollToSection('about')}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           <motion.div
-            className="w-6 h-10 border-2 border-secondary-400 flex justify-center"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+            className="flex items-center justify-center"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           >
-            <motion.div
-              className="w-1 h-3 bg-secondary-400 mt-2"
-              animate={{
-                opacity: [1, 0.3, 1],
-                scale: [1, 0.8, 1],
-              }}
-              transition={{
-                duration: 2.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
+            <Icon name="chevron-down" size={20} className="text-secondary-500" />
           </motion.div>
         </motion.div>
       </div>
