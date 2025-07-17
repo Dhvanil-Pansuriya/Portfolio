@@ -576,7 +576,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
                 className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col lg:flex-row gap-6"
                 whileHover={{ y: -5 }}
               >
-                <div className="lg:w-1/2 ">
+                <div className="lg:w-1/2 left-0">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-8 h-8 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon
@@ -724,7 +724,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
               <ImagePlaceholder
                 src={caseStudyData.images.results}
                 alt="Results Analytics"
-                className="w-full h-auto max-w-4xl mx-auto object-contain"
+                className="w-full max-w-4xl mx-auto h-80 object-contain"
                 fallbackText="Performance Analytics Dashboard"
               />
             </div>
@@ -780,60 +780,6 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
             <p className="text-xl leading-relaxed mb-12 text-white/90">
               {caseStudyData.conclusion}
             </p>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              {/* Android App Highlight */}
-              <motion.div
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
-                whileHover={{ scale: 1.02 }}
-              >
-                <h3 className="text-2xl font-bold mb-4">
-                  Android App Highlight
-                </h3>
-                <p className="text-white/80 mb-4">
-                  Framework: {caseStudyData.androidAppHighlight.framework}
-                </p>
-                <div className="space-y-2">
-                  {caseStudyData.androidAppHighlight.features.map(
-                    (feature, index) => (
-                      <div key={index} className="flex items-start gap-2">
-                        <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0" />
-                        <span className="text-white/90 text-sm">{feature}</span>
-                      </div>
-                    )
-                  )}
-                </div>
-              </motion.div>
-
-              {/* Technical Specifications */}
-              <motion.div
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
-                whileHover={{ scale: 1.02 }}
-              >
-                <h3 className="text-2xl font-bold mb-4">Key Specifications</h3>
-                <div className="space-y-3">
-                  <div>
-                    <h4 className="font-semibold text-white/90">
-                      API Architecture
-                    </h4>
-                    <p className="text-white/70 text-sm">
-                      {caseStudyData.technicalSpecifications.apiArchitecture.join(
-                        ", "
-                      )}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white/90">Security</h4>
-                    <p className="text-white/70 text-sm">
-                      {caseStudyData.technicalSpecifications.devOpsSecurity
-                        .slice(0, 2)
-                        .join(", ")}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-
             <motion.button
               onClick={onClose}
               className="px-8 py-4 bg-white text-primary-600 rounded-full font-semibold hover:bg-white/90 transition-colors shadow-lg"
