@@ -86,7 +86,10 @@ import { GoProjectSymlink } from "react-icons/go";
 import { BsAndroid2 } from "react-icons/bs";
 import { RiRobot2Fill } from "react-icons/ri";
 import { HiOutlineUser } from "react-icons/hi";
-import { FaHandPaper, FaUserCircle, FaArrowDown, FaDollarSign, FaClock, FaHandshake, FaRedo, FaPaintBrush, FaRuler, FaStore, FaShoppingCart, FaClipboardList, FaLink, FaDesktop, FaBookOpen } from "react-icons/fa";
+import { FaHandPaper, FaUserCircle, FaArrowDown, FaDollarSign, FaClock, FaHandshake, FaRedo, FaPaintBrush, FaRuler, FaStore, FaShoppingCart, FaClipboardList, FaLink, FaDesktop, FaBookOpen, FaServer, FaGlobe, FaCog, FaVideo, FaCreditCard, FaChartBar, FaClipboardCheck, FaExclamationTriangle, FaTrendingUp, FaUsers } from "react-icons/fa";
+import { FiFileText } from "react-icons/fi";
+import { IoMdTrendingUp } from "react-icons/io";
+
 
 // Icon mapping
 const iconMap = {
@@ -213,6 +216,19 @@ const iconMap = {
   "shopping-cart": FaShoppingCart,
   "computer": FaDesktop,
   "book-open": FaBookOpen,
+  
+  // Case study specific icons
+  "server": FaServer,
+  "globe": FaGlobe,
+  "cog": FaCog,
+  "video": FaVideo,
+  "credit-card": FaCreditCard,
+  "chart-bar": FaChartBar,
+  "clipboard-check": FaClipboardCheck,
+  "exclamation-triangle": FaExclamationTriangle,
+  "trending-up": IoMdTrendingUp,
+  "users": FaUsers,
+  "file-text": FiFileText,
 };
 
 const Icon = ({ name, size = 24, className = "", ...props }) => {

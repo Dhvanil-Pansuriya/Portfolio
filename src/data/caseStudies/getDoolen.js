@@ -1,18 +1,19 @@
 const getDoolen = {
-  title: "GetDoolen - Case Study",
+  title: "GetDoolen",
   images: {
-    hero: "/images/case-studies/getdoolen/hero-banner.jpg",
+    hero: "/images/case-studies/getdoolen/hero-banner.png",
     architecture: "/images/case-studies/getdoolen/system-architecture.png",
     mobileScreens: [
-      "/images/case-studies/getdoolen/mobile-login.jpg",
-      "/images/case-studies/getdoolen/mobile-dashboard.jpg",
-      "/images/case-studies/getdoolen/mobile-video-player.jpg",
-      "/images/case-studies/getdoolen/mobile-quiz.jpg"
+      "/images/case-studies/getdoolen/mobile-login.png",
+      "/images/case-studies/getdoolen/mobile-dashboard.png",
+      "/images/case-studies/getdoolen/mobile-video-player.png",
+      "/images/case-studies/getdoolen/mobile-queue.png"
     ],
     webScreens: [
-      "/images/case-studies/getdoolen/web-dashboard.jpg",
-      "/images/case-studies/getdoolen/web-video-library.jpg",
-      "/images/case-studies/getdoolen/web-admin-panel.jpg"
+      "/images/case-studies/getdoolen/web-dashboard.png",
+      "/images/case-studies/getdoolen/web-video-library.png",
+      "/images/case-studies/getdoolen/web-user-panel.png",
+      "/images/case-studies/getdoolen/web-queue.png"
     ],
     techStack: "/images/case-studies/getdoolen/tech-stack-diagram.png",
     userFlow: "/images/case-studies/getdoolen/user-flow-diagram.png",
@@ -131,7 +132,11 @@ const getDoolen = {
     {
       challenge: "Play Store Restrictions",
       solution:
-        "Deferred subscription billing inside app, directing users to web portal for now",
+        "Deferred subscription billing inside app, directing users to web portal for now`, ",
+    }, {
+      challenge: "App Store Restrictions",
+      solution:
+       "The client does not need to make subscriptions via in-app purchase as per business logic and App Store policy for digital goods; in-app purchases need to be handled accordingly. Therefore, we applied an alternative option with a redirect app, and after some rejections, we finally achieved the goal. Currently, we are managing subscriptions from the web only."
     },
     {
       challenge: "Push Notifications",

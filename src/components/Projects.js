@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Icon from './Icon';
 import ImagePlaceholder from './ImagePlaceholder';
+import CaseStudy from './CaseStudy/CaseStudy.js';
+import getDoolen from '../data/caseStudies/getDoolen';
 
 const Projects = ({ projects }) => {
   const [ref, inView] = useInView({
@@ -12,6 +14,7 @@ const Projects = ({ projects }) => {
 
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showCaseStudy, setShowCaseStudy] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -216,6 +219,22 @@ const Projects = ({ projects }) => {
 
             {/* Links */}
             <div className="flex flex-wrap gap-3">
+              {/* Case Study Button for GetDoolen */}
+              {project.name === "GetDoolen - Training Video App" && (
+                <motion.button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowCaseStudy(true);
+                    onClose();
+                  }}
+                  className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-xl hover:bg-primary-600 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Icon name="file-text" size={16} />
+                  View Case Study
+                </motion.button>
+              )}
               {project.playStore && (
                 <a
                   href={project.playStore}
@@ -399,6 +418,14 @@ const Projects = ({ projects }) => {
         <ProjectModal
           project={selectedProject}
           onClose={() => setSelectedProject(null)}
+        />
+      )}
+
+      {/* Case Study Modal */}
+      {showCaseStudy && (
+        <CaseStudy
+          caseStudyData={getDoolen}
+          onClose={() => setShowCaseStudy(false)}
         />
       )}
     </section>

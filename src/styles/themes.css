@@ -108,40 +108,42 @@
   --color-accent-900: #110c0c;
 }
 
-/* Pinal Theme - Olive (Darker) */
+/* Pinal Theme - Rare Dark Two-Color Theme */
 .theme-pinal {
-  --color-primary-50: #ecebe6;
-  --color-primary-100: #cfcbb2;
-  --color-primary-200: #b3af8c;
-  --color-primary-300: #7a783e; /* darker */
-  --color-primary-400: #64622e; /* darker */
-  --color-primary-500: #595926;
-  --color-primary-600: #45441c;
-  --color-primary-700: #323213;
-  --color-primary-800: #1e1e09;
-  --color-primary-900: #111106;
+  /* Rare Dark Color Theme: Charcoal & Deep Indigo */
+  --color-primary-50: #e3e4e6;
+  --color-primary-100: #b7bac0;
+  --color-primary-200: #8b909a;
+  --color-primary-300: #5f6674;
+  --color-primary-400: #333c4e;
+  --color-primary-500: #1a1d26; /* rare charcoal */
+  --color-primary-600: #15171e;
+  --color-primary-700: #101217;
+  --color-primary-800: #0b0c10;
+  --color-primary-900: #060609;
 
-  --color-secondary-50: #ecebe6;
-  --color-secondary-100: #cfcbb2;
-  --color-secondary-200: #b3af8c;
-  --color-secondary-300: #7a783e; /* darker */
-  --color-secondary-400: #64622e; /* darker */
-  --color-secondary-500: #8c8661;
-  --color-secondary-600: #736d4e;
-  --color-secondary-700: #5a543b;
-  --color-secondary-800: #413b28;
-  --color-secondary-900: #282215;
+  --color-secondary-50: #e6e7f3;
+  --color-secondary-100: #c2c4e0;
+  --color-secondary-200: #9ea1cd;
+  --color-secondary-300: #7a7eba;
+  --color-secondary-400: #565ba7;
+  --color-secondary-500: #232a6d; /* rare deep indigo */
+  --color-secondary-600: #1c2157;
+  --color-secondary-700: #151841;
+  --color-secondary-800: #0e102b;
+  --color-secondary-900: #070815;
 
-  --color-accent-50: #ecebe6;
-  --color-accent-100: #cfcbb2;
-  --color-accent-200: #b3af8c;
-  --color-accent-300: #7a783e; /* darker */
-  --color-accent-400: #64622e; /* darker */
-  --color-accent-500: #595926;
-  --color-accent-600: #45441c;
-  --color-accent-700: #323213;
-  --color-accent-800: #1e1e09;
-  --color-accent-900: #111106;
+  /* Accent uses secondary for consistency in two-color theme */
+  --color-accent-50: #e6e7f3;
+  --color-accent-100: #c2c4e0;
+  --color-accent-200: #9ea1cd;
+  --color-accent-300: #7a7eba;
+  --color-accent-400: #565ba7;
+  --color-accent-500: #232a6d;
+  --color-accent-600: #1c2157;
+  --color-accent-700: #151841;
+  --color-accent-800: #0e102b;
+  --color-accent-900: #070815;
 }
 
 /* Global Styles */
