@@ -215,6 +215,31 @@ export const projects = [
     ],
     technologies: ["Laravel", "jQuery", "Twilio API", "PHP", "MySQL"],
   },
+  {
+    name: "GetDoolen - Training Video App",
+    description:
+      "Developed a cross-platform training video application using React Native, enabling users to sign up, log in, and access a wide range of educational video content. The app includes features like personalized queues, interactive quizzes, and complete account management to enhance learning and user engagement.",
+    features: [
+      "User authentication (Login & Signup)",
+      "Video streaming and playback",
+      "Create and manage personalized video queues",
+      "Interactive quiz modules after each training session",
+      "Push notifications for new content and updates",
+      "Profile view and update",
+      "Delete account option for data privacy",
+      "Smooth and intuitive UI/UX for better user engagement",
+    ],
+    technologies: [
+      "React Native",
+      "JavaScript",
+      "Redux",
+      "Firebase",
+      "Node.js",
+      "React Navigation",
+    ],
+    duration: "Ongoing",
+    status: "Active",
+  },
 ];
 
 export const interests = [
