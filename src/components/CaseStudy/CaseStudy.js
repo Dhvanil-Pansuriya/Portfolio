@@ -294,105 +294,6 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
     );
   };
 
-  // Technical Architecture Section
-  const TechnicalSection = () => {
-    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-
-    const techCategories = [
-      {
-        name: "Backend",
-        items: caseStudyData.technicalArchitecture.backend,
-        icon: "server",
-      },
-      {
-        name: "Web Frontend",
-        items: caseStudyData.technicalArchitecture.webFrontend,
-        icon: "globe",
-      },
-      {
-        name: "Android App",
-        items: caseStudyData.technicalArchitecture.androidApp,
-        icon: "mobile",
-      },
-      {
-        name: "Shared Technologies",
-        items: caseStudyData.technicalArchitecture.sharedTechnologies,
-        icon: "cog",
-      },
-    ];
-
-    return (
-      <motion.section
-        ref={ref}
-        variants={containerVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        className="py-20 bg-gradient-to-br from-gray-50 to-white"
-      >
-        <div className="container mx-auto px-6">
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              <span className="gradient-text">Technical Architecture</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Built with modern technologies for scalability, performance, and
-              user experience
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {techCategories.map((category, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -5 }}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
-                    <Icon
-                      name={category.icon}
-                      size={20}
-                      className="text-primary-600"
-                    />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-800">
-                    {category.name}
-                  </h3>
-                </div>
-                <div className="space-y-2">
-                  {category.items.map((item, itemIndex) => (
-                    <div
-                      key={itemIndex}
-                      className="px-3 py-2 bg-gray-50 rounded-lg text-sm text-gray-700"
-                    >
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Tech Stack Visualization */}
-          <motion.div variants={itemVariants} className="text-center">
-            <h3 className="text-2xl font-bold mb-8 text-gray-800">
-              Technology Stack
-            </h3>
-            <div className="bg-white rounded-3xl p-8 shadow-lg">
-              <ImagePlaceholder
-                src={caseStudyData.images.techStack}
-                alt="Technology Stack"
-                className="w-full max-w-5xl mx-auto h-80 object-contain"
-                fallbackText="Technology Stack Diagram"
-              />
-            </div>
-          </motion.div>
-        </div>
-      </motion.section>
-    );
-  };
-
   // Features Section
   const FeaturesSection = () => {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -417,11 +318,6 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
         name: "Analytics & Tracking",
         items: caseStudyData.featuresFunctionality.analyticsTracking,
         icon: "chart-bar",
-      },
-      {
-        name: "Assessment System",
-        items: caseStudyData.featuresFunctionality.assessmentSystem,
-        icon: "clipboard-check",
       },
       {
         name: "Advanced Features",
@@ -545,9 +441,14 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
     );
   };
 
-  // Challenges Section
+  // Challenges Section (Modern Style)
   const ChallengesSection = () => {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const handleToggle = (index) => {
+      setOpenIndex(openIndex === index ? null : index);
+    };
 
     return (
       <motion.section
@@ -555,59 +456,85 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="py-20 bg-gray-50"
+        className="py-16 bg-transparent"
       >
-        <div className="container mx-auto px-6">
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-800">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <motion.div variants={itemVariants} className="text-center mb-10">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-gray-800">
               Challenges & Solutions
             </h2>
-            <div className="w-24 h-1 bg-indigo-600 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Addressing technical challenges with strategic and innovative
-              solutions
+            <p className="text-base text-gray-600">
+              Addressing technical challenges with strategic and innovative solutions
             </p>
           </motion.div>
-          <div className="space-y-10">
+          <div className="space-y-2">
             {caseStudyData.challengesSolutions.map((item, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col lg:flex-row gap-6"
-                whileHover={{ y: -5 }}
+                className={`relative border-b border-gray-200`}
               >
-                <div className="lg:w-1/2 left-0">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon
-                        name="exclamation-triangle"
-                        size={18}
-                        className="text-red-600"
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-800">
-                      Challenge
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 pl-9">
-                    {item.challengeDescription || item.challenge}
-                  </p>
-                </div>
-                <div className="lg:w-1/2">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon
-                        name="check-circle"
-                        size={18}
-                        className="text-green-600"
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-800">
-                      Solution
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 pl-9">{item.solution}</p>
-                </div>
+                <button
+                  className={`w-full flex items-center justify-between px-2 py-4 focus:outline-none transition-colors`}
+                  onClick={() => handleToggle(index)}
+                  aria-expanded={openIndex === index}
+                >
+                  <motion.div className="flex items-center gap-2" layout>
+                    <Icon
+                      name="exclamation-triangle"
+                      size={18}
+                      className="text-red-500"
+                    />
+                    <span className="font-semibold text-gray-800 text-base">
+                      {item.challengeDescription || item.challenge}
+                    </span>
+                  </motion.div>
+                  <motion.div
+                    animate={{ rotate: openIndex === index ? 180 : 0 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    <Icon
+                      name="chevron-down"
+                      size={16}
+                      className="text-gray-500"
+                    />
+                  </motion.div>
+                </button>
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10, height: 0 }}
+                      animate={{ opacity: 1, y: 0, height: "auto" }}
+                      exit={{ opacity: 0, y: -10, height: 0 }}
+                      transition={{ duration: 0.3, type: "spring", bounce: 0.2 }}
+                      className="px-2 pb-4"
+                    >
+                      <motion.div
+                        className="flex items-start gap-2 mb-1"
+                        initial={{ opacity: 0, x: -8 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <Icon
+                          name="check-circle"
+                          size={16}
+                          className="text-green-600 mt-1"
+                        />
+                        <span className="font-semibold text-gray-800 text-sm">
+                          Solution
+                        </span>
+                      </motion.div>
+                      <motion.p
+                        className="text-gray-700 pl-7 text-sm"
+                        initial={{ opacity: 0, x: 8 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.2, delay: 0.05 }}
+                      >
+                        {item.solution}
+                      </motion.p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ))}
           </div>
@@ -804,7 +731,6 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
       >
         <HeroSection />
         <OverviewSection />
-        {/* <TechnicalSection /> */}
         <FeaturesSection />
         <ChallengesSection />
         <ResultsSection />

@@ -73,7 +73,6 @@ const getDoolen = {
       "Quiz tools with auto-save",
       "Performance dashboards"
     ],
-    assessmentSystem: [],
     advancedFeatures: [
       "Push notifications",
       "Continue-watching",
@@ -82,20 +81,32 @@ const getDoolen = {
   },
   challengesSolutions: [
     {
-      challenge: "Global Delivery",
-      solution: "CDN streaming + adaptive buffering"
+      challenge: "Global Video Delivery",
+      solution: "CDN streaming + mobile-optimized video player with progressive buffering"
     },
     {
-      challenge: "Cross-Platform Auth",
-      solution: "Secure token refresh on mobile"
+      challenge: "Secure Authentication",
+      solution: "Cross-platform token handling with refresh token mechanism on Android"
     },
     {
-      challenge: "Payment Compliance",
-      solution: "Web-redirect subscription for app-store policies"
+      challenge: "Complex Payment Flows",
+      solution: "React Native-compatible subscription planning with fallback for direct web payment"
     },
     {
       challenge: "Real-Time Sync",
-      solution: "Redux + backend APIs for progress and quiz data"
+      solution: "Redux + backend sync APIs for watch progress, quiz attempts, and subscriptions"
+    },
+    {
+      challenge: "Play Store Restrictions",
+      solution: "Deferred subscription billing inside app, directing users to web portal for now"
+    },
+    {
+      challenge: "Push Notifications",
+      solution: "Firebase integration for both web and Android for course alerts and updates"
+    },
+    {
+      challenge: "App Store Restrictions",
+      solution: "The client does not need to make subscriptions via in-app purchase as per business logic and App Store policy for digital goods; in-app purchases need to be handled accordingly. Therefore, we applied an alternative option with a redirect app, and after some rejections, we finally achieved the goal. Currently, we are managing subscriptions from the web only."
     }
   ],
   resultsImpact: {
