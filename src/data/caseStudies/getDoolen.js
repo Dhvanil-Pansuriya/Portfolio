@@ -6,6 +6,8 @@ const getDoolen = {
     mobileScreens: [
       "/images/case-studies/getdoolen/mobile-login.png",
       "/images/case-studies/getdoolen/mobile-dashboard.png",
+      "/images/case-studies/getdoolen/mobile-video-player.png",
+      "/images/case-studies/getdoolen/mobile-queue.png",
     ],
     webScreens: [
       "/images/case-studies/getdoolen/web-dashboard.png",
@@ -22,7 +24,10 @@ const getDoolen = {
   },
   projectOverview: {
     objectives: [
-      "Enable secure user management, intuitive content discovery, cross-platform subscription and payment, and comprehensive analytics."
+      "Enable secure user management",
+      "Intuitive content discovery",
+      "Cross-platform subscription and payment",
+      "Comprehensive analytics"
     ],
     targetAudience: [
       "Individual learners",

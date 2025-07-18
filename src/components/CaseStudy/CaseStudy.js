@@ -438,7 +438,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
                           {/* Phone Body */}
                           <div className="relative bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
                             {/* Screen */}
-                            <div className="bg-white rounded-[2rem] overflow-hidden w-64 h-[520px] relative">
+                            <div className="bg-white rounded-[2rem] overflow-hidden w-64 h-[550px] relative">
                               {/* Status Bar */}
                               <div className="absolute top-0 left-0 right-0 h-8 bg-black rounded-t-[2rem] flex items-center justify-between px-6 z-10">
                                 <div className="flex items-center gap-1">
