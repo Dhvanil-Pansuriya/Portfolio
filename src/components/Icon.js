@@ -89,6 +89,9 @@ import { HiOutlineUser } from "react-icons/hi";
 import { FaHandPaper, FaUserCircle, FaArrowDown, FaDollarSign, FaClock, FaHandshake, FaRedo, FaPaintBrush, FaRuler, FaStore, FaShoppingCart, FaClipboardList, FaLink, FaDesktop, FaBookOpen, FaServer, FaGlobe, FaCog, FaVideo, FaCreditCard, FaChartBar, FaClipboardCheck, FaExclamationTriangle, FaTrendingUp, FaUsers } from "react-icons/fa";
 import { FiFileText } from "react-icons/fi";
 import { IoMdTrendingUp } from "react-icons/io";
+import { TbBatteryFilled } from "react-icons/tb";
+import { FaWifi } from "react-icons/fa";
+import { MdSignalCellularAlt } from "react-icons/md";
 
 
 // Icon mapping
@@ -229,6 +232,9 @@ const iconMap = {
   "trending-up": IoMdTrendingUp,
   "users": FaUsers,
   "file-text": FiFileText,
+  "battery" :TbBatteryFilled,
+  "wifi":FaWifi,
+  "signal" :MdSignalCellularAlt
 };
 
 const Icon = ({ name, size = 24, className = "", ...props }) => {

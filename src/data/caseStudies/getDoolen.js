@@ -4,10 +4,10 @@ const getDoolen = {
     hero: "/images/case-studies/getdoolen/hero-banner.png",
     architecture: "/images/case-studies/getdoolen/system-architecture.png",
     mobileScreens: [
-      "/images/case-studies/getdoolen/mobile-login.png",
       "/images/case-studies/getdoolen/mobile-dashboard.png",
       "/images/case-studies/getdoolen/mobile-video-player.png",
       "/images/case-studies/getdoolen/mobile-queue.png",
+      "/images/case-studies/getdoolen/mobile-profile.png",
     ],
     webScreens: [
       "/images/case-studies/getdoolen/web-dashboard.png",

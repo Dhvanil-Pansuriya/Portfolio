@@ -438,26 +438,45 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
                           {/* Phone Body */}
                           <div className="relative bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
                             {/* Screen */}
-                            <div className="bg-white rounded-[2rem] overflow-hidden w-64 h-[550px] relative">
+                            <div className="bg-black rounded-[2rem] overflow-hidden w-64 h-[550px] relative">
                               {/* Status Bar */}
-                              <div className="absolute top-0 left-0 right-0 h-8 bg-black rounded-t-[2rem] flex items-center justify-between px-6 z-10">
+                              <div className="absolute top-0 left-0 right-0 h-8 bg-white rounded-t-[2rem] flex items-center px-6 z-10">
+                                {/* Time (Left) */}
                                 <div className="flex items-center gap-1">
-                                  <div className="w-1 h-1 bg-white rounded-full" />
-                                  <div className="w-1 h-1 bg-white rounded-full" />
-                                  <div className="w-1 h-1 bg-white rounded-full" />
-                                </div>
-                                <div className="w-20 h-4 bg-white rounded-full" />
-                                <div className="flex items-center gap-1">
-                                  <span className="w-4 h-2 bg-white rounded-full text-[5px] flex items-center justify-center font-bold">
-                                    100
+                                  <span className="w-8 h-4 text-black rounded-full text-[10px] flex items-center justify-center font-bold">
+                                    9:45
+                                    <span className="text-[10px]">
+                                      &nbsp;am
+                                    </span>
                                   </span>
-                                  <div className="w-1 h-1 bg-white rounded-full" />
+                                </div>
+                                {/* Black Bar (Center) */}
+                                <div className="flex-1 flex justify-center pl-4">
+                                  <div className="w-[70px] h-5 bg-black rounded-full" />
+                                </div>
+                                {/* Icons (Right) */}
+                                <div className="flex items-center gap-1">
+                                  <Icon
+                                    name="signal"
+                                    size={14}
+                                    className="text-black"
+                                  />
+                                  <Icon
+                                    name="wifi"
+                                    size={14}
+                                    className="text-black"
+                                  />
+                                  <Icon
+                                    name="battery"
+                                    size={18}
+                                    className="text-black"
+                                  />
                                 </div>
                               </div>
 
                               {/* Screen Content */}
                               <motion.div
-                                className="w-full h-full pt-8"
+                                className="w-full h-full pt-8 pb-3 relative bg-white"
                                 transition={{ type: "spring", stiffness: 300 }}
                               >
                                 <ImagePlaceholder
@@ -466,6 +485,10 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
                                   className="w-full h-full object-cover"
                                   fallbackText={`Mobile Screen ${index + 1}`}
                                 />
+                                {/* Bat under the image */}
+                                <div className="absolute left-1/2 bottom-1 transform -translate-x-1/2 flex justify-center">
+                                  <div className="bg-gray-700 w-32 h-1 rounded-full" />
+                                </div>
                               </motion.div>
                             </div>
                           </div>
@@ -521,21 +544,22 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
                                 <div className="w-3 h-3 bg-green-400 rounded-full" />
                               </div>
                               <div className="flex-1 mx-4">
-                                <div className="bg-white rounded-lg px-3 py-1 text-xs text-gray-500 border">
-                                  getdoolen.com
+                                <div className="bg-white rounded-lg px-2 py-1 text-xs text-gray-500 border flex items-center gap-2">
+                                  <Icon name="home" size={13} />
+                                  http://www.getdoolen.com
                                 </div>
                               </div>
                             </div>
 
                             {/* Browser Content */}
                             <motion.div
-                              className="aspect-video bg-gray-50"
+                              className="h-fit bg-gray-50"
                               transition={{ type: "spring", stiffness: 300 }}
                             >
                               <ImagePlaceholder
                                 src={screen}
                                 alt={`Web Screen ${index + 1}`}
-                                className="w-full h-full object-cover"
+                                className="w-full h-fit object-cover"
                                 fallbackText={`Web Screen ${index + 1}`}
                               />
                             </motion.div>
