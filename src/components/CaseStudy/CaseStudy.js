@@ -608,7 +608,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
   // Challenges Section (Modern Style)
   const ChallengesSection = () => {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState(0); // Open the first item by default
 
     const handleToggle = (index) => {
       setOpenIndex(openIndex === index ? null : index);
@@ -620,47 +620,79 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="py-16 bg-transparent"
+        className="py-24 bg-gray-50"
       >
-        <div className="container mx-auto px-4 max-w-5xl">
-          <motion.div variants={itemVariants} className="text-center mb-10">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-gray-800">
-              Challenges & Solutions
+        <div className="container mx-auto px-6 max-w-5xl">
+          <motion.div variants={itemVariants} className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              <span className="gradient-text">Challenges & Solutions</span>
             </h2>
-            <p className="text-base text-gray-600">
-              Addressing technical challenges with strategic and innovative
-              solutions
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Navigating complexity with innovative solutions and strategic
+              insights.
             </p>
           </motion.div>
-          <div className="space-y-2">
+          <div className="space-y-4">
             {caseStudyData.challengesSolutions.map((item, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className={`relative border-b border-gray-200`}
+                className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden ${
+                  openIndex === index ? "" : ""
+                }`}
               >
                 <button
-                  className={`w-full flex items-center justify-between px-2 py-4 focus:outline-none transition-colors`}
+                  className="w-full flex items-center justify-between p-6 focus:outline-none"
                   onClick={() => handleToggle(index)}
                   aria-expanded={openIndex === index}
                 >
-                  <motion.div className="flex items-center gap-2" layout>
-                    <Icon
-                      name="exclamation-triangle"
-                      size={18}
-                      className="text-red-500"
-                    />
-                    <span className="font-semibold text-gray-800 text-base">
-                      {item.challengeDescription || item.challenge}
-                    </span>
+                  <motion.div
+                    className="flex items-center gap-4 text-left"
+                    layout
+                  >
+                    <div
+                      className={`w-12 h-12 rounded-lg flex items-center justify-center ${
+                        openIndex === index
+                          ? "bg-primary-500"
+                          : "bg-gray-200"
+                      } transition-colors duration-300`}
+                    >
+                      <Icon
+                        name="bolt"
+                        size={24}
+                        className={
+                          openIndex === index
+                            ? "text-white"
+                            : "text-primary-600"
+                        }
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-gray-800">
+                        {item.challengeDescription || item.challenge}
+                      </h3>
+                      <p
+                        className={`text-sm ${
+                          openIndex === index
+                            ? "text-primary-600"
+                            : "text-gray-500"
+                        } transition-colors duration-300`}
+                      >
+                        {openIndex === index ? "View Solution" : "Challenge"}
+                      </p>
+                    </div>
                   </motion.div>
                   <motion.div
-                    animate={{ rotate: openIndex === index ? 180 : 0 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    animate={{ rotate: openIndex === index ? -180 : 0 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 20,
+                    }}
                   >
                     <Icon
                       name="chevron-down"
-                      size={16}
+                      size={20}
                       className="text-gray-500"
                     />
                   </motion.div>
@@ -668,39 +700,44 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
                 <AnimatePresence>
                   {openIndex === index && (
                     <motion.div
-                      initial={{ opacity: 0, y: -10, height: 0 }}
-                      animate={{ opacity: 1, y: 0, height: "auto" }}
-                      exit={{ opacity: 0, y: -10, height: 0 }}
-                      transition={{
-                        duration: 0.3,
-                        type: "spring",
-                        bounce: 0.2,
-                      }}
-                      className="px-2 pb-4"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="px-6 pb-6"
                     >
-                      <motion.div
-                        className="flex items-start gap-2 mb-1"
-                        initial={{ opacity: 0, x: -8 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <Icon
-                          name="check-circle"
-                          size={16}
-                          className="text-green-600 mt-1"
-                        />
-                        <span className="font-semibold text-gray-800 text-sm">
-                          Solution
-                        </span>
-                      </motion.div>
-                      <motion.p
-                        className="text-gray-700 pl-7 text-sm"
-                        initial={{ opacity: 0, x: 8 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.2, delay: 0.05 }}
-                      >
-                        {item.solution}
-                      </motion.p>
+                      <div className="border-t border-gray-200 pt-6">
+                        <motion.div
+                          className="flex items-start gap-4 mb-4"
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.3, delay: 0.1 }}
+                        >
+                          <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-green-100">
+                            <Icon
+                              name="check-circle"
+                              size={24}
+                              className="text-green-600"
+                            />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-gray-800">
+                              Our Solution
+                            </h4>
+                            <p className="text-sm text-gray-600">
+                              Strategic and effective resolution
+                            </p>
+                          </div>
+                        </motion.div>
+                        <motion.p
+                          className="text-gray-700 leading-relaxed pl-16"
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.3, delay: 0.2 }}
+                        >
+                          {item.solution}
+                        </motion.p>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
