@@ -5,6 +5,7 @@ import Icon from './Icon';
 import ImagePlaceholder from './ImagePlaceholder';
 import CaseStudy from './CaseStudy/CaseStudy.js';
 import getDoolen from '../data/caseStudies/getDoolen';
+import useBodyScrollLock from '../hooks/useBodyScrollLock';
 
 const Projects = ({ projects }) => {
   const [ref, inView] = useInView({
@@ -15,6 +16,9 @@ const Projects = ({ projects }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showCaseStudy, setShowCaseStudy] = useState(false);
+
+  // Lock body scroll when any modal is open
+  useBodyScrollLock(showCaseStudy);
 
   const containerVariants = {
     hidden: { opacity: 0 },
