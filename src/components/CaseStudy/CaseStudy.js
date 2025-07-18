@@ -146,7 +146,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
             <motion.div variants={itemVariants} className="relative">
               <div className="relative">
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 rounded-3xl blur-3xl opacity-30"
+                  className="absolute inset-0 rounded-3xl blur-3xl opacity-30"
                   animate={{
                     scale: [1, 1.1, 1],
                     rotate: [0, 5, 0],
@@ -157,12 +157,12 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
                     ease: "easeInOut",
                   }}
                 />
-                <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl w-full h-96 flex items-center justify-center">
+                <div className="relative p-8 w-full h-96 flex items-center justify-center">
                   <div className="aspect-w-16 aspect-h-9">
                     <ImagePlaceholder
                       src={caseStudyData.images.hero}
                       alt={`${caseStudyData.title} Hero`}
-                      className="w-full h-full object-cover rounded-2xl"
+                      className="w-full h-full object-cover rounded-2xl drop-shadow-lg"
                       fallbackText={`${caseStudyData.title} Platform Preview`}
                     />
                   </div>
@@ -400,10 +400,82 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
 
             {/* Enhanced Screenshots Layout */}
             <div className="space-y-16">
+              {/* Web Application Section */}
+              <div className="relative">
+                <div className="flex items-center justify-center mb-8">
+                  <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-accent-50 to-accent-100  border border-accent-200 rounded-xl">
+                    <Icon name="globe" size={20} className="text-accent-600" />
+                    <span className="text-lg font-semibold text-accent-700">
+                      Web Application
+                    </span>
+                  </div>
+                </div>
+
+                <div className="relative">
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                    {caseStudyData.images.webScreens.map((screen, index) => (
+                      <motion.div
+                        key={index}
+                        className="relative group"
+                        initial={{
+                          opacity: 0,
+                          x: index % 2 === 0 ? -50 : 50,
+                          scale: 0.95,
+                        }}
+                        animate={{ opacity: 1, x: 0, scale: 1 }}
+                        transition={{
+                          duration: 0.7,
+                          delay: index * 0.3,
+                          type: "spring",
+                          stiffness: 80,
+                        }}
+                      >
+                        {/* Browser Frame */}
+                        <div className="relative">
+                          {/* Browser Shadow */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-accent-200/30 to-accent-400/30 rounded-2xl blur-xl transform translate-y-4 scale-105" />
+
+                          {/* Browser Window */}
+                          <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+                            {/* Browser Header */}
+                            <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200">
+                              <div className="flex gap-2">
+                                <div className="w-3 h-3 bg-red-400 rounded-full" />
+                                <div className="w-3 h-3 bg-yellow-400 rounded-full" />
+                                <div className="w-3 h-3 bg-green-400 rounded-full" />
+                              </div>
+                              <div className="flex-1 mx-4">
+                                <div className="bg-white rounded-lg px-2 py-1 text-xs text-gray-500 border flex items-center gap-2">
+                                  <Icon name="home" size={13} />
+                                  http://www.getdoolen.com
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Browser Content */}
+                            <motion.div
+                              className="h-fit bg-gray-50"
+                              transition={{ type: "spring", stiffness: 300 }}
+                            >
+                              <ImagePlaceholder
+                                src={screen}
+                                alt={`Web Screen ${index + 1}`}
+                                className="w-full h-fit object-cover"
+                                fallbackText={`Web Screen ${index + 1}`}
+                              />
+                            </motion.div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
               {/* Mobile Application Section */}
               <div className="relative">
                 <div className="flex items-center justify-center mb-8">
-                  <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary-50 to-primary-100 rounded-full border border-primary-200">
+                  <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary-50 to-primary-100 rounded-xl border border-primary-200">
                     <Icon
                       name="mobile"
                       size={20}
@@ -498,79 +570,6 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
                   </div>
                 </div>
               </div>
-
-              {/* Web Application Section */}
-              <div className="relative">
-                <div className="flex items-center justify-center mb-8">
-                  <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-accent-50 to-accent-100 rounded-full border border-accent-200">
-                    <Icon name="globe" size={20} className="text-accent-600" />
-                    <span className="text-lg font-semibold text-accent-700">
-                      Web Application
-                    </span>
-                  </div>
-                </div>
-
-                <div className="relative">
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
-                    {caseStudyData.images.webScreens.map((screen, index) => (
-                      <motion.div
-                        key={index}
-                        className="relative group"
-                        initial={{
-                          opacity: 0,
-                          x: index % 2 === 0 ? -50 : 50,
-                          scale: 0.95,
-                        }}
-                        animate={{ opacity: 1, x: 0, scale: 1 }}
-                        transition={{
-                          duration: 0.7,
-                          delay: index * 0.3,
-                          type: "spring",
-                          stiffness: 80,
-                        }}
-                      >
-                        {/* Browser Frame */}
-                        <div className="relative">
-                          {/* Browser Shadow */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-accent-200/30 to-accent-400/30 rounded-2xl blur-xl transform translate-y-4 scale-105" />
-
-                          {/* Browser Window */}
-                          <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
-                            {/* Browser Header */}
-                            <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200">
-                              <div className="flex gap-2">
-                                <div className="w-3 h-3 bg-red-400 rounded-full" />
-                                <div className="w-3 h-3 bg-yellow-400 rounded-full" />
-                                <div className="w-3 h-3 bg-green-400 rounded-full" />
-                              </div>
-                              <div className="flex-1 mx-4">
-                                <div className="bg-white rounded-lg px-2 py-1 text-xs text-gray-500 border flex items-center gap-2">
-                                  <Icon name="home" size={13} />
-                                  http://www.getdoolen.com
-                                </div>
-                              </div>
-                            </div>
-
-                            {/* Browser Content */}
-                            <motion.div
-                              className="h-fit bg-gray-50"
-                              transition={{ type: "spring", stiffness: 300 }}
-                            >
-                              <ImagePlaceholder
-                                src={screen}
-                                alt={`Web Screen ${index + 1}`}
-                                className="w-full h-fit object-cover"
-                                fallbackText={`Web Screen ${index + 1}`}
-                              />
-                            </motion.div>
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
               {/* Features Highlight */}
               <motion.div
                 className="text-center"
@@ -578,7 +577,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
-                <div className="inline-flex items-center gap-6 px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full text-white shadow-lg">
+                <div className="inline-flex items-center gap-6 px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl text-white shadow-lg">
                   <div className="flex items-center gap-2">
                     <Icon name="check-circle" size={16} />
                     <span className="text-sm font-medium">
@@ -811,21 +810,6 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
               </div>
             </motion.div>
           </div>
-
-          {/* Results Analytics */}
-          <motion.div variants={itemVariants} className="text-center">
-            <h3 className="text-2xl font-bold mb-8 text-gray-800">
-              Performance Analytics
-            </h3>
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8">
-              <ImagePlaceholder
-                src={caseStudyData.images.results}
-                alt="Results Analytics"
-                className="w-full max-w-4xl mx-auto h-80 object-contain"
-                fallbackText="Performance Analytics Dashboard"
-              />
-            </div>
-          </motion.div>
         </div>
       </motion.section>
     );
