@@ -1,10 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ImagePlaceholder from '../ImagePlaceholder';
 
 const StackedScreenshots = ({ screenshots, title = "Application Screenshots", description = "Experience the seamless interface design across all platforms" }) => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const scrollRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: scrollRef,
+    offset: ["start start", "end end"],
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -35,79 +40,86 @@ const StackedScreenshots = ({ screenshots, title = "Application Screenshots", de
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className="bg-gray-900 text-stone-200 text-center pb-20 min-h-screen"
-      style={{
-        '--card-height': '45vw', // Increased from 40vw to make images larger
-        '--card-margin': '4vw',
-        '--card-top-offset': '1em',
-        '--numcards': screenshots.length,
-      }}
+      className={`text-center pb-20 min-h-screen bg-primary-50 text-primary-900`}
     >
       {/* Header */}
-      <header className="w-4/5 mx-auto h-[35vh] flex items-center justify-center mb-20">
+      <header className="w-4/5 mx-auto h-[40vh] flex items-center justify-center mb-12">
         <motion.div variants={itemVariants} className="text-center">
-          <h1 className="font-light text-5xl mb-4 font-['Inter'] tracking-wide">
+          <h1 className={`font-light text-5xl mb-4 font-['Inter'] tracking-wide text-primary-900`}>
             {title}
           </h1>
-          <p className="font-light leading-relaxed text-lg font-['Inter']">
+          <p className={`font-light leading-relaxed text-lg font-['Inter'] text-primary-700`}>
             {description}
           </p>
         </motion.div>
       </header>
 
       {/* Main Content */}
-      <main className="w-4/5 mx-auto">
-        <ul 
-          className="list-none grid grid-cols-1 gap-[var(--card-margin)] p-0 m-0"
-          style={{
-            gridTemplateRows: `repeat(var(--numcards), var(--card-height))`,
-            paddingBottom: `calc(var(--numcards) * var(--card-top-offset))`,
-            marginBottom: 'var(--card-margin)',
-          }}
-        >
-          {screenshots.map((screenshot, index) => (
-            <li
-              key={index}
-              className="sticky top-0"
-              style={{
-                '--index': index + 1,
-                paddingTop: `calc(var(--index) * var(--card-top-offset))`,
-              }}
-            >
-              <div className="shadow-lg bg-stone-50 text-gray-900 overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-stretch p-6 lg:p-8">
-                <div className="w-full max-w-3xl place-self-center text-left grid gap-4 place-items-start lg:pr-6">
-                  <h2 className="font-bold text-3xl lg:text-4xl font-['Inter'] m-0 tracking-wide">
-                    {screenshot.title}
-                  </h2>
-                  <p className="font-light leading-relaxed text-lg font-['Inter']">
-                    {screenshot.description}
-                  </p>
-                </div>
-                <figure className="overflow-hidden mt-6 lg:mt-0">
-                  <ImagePlaceholder
-                    src={screenshot.image}
-                    alt={screenshot.title}
-                    className="w-full h-full object-cover rounded-sm min-h-[300px] lg:min-h-[400px]" // Increased min-height for larger images
-                    fallbackText={screenshot.title}
-                  />
-                </figure>
-              </div>
-            </li>
-          ))}
-        </ul>
+      <main ref={scrollRef} className="w-4/5 mx-auto relative" style={{ height: `calc(${screenshots.length} * 100vh)` }}>
+        <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+          <ul className="list-none p-0 m-0 w-full h-full relative">
+            {screenshots.map((screenshot, index) => (
+              <ScreenshotCard
+                key={index}
+                index={index}
+                screenshot={screenshot}
+                scrollYProgress={scrollYProgress}
+                totalScreenshots={screenshots.length}
+              />
+            ))}
+          </ul>
+        </div>
       </main>
-
-      {/* Responsive Styles */}
-      <style jsx>{`
-        @media (max-width: 768px) {
-          .stacked-screenshots-container {
-            --card-height: 70vw; /* Increased from 60vw for larger mobile images */
-            --card-margin: 6vw;
-          }
-        }
-      `}</style>
     </motion.div>
   );
 };
 
+const ScreenshotCard = ({ index, screenshot, scrollYProgress, totalScreenshots }) => {
+  const start = index / totalScreenshots;
+  const end = (index + 1) / totalScreenshots;
+
+  // When the card is active, its blur is 0. As it gets scrolled past, it blurs.
+  const blurValue = useTransform(scrollYProgress, [start, end], [0, 4]);
+  const blur = useTransform(blurValue, (v) => `blur(${v}px)`);
+
+  // The active card is at full scale. It shrinks as it moves to the back.
+  const scale = useTransform(scrollYProgress, [start, end], [1, 0.9]);
+  
+  // The active card is fully opaque. It fades as it moves to the back.
+  const opacity = useTransform(scrollYProgress, [start, end], [1, 0.7]);
+
+  return (
+    <motion.li
+      className="absolute inset-0 flex items-center justify-center"
+    >
+      <motion.div
+        className={`shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-stretch p-6 lg:p-8 rounded-2xl bg-white text-primary-900 w-full max-w-6xl`}
+        style={{
+          filter: blur,
+          scale: scale,
+          opacity: opacity,
+        }}
+      >
+        <div className="w-full max-w-3xl place-self-center text-left grid gap-4 place-items-start lg:pr-6">
+          <h2 className="font-bold text-3xl lg:text-4xl font-['Inter'] m-0 tracking-wide">
+            {screenshot.title}
+          </h2>
+          <p className="font-light leading-relaxed text-lg font-['Inter']">
+            {screenshot.description}
+          </p>
+        </div>
+        <figure className="overflow-hidden mt-6 lg:mt-0 flex items-center justify-center h-full">
+          <ImagePlaceholder
+            src={screenshot.image}
+            alt={screenshot.title}
+            className="w-full h-full object-contain rounded-lg"
+            fallbackText={screenshot.title}
+          />
+        </figure>
+      </motion.div>
+    </motion.li>
+  );
+};
+
 export default StackedScreenshots;
+
