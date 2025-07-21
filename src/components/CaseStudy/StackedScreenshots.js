@@ -35,7 +35,7 @@ const StackedScreenshots = ({ screenshots, title = "Application Screenshots", de
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
-      className={`text-center pb-20 min-h-screen bg-primary-50 text-primary-900`}
+      className={`text-center pb-10 min-h-screen bg-primary-50 text-primary-900`}
       style={{
         '--card-height': 'clamp(400px, 45vw, 600px)', // Responsive height
         '--card-margin': '4vw',
@@ -44,7 +44,7 @@ const StackedScreenshots = ({ screenshots, title = "Application Screenshots", de
       }}
     >
       {/* Header */}
-      <header className="w-4/5 mx-auto h-[40vh] flex items-center justify-center mb-12">
+      <header className="w-4/5 mx-auto h-[30vh] flex items-center justify-center ">
         <motion.div variants={itemVariants} className="text-center">
           <h1 className={`font-light text-5xl mb-4 font-['Inter'] tracking-wide text-primary-900`}>
             {title}
@@ -61,7 +61,7 @@ const StackedScreenshots = ({ screenshots, title = "Application Screenshots", de
           className="list-none grid grid-cols-1 gap-[var(--card-margin)] p-0 m-0"
           style={{
             gridTemplateRows: `repeat(var(--numcards), var(--card-height))`,
-            paddingBottom: `calc(var(--numcards) * var(--card-top-offset))`,
+            // paddingBottom: `calc(var(--numcards) * var(--card-top-offset))`,
             marginBottom: 'var(--card-margin)',
           }}
         >
@@ -80,9 +80,7 @@ const StackedScreenshots = ({ screenshots, title = "Application Screenshots", de
                   transform: `scale(${1 - ((screenshots.length - 1 - index) * 0.01)})`,
                   filter: `drop-shadow(0 4px 6px rgba(0, 0, 0, ${0.1 + (index * 0.02)}))`,
                   zIndex: screenshots.length - index,
-                  marginTop: `calc(var(--index) * var(--card-top-offset))`,
                   marginBottom: `calc(var(--index) * var(--card-top-offset))`,
-                  
                 }}
               >
                 <div className="w-full max-w-3xl place-self-center text-left grid gap-4 place-items-start lg:pr-6">
