@@ -102,7 +102,7 @@ const getDoolen = {
       solution: "Redux + backend sync APIs for watch progress, quiz attempts, and subscriptions"
     },
     {
-      challenge: "Play Store Restrictions",
+      challenge: "Play Store Rejection",
       solution: "Deferred subscription billing inside app, directing users to web portal for now"
     },
     {
@@ -110,7 +110,7 @@ const getDoolen = {
       solution: "Firebase integration for both web and Android for course alerts and updates"
     },
     {
-      challenge: "App Store Restrictions",
+      challenge: "App Store Rejection",
       solution: "The client does not need to make subscriptions via in-app purchase as per business logic and App Store policy for digital goods; in-app purchases need to be handled accordingly. Therefore, we applied an alternative option with a redirect app, and after some rejections, we finally achieved the goal. Currently, we are managing subscriptions from the web only."
     }
   ],

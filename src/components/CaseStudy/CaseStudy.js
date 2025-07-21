@@ -188,10 +188,19 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <div className="flex flex-col items-center gap-2 text-primary-600">
+          <motion.button
+            onClick={() =>
+              document
+                .getElementById("overview")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+            className="flex flex-col items-center gap-2 text-primary-600"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <span className="text-sm font-medium">Scroll to explore</span>
             <Icon name="chevron-down" size={20} />
-          </div>
+          </motion.button>
         </motion.div>
       </motion.section>
     );
@@ -652,9 +661,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
                   >
                     <div
                       className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                        openIndex === index
-                          ? "bg-primary-500"
-                          : "bg-gray-200"
+                        openIndex === index ? "bg-primary-500" : "bg-gray-200"
                       } transition-colors duration-300`}
                     >
                       <Icon
