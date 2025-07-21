@@ -285,7 +285,7 @@ const Navigation = () => {
               </div>
             </motion.div>
           </>
-        )}
+        )} 
       </AnimatePresence>
 
       {/* Floating Navigation Dots (Desktop) - Vertical */}
