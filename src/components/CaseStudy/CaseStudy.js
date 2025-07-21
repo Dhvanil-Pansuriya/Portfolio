@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Icon from "../Icon";
 import ImagePlaceholder from "../ImagePlaceholder";
+import StackedScreenshots from "./StackedScreenshots";
 import { useRef } from "react";
 
 const CaseStudy = ({ caseStudyData, onClose }) => {
@@ -13,6 +14,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
   const navItems = [
     { id: "overview", label: "Overview", icon: "eye" },
     { id: "features", label: "Features", icon: "star" },
+    { id: "screenshots", label: "Screenshots", icon: "image" },
     { id: "challenges", label: "Challenges", icon: "bolt" },
     { id: "results", label: "Results", icon: "chart-bar" },
     { id: "conclusion", label: "Conclusion", icon: "check-circle" },
@@ -459,221 +461,19 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
             ))}
           </div>
 
-          {/* Professional Application Screenshots Gallery */}
-          <motion.div variants={itemVariants} className="mt-20">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold mb-4">
-                <span className="gradient-text">Application Screenshots</span>
-              </h3>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Experience the seamless interface design across all platforms
-              </p>
-            </div>
-
-            {/* Enhanced Screenshots Layout */}
-            <div className="space-y-16">
-              {/* Web Application Section */}
-              <div className="relative">
-                <div className="flex items-center justify-center mb-8">
-                  <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-accent-50 to-accent-100  border border-accent-200 rounded-xl">
-                    <Icon name="globe" size={20} className="text-accent-600" />
-                    <span className="text-lg font-semibold text-accent-700">
-                      Web Application
-                    </span>
-                  </div>
-                </div>
-
-                <div className="relative">
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
-                    {caseStudyData.images.webScreens.map((screen, index) => (
-                      <motion.div
-                        key={index}
-                        className="relative group"
-                        initial={{
-                          opacity: 0,
-                          x: index % 2 === 0 ? -50 : 50,
-                          scale: 0.95,
-                        }}
-                        animate={{ opacity: 1, x: 0, scale: 1 }}
-                        transition={{
-                          duration: 0.7,
-                          delay: index * 0.3,
-                          type: "spring",
-                          stiffness: 80,
-                        }}
-                      >
-                        {/* Browser Frame */}
-                        <div className="relative">
-                          {/* Browser Shadow */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-accent-200/30 to-accent-400/30 rounded-2xl blur-xl transform translate-y-4 scale-105" />
-
-                          {/* Browser Window */}
-                          <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
-                            {/* Browser Header */}
-                            <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b border-gray-200">
-                              <div className="flex gap-2">
-                                <div className="w-3 h-3 bg-red-400 rounded-full" />
-                                <div className="w-3 h-3 bg-yellow-400 rounded-full" />
-                                <div className="w-3 h-3 bg-green-400 rounded-full" />
-                              </div>
-                              <div className="flex-1 mx-4">
-                                <div className="bg-white rounded-lg px-2 py-1 text-xs text-gray-500 border flex items-center gap-2">
-                                  <Icon name="home" size={13} />
-                                  http://www.getdoolen.com
-                                </div>
-                              </div>
-                            </div>
-
-                            {/* Browser Content */}
-                            <motion.div
-                              className="h-fit bg-gray-50"
-                              transition={{ type: "spring", stiffness: 300 }}
-                            >
-                              <ImagePlaceholder
-                                src={screen}
-                                alt={`Web Screen ${index + 1}`}
-                                className="w-full h-fit object-cover"
-                                fallbackText={`Web Screen ${index + 1}`}
-                              />
-                            </motion.div>
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Mobile Application Section */}
-              <div className="relative">
-                <div className="flex items-center justify-center mb-8">
-                  <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-primary-50 to-primary-100 rounded-xl border border-primary-200">
-                    <Icon
-                      name="mobile"
-                      size={20}
-                      className="text-primary-600"
-                    />
-                    <span className="text-lg font-semibold text-primary-700">
-                      Mobile Application
-                    </span>
-                  </div>
-                </div>
-
-                <div className="relative">
-                  <div className="flex justify-center items-center gap-8 pb-4">
-                    {caseStudyData.images.mobileScreens.map((screen, index) => (
-                      <motion.div
-                        key={index}
-                        className="relative group flex-shrink-0"
-                        initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        transition={{
-                          duration: 0.6,
-                          delay: index * 0.2,
-                          type: "spring",
-                          stiffness: 100,
-                        }}
-                      >
-                        {/* Phone Frame */}
-                        <div className="relative">
-                          {/* Phone Shadow */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-primary-200/30 to-primary-400/30 rounded-[2.5rem] blur-xl transform translate-y-4 scale-105" />
-
-                          {/* Phone Body */}
-                          <div className="relative bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
-                            {/* Screen */}
-                            <div className="bg-black rounded-[2rem] overflow-hidden w-64 h-[550px] relative">
-                              {/* Status Bar */}
-                              <div className="absolute top-0 left-0 right-0 h-8 bg-white rounded-t-[2rem] flex items-center px-6 z-10">
-                                {/* Time (Left) */}
-                                <div className="flex items-center gap-1">
-                                  <span className="w-8 h-4 text-black rounded-full text-[10px] flex items-center justify-center font-bold">
-                                    9:45
-                                    <span className="text-[10px]">
-                                      &nbsp;am
-                                    </span>
-                                  </span>
-                                </div>
-                                {/* Black Bar (Center) */}
-                                <div className="flex-1 flex justify-center pl-4">
-                                  <div className="w-[70px] h-5 bg-black rounded-full" />
-                                </div>
-                                {/* Icons (Right) */}
-                                <div className="flex items-center gap-1">
-                                  <Icon
-                                    name="signal"
-                                    size={14}
-                                    className="text-black"
-                                  />
-                                  <Icon
-                                    name="wifi"
-                                    size={14}
-                                    className="text-black"
-                                  />
-                                  <Icon
-                                    name="battery"
-                                    size={18}
-                                    className="text-black"
-                                  />
-                                </div>
-                              </div>
-
-                              {/* Screen Content */}
-                              <motion.div
-                                className="w-full h-full pt-8 pb-3 relative bg-white"
-                                transition={{ type: "spring", stiffness: 300 }}
-                              >
-                                <ImagePlaceholder
-                                  src={screen}
-                                  alt={`Mobile Screen ${index + 1}`}
-                                  className="w-full h-full object-cover"
-                                  fallbackText={`Mobile Screen ${index + 1}`}
-                                />
-                                {/* Bat under the image */}
-                                <div className="absolute left-1/2 bottom-1 transform -translate-x-1/2 flex justify-center">
-                                  <div className="bg-gray-700 w-32 h-1 rounded-full" />
-                                </div>
-                              </motion.div>
-                            </div>
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              {/* Features Highlight */}
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-              >
-                <div className="inline-flex items-center gap-6 px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 rounded-xl text-white shadow-lg">
-                  <div className="flex items-center gap-2">
-                    <Icon name="check-circle" size={16} />
-                    <span className="text-sm font-medium">
-                      Responsive Design
-                    </span>
-                  </div>
-                  <div className="w-px h-4 bg-white/30" />
-                  <div className="flex items-center gap-2">
-                    <Icon name="check-circle" size={16} />
-                    <span className="text-sm font-medium">
-                      Cross-Platform Sync
-                    </span>
-                  </div>
-                  <div className="w-px h-4 bg-white/30" />
-                  <div className="flex items-center gap-2">
-                    <Icon name="check-circle" size={16} />
-                    <span className="text-sm font-medium">Modern UI/UX</span>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
         </div>
       </motion.section>
+    );
+  };
+
+  // Screenshots Section using StackedScreenshots component
+  const ScreenshotsSection = () => {
+    return (
+      <StackedScreenshots 
+        screenshots={caseStudyData.images.stackedScreenshots}
+        title="Application Screenshots"
+        description="Scroll down to stack the cards. Experience the seamless interface design across all platforms."
+      />
     );
   };
 
@@ -997,6 +797,9 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
         <HeroSection />
         <OverviewSection />
         <FeaturesSection />
+        <div id="screenshots">
+          <ScreenshotsSection />
+        </div>
         <ChallengesSection />
         <ResultsSection />
         <ConclusionSection />
