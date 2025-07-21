@@ -7,6 +7,76 @@ import { useRef } from "react";
 
 const CaseStudy = ({ caseStudyData, onClose }) => {
   const [activeSection, setActiveSection] = useState("overview");
+  const scrollContainerRef = useRef(null);
+
+  // Navigation items for floating dots
+  const navItems = [
+    { id: "overview", label: "Overview", icon: "eye" },
+    { id: "features", label: "Features", icon: "star" },
+    { id: "challenges", label: "Challenges", icon: "bolt" },
+    { id: "results", label: "Results", icon: "chart-bar" },
+    { id: "conclusion", label: "Conclusion", icon: "check-circle" },
+  ];
+
+  // Scroll tracking for floating navigation
+  useEffect(() => {
+    const handleScroll = (event) => {
+      // Get the scrollable container (the case study modal)
+      const scrollContainer = event.target;
+      const scrollTop = scrollContainer.scrollTop;
+      
+      // Update active section based on scroll position
+      const sections = navItems.map((item) => item.id);
+      const currentSection = sections.find((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const containerRect = scrollContainer.getBoundingClientRect();
+          // Adjust the calculation for the modal container
+          const relativeTop = rect.top - containerRect.top;
+          const relativeBottom = rect.bottom - containerRect.top;
+          return relativeTop <= 150 && relativeBottom >= 150;
+        }
+        return false;
+      });
+
+      if (currentSection) {
+        setActiveSection(currentSection);
+      } else if (scrollTop < 100) {
+        setActiveSection("overview");
+      }
+    };
+
+    // Use the ref to get the scrollable container
+    const scrollContainer = scrollContainerRef.current;
+    
+    if (scrollContainer) {
+      // Small delay to ensure all sections are rendered
+      const timer = setTimeout(() => {
+        handleScroll({ target: scrollContainer });
+      }, 100);
+      
+      scrollContainer.addEventListener("scroll", handleScroll);
+      return () => {
+        clearTimeout(timer);
+        scrollContainer.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [navItems]);
+
+  // Scroll to section function
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    const scrollContainer = scrollContainerRef.current;
+    
+    if (element && scrollContainer) {
+      const offsetTop = element.offsetTop - 80;
+      scrollContainer.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
 
   // Animation variants
   const containerVariants = {
@@ -130,11 +200,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
                 </motion.div>
               </div>
               <motion.button
-                onClick={() =>
-                  document
-                    .getElementById("overview")
-                    .scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => scrollToSection("overview")}
                 className="px-8 py-4 bg-primary-500 text-white rounded-full font-semibold hover:bg-primary-600 transition-colors shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -189,11 +255,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
           transition={{ duration: 2, repeat: Infinity }}
         >
           <motion.button
-            onClick={() =>
-              document
-                .getElementById("overview")
-                .scrollIntoView({ behavior: "smooth" })
-            }
+            onClick={() => scrollToSection("overview")}
             className="flex flex-col items-center gap-2 text-primary-600"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -337,6 +399,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
 
     return (
       <motion.section
+        id="features"
         ref={ref}
         variants={containerVariants}
         initial="hidden"
@@ -625,6 +688,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
 
     return (
       <motion.section
+        id="challenges"
         ref={ref}
         variants={containerVariants}
         initial="hidden"
@@ -762,6 +826,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
 
     return (
       <motion.section
+        id="results"
         ref={ref}
         variants={containerVariants}
         initial="hidden"
@@ -865,6 +930,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
 
     return (
       <motion.section
+        id="conclusion"
         ref={ref}
         variants={containerVariants}
         initial="hidden"
@@ -922,6 +988,7 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
   return (
     <AnimatePresence>
       <motion.div
+        ref={scrollContainerRef}
         className="fixed inset-0 bg-white z-50 overflow-y-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -933,6 +1000,43 @@ const CaseStudy = ({ caseStudyData, onClose }) => {
         <ChallengesSection />
         <ResultsSection />
         <ConclusionSection />
+        
+        {/* Floating Navigation Dots (Desktop) - Vertical */}
+        <div className="hidden xl:block fixed right-6 top-1/2 transform -translate-y-1/2 z-30">
+          <div className="card-professional p-2 space-y-3">
+            {navItems.map((item) => (
+              <motion.button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`group relative w-3 h-3 transition-all duration-300 ease-in-out flex items-center justify-center ${
+                  activeSection === item.id
+                    ? "bg-primary-500 scale-90 shadow-lg"
+                    : "bg-gray-300 hover:bg-primary-400"
+                }`}
+                whileHover={{ scale: 1.3 }}
+                whileTap={{ scale: 0.9 }}
+                title={item.label}
+              >
+                {/* Active indicator */}
+                {activeSection === item.id && (
+                  <motion.div
+                    className="absolute inset-0 bg-primary-500"
+                    layoutId="activeCaseStudyDot"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                {/* Tooltip */}
+                <div className="absolute right-8 top-1/2 transform -translate-y-1/2 card-professional px-4 py-2 text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap text-gray-700 font-medium pointer-events-none">
+                  <div className="flex items-center justify-center gap-x-2">
+                    <Icon name={item.icon} size={12} />
+                    {item.label}
+                  </div>
+                  <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-4 border-l-white border-t-2 border-b-2 border-t-transparent border-b-transparent"></div>
+                </div>
+              </motion.button>
+            ))}
+          </div>
+        </div>
       </motion.div>
     </AnimatePresence>
   );
