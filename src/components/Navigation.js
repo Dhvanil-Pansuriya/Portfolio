@@ -14,15 +14,15 @@ const Navigation = () => {
   // Get the current portfolio name based on route
   const getPortfolioName = () => {
     switch (location.pathname) {
-      case "/pinal":
+      case "/pinal-ramoliya":
         return "Pinal Ramoliya";
-      case "/dhvanil":
+      case "/dhvanil-pansuriya":
         return "Dhvanil Pansuriya";
-      case "/deep":
+      case "/deep-surti":
         return "Deep Surti";
-      case "/hardik/android":
-      case "/hardik/mobile-app-development":
-      case "/hardik/react-native":
+      case "/hardik-ramoliya/android":
+      case "/hardik-ramoliya/mobile-app-development":
+      case "/hardik-ramoliya/react-native":
         return "Hardik Ramoliya";
       default:
         return "Hardik Ramoliya";
@@ -289,7 +289,7 @@ const Navigation = () => {
               </div>
             </motion.div>
           </>
-        )} 
+        )}
       </AnimatePresence>
 
       {/* Floating Navigation Dots (Desktop) - Vertical */}
