@@ -48,7 +48,7 @@ export const experiences = [
     organization: "ePhoenix Solutions",
     designation: "React & Node.js Developer Intern",
     duration: "December 2024 - Present",
-    location: "Remote",
+    location: "Ahmadabad, Gujarat, India",
     description:
       "Worked on MERN stack development with full focus on building and learning through real-time projects. Collaborated with senior developers on live client projects.",
     achievements: [
