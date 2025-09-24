@@ -47,7 +47,7 @@ export const experiences = [
   {
     organization: "ePhoenix Solutions",
     designation: "React & Node.js Developer Intern",
-    duration: "1 Year",
+    duration: "December 2024 - Present",
     location: "Remote",
     description:
       "Worked on MERN stack development with full focus on building and learning through real-time projects. Collaborated with senior developers on live client projects.",
