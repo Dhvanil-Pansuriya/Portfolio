@@ -105,7 +105,7 @@ export const projects = [
   {
     name: "Doolen - Training Video App (React Native)",
     description:
-      "Built a personalized training video platform with custom content queue system tailored to user preferences and interactive quizzes with score tracking.",
+    "Built a personalized training video platform with custom content queue system tailored to user preferences and interactive quizzes with score tracking.",
     features: [
       "Personalized training video platform",
       "Custom content queue system based on user preferences",
@@ -123,6 +123,7 @@ export const projects = [
       "Redux",
       "AsyncStorage",
     ],
+    playStore: "https://play.google.com/store/apps/details?id=com.doolen.trainingplatform"
   },
   {
     name: "School Survey App (Kotlin)",
