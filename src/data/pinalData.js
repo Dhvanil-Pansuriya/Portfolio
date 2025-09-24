@@ -1,6 +1,7 @@
 export const personalInfo = {
   name: "Pinal Ramoliya",
-  image: "../assets/images/pinal_ramoliya.png",
+  image: require("../assets/images/pinal_ramoliya.png"),
+  resume: require("../assets/doc/PHP_Resume_Pinal_Ramoliya_Resume.pdf"),
   title: "Development Lead",
   subtitle: "Complex Problem-Solver with Analytical Mindset",
   email: "pinaltkothiya@gmail.com",
@@ -12,7 +13,7 @@ export const personalInfo = {
     "B.E (Computer Engineering) from Government Engineering College - Rajkot with 7.11 CPI (2009-2013)",
   socialLinks: {
     gitlab: "https://gitlab.com/pinaltkothiya",
-    linkedin: "https://www.linkedin.com/in/pinal-kothiya-a6b61014a/"
+    linkedin: "https://www.linkedin.com/in/pinal-kothiya-a6b61014a/",
   },
 };
 

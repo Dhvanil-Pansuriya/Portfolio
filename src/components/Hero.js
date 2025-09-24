@@ -10,6 +10,27 @@ const Hero = ({ personalInfo }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  // Function to handle resume download
+  const handleDownloadResume = () => {
+    // Check if resume is available in personalInfo
+    if (!personalInfo.resume) {
+      console.error("Resume file not found in personalInfo");
+      return;
+    }
+
+    // Generate filename based on person's name
+    const fileName = `${personalInfo.name.replace(/ /g, '_')}.pdf`;
+
+    // Create a temporary link element and trigger download
+    const link = document.createElement('a');
+    link.href = personalInfo.resume;
+    link.download = fileName;
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -177,6 +198,7 @@ const Hero = ({ personalInfo }) => {
                   y: -2,
                 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={handleDownloadResume}
               >
                 <Icon name="download" size={16} />
                 Download CV

@@ -5,6 +5,7 @@
 const basePersonalInfo = {
   name: "Hardik Ramoliya",
   image: require("../assets/images/hardik_ramoliya.png"),
+  resume: require("../assets/doc/Hardik_Android_Kotlin_Resume_11_YearExp_6_Aug_2024_WCD.pdf"),
   email: "hardik@example.com",
   phone: "+91 99242 74295",
   location: "Ahmedabad, Gujarat",
