@@ -127,12 +127,13 @@ export const projects = [
       "Contact forms and business information",
       "High performance and availability",
       "Mobile-responsive design",
+      "EmailJs integration for appointment + inquiries",
     ],
     technologies: ["React.js", "Tailwind CSS", "JavaScript"],
     website: "https://element-engineering.vercel.app/",
   },
   {
-    name: "HRFIC Website",
+    name: "HRF Incubation Center Website",
     description:
       "Built a professional website to represent HRFIC's offerings and services using React.js and Tailwind CSS with clean UI and smooth navigation.",
     features: [
@@ -142,6 +143,7 @@ export const projects = [
       "Performance optimized",
       "Mobile responsive design",
       "Modern design patterns",
+      "EmailJs integration for inquiries",
     ],
     technologies: ["React.js", "Tailwind CSS", "JavaScript"],
     website: "https://www.hrfic.in/home",
