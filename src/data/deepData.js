@@ -3,7 +3,7 @@
 export const personalInfo = {
   name: "Deep Surti",
   image: require("../assets/images/deep_surti.png"), // You'll need to add this image
-  resume: require("../assets/doc/Deep_Surti_Resume.pdf"), // You'll need to add this resume
+  resume: require("../assets/doc/Deep_Surti.pdf"), // You'll need to add this resume
   title: "Mobile Developer",
   subtitle: "Android & Cross-Platform Development Specialist",
   email: "deepsurti23@gmail.com",

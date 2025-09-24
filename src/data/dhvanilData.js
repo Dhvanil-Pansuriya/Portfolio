@@ -3,7 +3,7 @@
 export const personalInfo = {
   name: "Dhvanil Pansuriya",
   image: require("../assets/images/dhvanil_pansuriya.png"), // You'll need to add this image
-  resume: require("../assets/doc/Dhvanil_Pansuriya_Resume.pdf"), // You'll need to add this resume
+  resume: require("../assets/doc/Dhvanil_Pansuriya.pdf"), // You'll need to add this resume
   title: "React & Node.js Developer",
   subtitle: "MERN Stack Development Specialist",
   email: "dhvanil.p@ephoenixsolutions.com",
