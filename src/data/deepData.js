@@ -26,7 +26,7 @@ export const skills = {
   databases: ["SQLite", "Room Database", "Firebase"],
   others: [
     "Mobile App Development",
-    "Cross-Platform Development", 
+    "Cross-Platform Development",
     "Kotlin Multiplatform (Learning)",
     "API Integration",
     "UI/UX Design",
@@ -80,7 +80,7 @@ export const projects = [
     ],
   },
   {
-    name: "Dating App (Kotlin & XML)",
+    name: "Dating App (Kotlin)",
     description:
       "Engineered a premium dating platform with in-app subscriptions, live communication features, secure user authentication, and real-time chat and video calling.",
     features: [
@@ -146,6 +146,44 @@ export const projects = [
       "MVVM Architecture",
     ],
   },
+  {
+    name: "CBA (React Native)",
+    description:
+      "Hotel booking application with partial development completed, focusing on exploring hotels and booking options with smooth navigation and UI.",
+    features: [
+      "Explore hotels with search and filter options",
+      "View hotel details and availability",
+      "Partial booking flow implemented",
+      "Clean and intuitive UI for easy navigation",
+      "Future scope for full booking integration",
+    ],
+    technologies: [
+      "React Native",
+      "JavaScript",
+      "React Navigation",
+      "SQLite Database (for local data storage)",
+      "API Integration (for hotel listings)",
+    ],
+  },
+  {
+    name: "Global Pump (React Native)",
+    description:
+      "Pump calculation application designed for managing pump data and calculations efficiently, with local storage and offline capabilities.",
+    features: [
+      "Pump calculation based on user input",
+      "Save and retrieve calculation data locally",
+      "Offline functionality with SQLite",
+      "Clean and responsive UI",
+      "Future scope for real-time data integration",
+    ],
+    technologies: [
+      "React Native",
+      "JavaScript",
+      "SQLite Database (for local saving)",
+      "Redux (optional for state management)",
+      "Custom calculation logic",
+    ],
+  },
 ];
 
 export const education = [
@@ -180,22 +218,19 @@ export const interests = [
   "Learning New Technologies",
 ];
 
-export const languages = [
-  "Hindi",
-  "English", 
-  "Gujarati",
-];
+export const languages = ["Hindi", "English", "Gujarati"];
 
 export const certifications = [
   {
     name: "Android Development",
     issuer: "Self-Learning",
     year: "2024",
-    description: "Comprehensive Android development using Kotlin and Jetpack Compose",
+    description:
+      "Comprehensive Android development using Kotlin and Jetpack Compose",
   },
   {
     name: "React Native Development",
-    issuer: "Self-Learning", 
+    issuer: "Self-Learning",
     year: "2024",
     description: "Cross-platform mobile app development using React Native",
   },
@@ -204,12 +239,14 @@ export const certifications = [
 export const achievements = [
   {
     title: "Mobile App Developer",
-    description: "Successfully developed and deployed multiple mobile applications",
+    description:
+      "Successfully developed and deployed multiple mobile applications",
     year: "2024",
   },
   {
     title: "Cross-Platform Expertise",
-    description: "Gained expertise in both native Android and React Native development",
+    description:
+      "Gained expertise in both native Android and React Native development",
     year: "2024",
   },
 ];
@@ -218,7 +255,7 @@ export const achievements = [
 export const technicalSkills = {
   mobileAppDevelopment: [
     "Kotlin",
-    "Jetpack Compose", 
+    "Jetpack Compose",
     "React Native",
     "Android SDK",
     "XML Layouts",
@@ -228,11 +265,7 @@ export const technicalSkills = {
     "Kotlin Multiplatform (Learning)",
     "JavaScript",
   ],
-  frontendDevelopment: [
-    "HTML",
-    "CSS", 
-    "JavaScript (Basics)",
-  ],
+  frontendDevelopment: ["HTML", "CSS", "JavaScript (Basics)"],
   toolsAndPlatforms: [
     "Android Studio",
     "Visual Studio Code",
