@@ -3,7 +3,7 @@
 export const personalInfo = {
   name: "Dhvanil Pansuriya",
   image: require("../assets/images/dhvanil_pansuriya.png"), // You'll need to add this image
-  // resume: require("../assets/doc/Dhvanil_Pansuriya_Resume.pdf"), // You'll need to add this resume
+  resume: require("../assets/doc/Dhvanil_Pansuriya_Resume.pdf"), // You'll need to add this resume
   title: "React & Node.js Developer",
   subtitle: "MERN Stack Development Specialist",
   email: "dhvanil.p@ephoenixsolutions.com",
@@ -47,7 +47,7 @@ export const experiences = [
   {
     organization: "ePhoenix Solutions",
     designation: "React & Node.js Developer Intern",
-    duration: "December 2024 - Present",
+    duration: "December 2023 - Present",
     location: "Ahmadabad, Gujarat, India",
     description:
       "Worked on MERN stack development with full focus on building and learning through real-time projects. Collaborated with senior developers on live client projects.",

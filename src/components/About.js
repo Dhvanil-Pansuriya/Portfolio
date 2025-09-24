@@ -41,15 +41,15 @@ const About = ({ personalInfo, interests, education, certificates, achievements,
         { number: "100+", label: "Projects Completed", icon: "rocket" },
         { number: "100%", label: "Client Satisfaction", icon: "heart" },
       ];
-    } else if (personalInfo.name === "Dhvanilkumar K. Pansuriya") {
+    } else if (personalInfo.name === "Dhvanil Pansuriya") {
       return [
-        { number: "1+", label: "Years Experience", icon: "code" },
+        { number: "2+", label: "Years Experience", icon: "code" },
         { number: "7+", label: "Projects Completed", icon: "rocket" },
         { number: "110+", label: "Problems Solved", icon: "lightbulb" },
       ];
     } else if (personalInfo.name === "Deep Surti") {
       return [
-        { number: "1+", label: "Years Experience", icon: "code" },
+        { number: "1.5+", label: "Years Experience", icon: "code" },
         { number: "4+", label: "Projects Completed", icon: "rocket" },
         { number: "100%", label: "Client Satisfaction", icon: "heart" },
       ];
