@@ -31,7 +31,7 @@ const ReactNativePortfolio = () => {
     <div className="min-h-screen">
       <SEO 
         title={`${personalInfo.name} - React Native Developer Portfolio`}
-        description="Professional React Native Developer with 5+ years of experience. Specializing in cross-platform mobile app development with modern technologies."
+        description="Professional React Native Developer with 11+ years of experience. Specializing in cross-platform mobile app development with modern technologies."
         keywords="React Native Developer, Mobile App Development, Cross-Platform, Portfolio, Freelancer"
       />
       

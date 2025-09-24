@@ -37,13 +37,13 @@ const About = ({ personalInfo, interests, education }) => {
   const getStats = () => {
     if (personalInfo.name === "Pinal Ramoliya") {
       return [
-        { number: "9+", label: "Years Experience", icon: "code" },
+        { number: "11+", label: "Years Experience", icon: "code" },
         { number: "100+", label: "Projects Completed", icon: "rocket" },
         { number: "100%", label: "Client Satisfaction", icon: "heart" },
       ];
     }
     return [
-      { number: "5+", label: "Years Experience", icon: "code" },
+      { number: "11+", label: "Years Experience", icon: "code" },
       { number: "50+", label: "Projects Completed", icon: "rocket" },
       { number: "100%", label: "Client Satisfaction", icon: "heart" },
     ];

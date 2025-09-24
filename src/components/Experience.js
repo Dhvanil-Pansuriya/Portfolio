@@ -246,7 +246,7 @@ const Experience = ({ experiences }) => {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 max-w-xs sm:max-w-none mx-auto">
                 {[
-                  { label: "Years of Experience", value: "5+" },
+                  { label: "Years of Experience", value: "11+" },
                   { label: "Companies Worked", value: experiences.length },
                   { label: "Technologies Mastered", value: "20+" },
                 ].map((stat, index) => (

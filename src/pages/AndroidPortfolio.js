@@ -31,7 +31,7 @@ const AndroidPortfolio = () => {
     <div className="min-h-screen">
       <SEO
         title={`${personalInfo.name} - Android Developer Portfolio`}
-        description="Professional Android Developer with 5+ years of experience. Specializing in native Android app development with modern technologies."
+        description="Professional Android Developer with 11+ years of experience. Specializing in native Android app development with modern technologies."
         keywords="Android Developer, Mobile App Development, Native Android, Portfolio, Freelancer"
       />
 

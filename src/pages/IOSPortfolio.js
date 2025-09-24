@@ -31,7 +31,7 @@ const IOSPortfolio = () => {
     <div className="min-h-screen">
       <SEO
         title={`${personalInfo.name} - Mobile App Developer Portfolio`}
-        description="Professional Mobile App Developer with 5+ years of experience. Specializing in iOS and Android app development with modern technologies."
+        description="Professional Mobile App Developer with 11+ years of experience. Specializing in iOS and Android app development with modern technologies."
         keywords="Mobile App Developer, iOS Developer, Android Developer, Cross-Platform Development, Portfolio, Freelancer"
       />
 

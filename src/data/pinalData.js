@@ -7,7 +7,7 @@ export const personalInfo = {
   phone: "+91 (7622905891)",
   location: "Ahmedabad, Gujarat",
   objective:
-    "Complex problem-solver with analytical and driven mindset with experience of 9+ years. Dedicated to achieving demanding development objectives according to tight schedules while producing impeccable code.",
+    "Complex problem-solver with analytical and driven mindset with experience of 11+ years. Dedicated to achieving demanding development objectives according to tight schedules while producing impeccable code.",
   education:
     "B.E (Computer Engineering) from Government Engineering College - Rajkot with 7.11 CPI (2009-2013)",
   socialLinks: {

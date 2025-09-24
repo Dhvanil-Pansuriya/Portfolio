@@ -30,7 +30,7 @@ const PinalPortfolio = () => {
     <div className="min-h-screen">
       <SEO 
         title={`${personalInfo.name} - Development Lead Portfolio`}
-        description="Experienced Development Lead with 9+ years of expertise in PHP, Laravel, Yii2, and full-stack web development. Complex problem-solver with analytical mindset."
+        description="Experienced Development Lead with 11+ years of expertise in PHP, Laravel, Yii2, and full-stack web development. Complex problem-solver with analytical mindset."
         keywords="Development Lead, PHP Developer, Laravel, Yii2, Full Stack Developer, Web Development, Team Lead, Portfolio"
       />
       
