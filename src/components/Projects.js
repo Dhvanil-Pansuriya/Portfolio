@@ -224,7 +224,7 @@ const Projects = ({ projects }) => {
             {/* Links */}
             <div className="flex flex-wrap gap-3">
               {/* Case Study Button for GetDoolen */}
-              {project.name === "GetDoolen - Training Video App" && (
+              {/* {project.name === "GetDoolen - Training Video App" && (
                 <motion.button
                   onClick={(e) => {
                     e.stopPropagation();
@@ -238,7 +238,7 @@ const Projects = ({ projects }) => {
                   <Icon name="file-text" size={16} />
                   View Case Study
                 </motion.button>
-              )}
+              )} */}
               {/* Website Button */}
               {project.website && (
                 <motion.a

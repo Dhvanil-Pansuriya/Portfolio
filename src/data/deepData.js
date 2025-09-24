@@ -22,7 +22,7 @@ export const personalInfo = {
 export const skills = {
   languages: ["Kotlin", "JavaScript", "HTML", "CSS"],
   frameworks: ["Jetpack Compose", "React Native", "XML"],
-  tools: ["Android Studio", "Visual Studio Code", "Git"],
+  tools: ["Android Studio", "Visual Studio Code", "Git", "Github", "Bitbucket", "Postman"],
   databases: ["SQLite", "Room Database", "Firebase"],
   others: [
     "Mobile App Development",

@@ -30,7 +30,7 @@ export const skills = {
     "Bootstrap",
   ],
     databases: ["MongoDB", "MySQL", "Snowflake"],
-    tools: ["Git", "GitHub", "GitLab", "Bitbucket", "VS Code", "Vercel"],
+    tools: ["Git", "GitHub", "GitLab", "Bitbucket", "VS Code", "Vercel", "Postman"],
   others: [
     "MERN Stack Development",
     "REST APIs",
