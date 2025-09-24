@@ -18,6 +18,8 @@ const Navigation = () => {
         return "Pinal Ramoliya";
       case "/dhvanil":
         return "Dhvanil Pansuriya";
+      case "/deep":
+        return "Deep Surti";
       case "/hardik/android":
       case "/hardik/mobile-app-development":
       case "/hardik/react-native":

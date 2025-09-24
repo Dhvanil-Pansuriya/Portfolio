@@ -18,7 +18,8 @@ const ThemeSelector = () => {
     '/android': 'android', // Legacy route
     '/ios': 'mobile app development', // Legacy route
     '/pinal': 'pinal',
-    '/dhvanil': 'dhvanil'
+    '/dhvanil': 'dhvanil',
+    '/deep': 'deep'
   };
   
   // Use context theme if available, otherwise fall back to route-based detection
@@ -30,7 +31,8 @@ const ThemeSelector = () => {
     'android': '/hardik/android',
     'mobile app development': '/hardik/mobile-app-development',
     'pinal': '/pinal',
-    'dhvanil': '/dhvanil'
+    'dhvanil': '/dhvanil',
+    'deep': '/deep'
   };
 
   return (

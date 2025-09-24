@@ -29,8 +29,8 @@ export const skills = {
     "Tailwind CSS",
     "Bootstrap",
   ],
-  databases: ["MongoDB", "MySQL", "Snowflake"],
-  tools: ["Git", "GitHub", "GitLab", "Bitbucket", "VS Code", "Vercel"],
+    databases: ["MongoDB", "MySQL", "Snowflake"],
+    tools: ["Git", "GitHub", "GitLab", "Bitbucket", "VS Code", "Vercel"],
   others: [
     "MERN Stack Development",
     "REST APIs",

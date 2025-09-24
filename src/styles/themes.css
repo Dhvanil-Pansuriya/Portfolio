@@ -184,6 +184,47 @@
   --color-accent-900: #0c0c0d;
 }
 
+
+/* Deep Theme - Mobile Developer Theme */
+.theme-deep {
+  /* Muted Blue replaced with #ac8981 Color Scheme */
+  --color-primary-50: #f3ecea;
+  --color-primary-100: #e7d9d4;
+  --color-primary-200: #d1b6b0;
+  --color-primary-300: #bb938c;
+  --color-primary-400: #ac8981; /* new muted shade */
+  --color-primary-500: #ac8981; /* main color */
+  --color-primary-600: #9c7b74;
+  --color-primary-700: #8c6d67;
+  --color-primary-800: #7c5f5a;
+  --color-primary-900: #6c514d;
+
+  /* Secondary color converted to #ac8981 shade */
+  --color-secondary-50: #f3ecea;
+  --color-secondary-100: #e7d9d4;
+  --color-secondary-200: #d1b6b0;
+  --color-secondary-300: #bb938c;
+  --color-secondary-400: #ac8981;
+  --color-secondary-500: #ac8981;
+  --color-secondary-600: #9c7b74;
+  --color-secondary-700: #8c6d67;
+  --color-secondary-800: #7c5f5a;
+  --color-secondary-900: #6c514d;
+
+  /* Accent uses primary for consistency */
+  --color-accent-50: #f3ecea;
+  --color-accent-100: #e7d9d4;
+  --color-accent-200: #d1b6b0;
+  --color-accent-300: #bb938c;
+  --color-accent-400: #ac8981;
+  --color-accent-500: #ac8981;
+  --color-accent-600: #9c7b74;
+  --color-accent-700: #8c6d67;
+  --color-accent-800: #7c5f5a;
+  --color-accent-900: #6c514d;
+}
+
+
 /* Global Styles */
 * {
   margin: 0;
