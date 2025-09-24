@@ -133,7 +133,7 @@ export const projects = [
     website: "https://element-engineering.vercel.app/",
   },
   {
-    name: "HRF Incubation Center Website",
+    name: "HRF Incubation Center",
     description:
       "Built a professional website to represent HRFIC's offerings and services using React.js and Tailwind CSS with clean UI and smooth navigation.",
     features: [
@@ -163,7 +163,7 @@ export const projects = [
     technologies: ["Node.js", "Puppeteer", "SQL", "Snowflake", "JavaScript", "Express.js"],
   },
   {
-    name: "Doolen Training Video App",
+    name: "GetDoolen Training",
     description:
       "Contributed to video training platform functionality with automatic scheduled notifications and video watch logic for progress tracking.",
     features: [
