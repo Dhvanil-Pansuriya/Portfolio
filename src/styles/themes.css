@@ -146,6 +146,44 @@
   --color-accent-900: #000000;
 }
 
+/* Dhvanil Theme - Modern React/Node.js Theme */
+.theme-dhvanil {
+  /* Modern Muted Blue-Gray Color Scheme (Base: #5c5c5e) */
+  --color-primary-50: #ededed;
+  --color-primary-100: #d6d6d7;
+  --color-primary-200: #bfbfc0;
+  --color-primary-300: #a8a8a9;
+  --color-primary-400: #919192;
+  --color-primary-500: #5c5c5e; /* modern muted blue-gray */
+  --color-primary-600: #484849;
+  --color-primary-700: #343435;
+  --color-primary-800: #202021;
+  --color-primary-900: #0c0c0d;
+
+  --color-secondary-50: #ededed;
+  --color-secondary-100: #d6d6d7;
+  --color-secondary-200: #bfbfc0;
+  --color-secondary-300: #a8a8a9;
+  --color-secondary-400: #919192;
+  --color-secondary-500: #5c5c5e; /* modern muted blue-gray */
+  --color-secondary-600: #484849;
+  --color-secondary-700: #343435;
+  --color-secondary-800: #202021;
+  --color-secondary-900: #0c0c0d;
+
+  /* Accent uses primary for consistency */
+  --color-accent-50: #ededed;
+  --color-accent-100: #d6d6d7;
+  --color-accent-200: #bfbfc0;
+  --color-accent-300: #a8a8a9;
+  --color-accent-400: #919192;
+  --color-accent-500: #5c5c5e;
+  --color-accent-600: #484849;
+  --color-accent-700: #343435;
+  --color-accent-800: #202021;
+  --color-accent-900: #0c0c0d;
+}
+
 /* Global Styles */
 * {
   margin: 0;

@@ -17,6 +17,7 @@ import ReactNativePortfolio from './pages/ReactNativePortfolio';
 import AndroidPortfolio from './pages/AndroidPortfolio';
 import IOSPortfolio from './pages/IOSPortfolio';
 import PinalPortfolio from './pages/PinalPortfolio';
+import DhvanilPortfolio from './pages/DhvanilPortfolio';
 
 const AppLayout = ({ children }) => {
   useEffect(() => {
@@ -129,6 +130,9 @@ function App() {
                     
                     {/* Pinal's Portfolio route */}
                     <Route path="/pinal" element={<PinalPortfolio />} />
+                    
+                    {/* Dhvanil's Portfolio route */}
+                    <Route path="/dhvanil" element={<DhvanilPortfolio />} />
                     
                     {/* Legacy routes - redirect to new structure */}
                     <Route path="/react-native" element={<Navigate to="/hardik/react-native" replace />} />

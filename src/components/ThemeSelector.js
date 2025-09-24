@@ -17,7 +17,8 @@ const ThemeSelector = () => {
     '/react-native': 'react-native', // Legacy route
     '/android': 'android', // Legacy route
     '/ios': 'mobile app development', // Legacy route
-    '/pinal': 'pinal'
+    '/pinal': 'pinal',
+    '/dhvanil': 'dhvanil'
   };
   
   // Use context theme if available, otherwise fall back to route-based detection
@@ -28,7 +29,8 @@ const ThemeSelector = () => {
     'react-native': '/hardik/react-native',
     'android': '/hardik/android',
     'mobile app development': '/hardik/mobile-app-development',
-    'pinal': '/pinal'
+    'pinal': '/pinal',
+    'dhvanil': '/dhvanil'
   };
 
   return (

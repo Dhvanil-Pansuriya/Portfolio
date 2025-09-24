@@ -244,7 +244,7 @@ const Experience = ({ experiences }) => {
                 established companies, giving me a well-rounded perspective on
                 software development.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 max-w-xs sm:max-w-none mx-auto">
+              {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 max-w-xs sm:max-w-none mx-auto">
                 {[
                   { label: "Years of Experience", value: "11+" },
                   { label: "Companies Worked", value: experiences.length },
@@ -267,7 +267,7 @@ const Experience = ({ experiences }) => {
                     <div className="text-sm text-gray-600">{stat.label}</div>
                   </motion.div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </motion.div>

@@ -44,6 +44,11 @@ export const ThemeProvider = ({ children }) => {
       name: 'Pinal Portfolio',
       icon: <Icon name="code" size={30} className="text-gray-900" />,
       description: 'Development Lead Portfolio'
+    },
+    'dhvanil': {
+      name: 'Dhvanil Portfolio',
+      icon: <Icon name="react" size={30} className="text-gray-900" />,
+      description: 'React & Node.js Developer Portfolio'
     }
   };
 

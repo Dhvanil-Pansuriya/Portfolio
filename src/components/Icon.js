@@ -55,7 +55,16 @@ import {
   SiXcode,
   SiYii,
   SiApache,
+  SiLeetcode,
+  SiLinux,
+  SiDocker,
+  SiGraphql,
+  SiNodedotjs,
+  SiFlutter,
 } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
+import { FaHackerrank } from "react-icons/fa6";
+  
 import {
   FaPhp,
   FaLaravel,
@@ -86,7 +95,7 @@ import { GoProjectSymlink } from "react-icons/go";
 import { BsAndroid2 } from "react-icons/bs";
 import { RiRobot2Fill } from "react-icons/ri";
 import { HiOutlineUser } from "react-icons/hi";
-import { FaHandPaper, FaUserCircle, FaArrowDown, FaDollarSign, FaClock, FaHandshake, FaRedo, FaPaintBrush, FaRuler, FaStore, FaShoppingCart, FaClipboardList, FaLink, FaDesktop, FaBookOpen, FaServer, FaGlobe, FaCog, FaVideo, FaCreditCard, FaChartBar, FaClipboardCheck, FaExclamationTriangle, FaTrendingUp, FaUsers } from "react-icons/fa";
+import { FaHandPaper, FaUserCircle, FaArrowDown, FaDollarSign, FaClock, FaHandshake, FaRedo, FaPaintBrush, FaRuler, FaStore, FaShoppingCart, FaClipboardList, FaLink, FaDesktop, FaBookOpen, FaServer, FaGlobe, FaCog, FaVideo, FaCreditCard, FaChartBar, FaClipboardCheck, FaExclamationTriangle, FaTrendingUp, FaUsers, FaTrophy } from "react-icons/fa";
 import { FiFileText } from "react-icons/fi";
 import { IoMdTrendingUp } from "react-icons/io";
 import { TbBatteryFilled } from "react-icons/tb";
@@ -178,7 +187,7 @@ const iconMap = {
   yii2: SiYii,
   vue: FaVuejs,
   react: FaReact,
-  "node.js": FaNodeJs,
+  "node.js": SiNodedotjs,
   jquery: SiJquery,
   apache: SiApache,
   schema: MdOutlineSchema,
@@ -200,6 +209,23 @@ const iconMap = {
   "website-performance": FaTachometerAlt,
   "website-load-testing": FaCogs,
   "objective-c": FaC,
+  
+  // Platform and Technology Icons
+  hackerrank: FaHackerrank ,
+  leetcode: SiLeetcode,
+  trophy: FaTrophy,
+  azure: VscAzure ,
+  linux: SiLinux,
+  docker: SiDocker,
+  graphql: SiGraphql,
+  nodejs: SiNodedotjs,
+  flutter: SiFlutter,
+  
+  // Additional aliases
+  "node-js": SiNodedotjs,
+  "node.js": SiNodedotjs,
+  award: FaTrophy,
+  certificate: FaTrophy,
 
   // Chat-specific icons
   "waving-hand": FaHandPaper,

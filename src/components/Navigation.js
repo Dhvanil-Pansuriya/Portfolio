@@ -16,6 +16,8 @@ const Navigation = () => {
     switch (location.pathname) {
       case "/pinal":
         return "Pinal Ramoliya";
+      case "/dhvanil":
+        return "Dhvanil Pansuriya";
       case "/hardik/android":
       case "/hardik/mobile-app-development":
       case "/hardik/react-native":

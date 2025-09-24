@@ -239,6 +239,20 @@ const Projects = ({ projects }) => {
                   View Case Study
                 </motion.button>
               )}
+              {/* Website Button */}
+              {project.website && (
+                <motion.a
+                  href={project.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-purple-500 text-white rounded-xl hover:bg-purple-600 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Icon name="external-link" size={16} />
+                  Visit Website
+                </motion.a>
+              )}
               {project.playStore && (
                 <a
                   href={project.playStore}
@@ -363,6 +377,30 @@ const Projects = ({ projects }) => {
 
                     {/* Links */}
                     <div className="flex gap-2">
+                      {project.website && (
+                        <a
+                          href={project.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 bg-purple-100 text-purple-600 rounded-lg hover:bg-purple-200 transition-colors"
+                          onClick={(e) => e.stopPropagation()}
+                          title="Visit Website"
+                        >
+                          <Icon name="external-link" size={16} />
+                        </a>
+                      )}
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition-colors"
+                          onClick={(e) => e.stopPropagation()}
+                          title="View GitHub"
+                        >
+                          <Icon name="github" size={16} />
+                        </a>
+                      )}
                       {project.playStore && (
                         <a
                           href={project.playStore}
@@ -370,6 +408,7 @@ const Projects = ({ projects }) => {
                           rel="noopener noreferrer"
                           className="p-2 bg-green-100 text-green-600 rounded-lg hover:bg-green-200 transition-colors"
                           onClick={(e) => e.stopPropagation()}
+                          title="View on Play Store"
                         >
                           <Icon name="google-play" size={16} />
                         </a>
@@ -381,6 +420,7 @@ const Projects = ({ projects }) => {
                           rel="noopener noreferrer"
                           className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"
                           onClick={(e) => e.stopPropagation()}
+                          title="View on App Store"
                         >
                           <Icon name="app-store" size={16} />
                         </a>
