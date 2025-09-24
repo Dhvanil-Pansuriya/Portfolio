@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Icon from './Icon';
+import { sendContactEmails } from '../services/emailService';
 
 const Contact = ({ personalInfo }) => {
   const [ref, inView] = useInView({
@@ -18,6 +19,8 @@ const Contact = ({ personalInfo }) => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitError, setSubmitError] = useState('');
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -52,18 +55,32 @@ const Contact = ({ personalInfo }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError('');
+    setSubmitMessage('');
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      // Send emails using EmailJS service
+      const result = await sendContactEmails(formData);
       
-      // Reset success message after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 3000);
-    }, 2000);
+      if (result.success) {
+        setIsSubmitted(true);
+        setSubmitMessage(result.message);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setSubmitMessage('');
+        }, 5000);
+      } else {
+        setSubmitError(result.message || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitError('An unexpected error occurred. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -241,12 +258,30 @@ const Contact = ({ personalInfo }) => {
                     <h4 className="text-base sm:text-lg lg:text-xl font-semibold text-green-600 mb-2 px-2">
                       Message Sent Successfully!
                     </h4>
-                    <p className="text-gray-600 text-sm sm:text-base px-2">
-                      Thank you for reaching out. I'll get back to you soon!
+                    <p className="text-gray-600 text-sm sm:text-base px-2 mb-2">
+                      {submitMessage || "Thank you for reaching out. I'll get back to you soon!"}
+                    </p>
+                    <p className="text-gray-500 text-xs sm:text-sm px-2">
+                      📧 You should receive a confirmation email shortly.
                     </p>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 lg:space-y-6">
+                  <div>
+                    {/* Error Message */}
+                    {submitError && (
+                      <motion.div
+                        className="mb-4 p-3 sm:p-4 bg-red-50 border border-red-200 rounded-lg sm:rounded-xl"
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                      >
+                        <div className="flex items-center gap-2 sm:gap-3">
+                          <Icon name="exclamation-triangle" size={16} className="text-red-500 flex-shrink-0" />
+                          <p className="text-red-700 text-sm sm:text-base">{submitError}</p>
+                        </div>
+                      </motion.div>
+                    )}
+                    
+                    <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 lg:space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
                       <div>
                         <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
@@ -329,7 +364,8 @@ const Contact = ({ personalInfo }) => {
                         </>
                       )}
                     </motion.button>
-                  </form>
+                    </form>
+                  </div>
                 )}
               </div>
             </motion.div>
