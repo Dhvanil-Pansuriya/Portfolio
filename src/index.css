@@ -248,6 +248,29 @@ html {
   }
 }
 
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes shimmer-fast {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
 /* Animation Utilities */
 .animate-fade-in {
   animation: fadeIn 0.5s ease-in-out;
@@ -279,6 +302,35 @@ html {
 
 .animate-spin {
   animation: spin 2s linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-shimmer-fast {
+  animation: shimmer-fast 1.5s infinite;
+}
+
+/* Enhanced skeleton loading styles */
+.skeleton-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(243, 244, 246, 1) 0%,
+    rgba(229, 231, 235, 1) 50%,
+    rgba(243, 244, 246, 1) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-wave 2s ease-in-out infinite;
+}
+
+@keyframes skeleton-wave {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 /* Focus Styles */

@@ -48,22 +48,20 @@ const Hero = ({ personalInfo }) => {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.15,
-        duration: 0.6,
+        delayChildren: 0.1,
+        staggerChildren: 0.1,
+        duration: 0.4,
         ease: [0.4, 0, 0.2, 1],
       },
     },
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0, scale: 0.95 },
+    hidden: { opacity: 0 },
     visible: {
-      y: 0,
       opacity: 1,
-      scale: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.4,
         ease: [0.4, 0, 0.2, 1],
       },
     },
@@ -81,15 +79,13 @@ const Hero = ({ personalInfo }) => {
   };
 
   const imageVariants = {
-    hidden: { scale: 0.8, opacity: 0, rotate: -5 },
+    hidden: { opacity: 0 },
     visible: {
-      scale: 1,
       opacity: 1,
-      rotate: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.5,
         ease: [0.4, 0, 0.2, 1],
-        delay: 0.3,
+        delay: 0.2,
       },
     },
   };
@@ -280,9 +276,9 @@ const Hero = ({ personalInfo }) => {
         {/* Scroll Down Button */}
         <motion.div
           className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 z-20 cursor-pointer"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.5, duration: 0.8 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8, duration: 0.5 }}
           onClick={() => scrollToSection('about')}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
