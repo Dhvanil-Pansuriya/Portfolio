@@ -93,27 +93,6 @@ export const experiences = [
 
 export const projects = [
   {
-    name: "SIGE-EKL (React Native)",
-    description:
-      "Developed a barcode-based inventory management application for bookstores with real-time stock updates and clean, minimal UI for ease of use.",
-    features: [
-      "Barcode scanning integration for inventory tracking",
-      "Real-time stock updates and management",
-      "Clean and minimal UI design for ease of use",
-      "Inventory search and filtering capabilities",
-      "Stock level alerts and notifications",
-      "Multi-store inventory management",
-    ],
-    technologies: [
-      "React Native",
-      "JavaScript",
-      "Barcode Scanner",
-      "Firebase",
-      "Real-time Database",
-      "Redux",
-    ],
-  },
-  {
     name: "Dating App (Kotlin)",
     description:
       "Engineered a premium dating platform with in-app subscriptions, live communication features, secure user authentication, and real-time chat and video calling.",
@@ -157,9 +136,12 @@ export const projects = [
       "Redux",
       "AsyncStorage",
     ],
+    website: "https://www.getdoolen.com/",
     playStore:
       "https://play.google.com/store/apps/details?id=com.doolen.trainingplatform",
+    appStore: "https://apps.apple.com/us/app/training-platform/id6743212121",
   },
+
   {
     name: "School Survey App (Kotlin)",
     description:
@@ -183,6 +165,27 @@ export const projects = [
     ],
   },
   {
+    name: "SIGE-EKL (React Native)",
+    description:
+      "Developed a barcode-based inventory management application for bookstores with real-time stock updates and clean, minimal UI for ease of use.",
+    features: [
+      "Barcode scanning integration for inventory tracking",
+      "Real-time stock updates and management",
+      "Clean and minimal UI design for ease of use",
+      "Inventory search and filtering capabilities",
+      "Stock level alerts and notifications",
+      "Multi-store inventory management",
+    ],
+    technologies: [
+      "React Native",
+      "JavaScript",
+      "Barcode Scanner",
+      "Firebase",
+      "Real-time Database",
+      "Redux",
+    ],
+  },
+  {
     name: "CBA (React Native)",
     description:
       "Hotel booking application with partial development completed, focusing on exploring hotels and booking options with smooth navigation and UI.",
@@ -200,24 +203,47 @@ export const projects = [
       "SQLite Database (for local data storage)",
       "API Integration (for hotel listings)",
     ],
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.citybreakapartments.guestapp&pcampaignid=web_share",
+    appStore:
+      "https://apps.apple.com/in/app/city-break-apartments/id6742106330",
   },
   {
-    name: "Global Pump (React Native)",
+    name: "Global Pump - Pump Selection & Performance Analysis App (React Native Expo)",
     description:
-      "Pump calculation application designed for managing pump data and calculations efficiently, with local storage and offline capabilities.",
+      "We built the Global Pump App with a fully interactive frontend that lets users filter pumps based on multiple dependent parameters and visualize pump performance through clean, intuitive UI components. The app converts complex SOAP responses into mobile-friendly data structures on the client side and displays results in real time.",
     features: [
-      "Pump calculation based on user input",
-      "Save and retrieve calculation data locally",
-      "Offline functionality with SQLite",
-      "Clean and responsive UI",
-      "Future scope for real-time data integration",
+      "Pump Filtering UI: Users input parameters like flow, head, and efficiency, and the frontend dynamically updates available pump options based on dependent fields.",
+      "Performance Graphs: Displays pump curves and operating points using responsive chart components for smooth interaction.",
+      "Dynamic Calculations: Runs selection logic and pump performance calculations on the client side for instant feedback.",
+      "Smooth User Experience: Fast UI updates, clean visualization layouts, and an industrial-friendly interface.",
     ],
     technologies: [
       "React Native",
-      "JavaScript",
-      "SQLite Database (for local saving)",
-      "Redux (optional for state management)",
-      "Custom calculation logic",
+      "TypeScript",
+      "Axios",
+      "PDF Viewer",
+      "Zustand",
+      "Async Storage",
+      "Responsive Charts",
+    ],
+  },
+  {
+    name: "Conference App (React Native Expo)",
+    description:
+      "Built a frontend app that allows users to browse conference schedules, check session timings, and view detailed information about speakers. The interface is clean, fast, and focused on helping attendees quickly find upcoming sessions and explore speaker profiles.",
+    features: [
+      "Conference Schedule View: Users can explore daily schedules, session timings, and event categories.",
+      "Speaker Directory: Displays speaker profiles with photos, designations, session topics, and timing.",
+      "Session Details: Users can open any session to view full information such as description, speakers involved, and location.",
+      "Smooth Frontend Experience: Clean UI, responsive navigation, and instant updates using local state management.",
+    ],
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "Axios",
+      "Zustand",
+      "Async Storage",
     ],
   },
 ];
