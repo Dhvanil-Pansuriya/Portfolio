@@ -23,7 +23,6 @@ const initEmailJS = () => {
 
 // Send email to admin (Hardik)
 const sendEmailToAdmin = async (formData) => {
-  console.log('EmailJS Configuration:', EMAILJS_CONFIG);
   try {
     const templateParams = {
       from_name: formData.name,

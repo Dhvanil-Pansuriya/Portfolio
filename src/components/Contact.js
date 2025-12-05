@@ -112,7 +112,7 @@ const Contact = ({ personalInfo }) => {
     const colorMap = {
       linkedin: 'hover:text-blue-600',
       github: 'hover:text-gray-800',
-      twitter: 'hover:text-blue-400',
+      x: 'hover:text-blue-400',
       gitlab: 'hover:text-orange-500',
       bitbucket: 'hover:text-blue-500'
     };

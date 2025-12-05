@@ -101,6 +101,29 @@ import { IoMdTrendingUp } from "react-icons/io";
 import { TbBatteryFilled } from "react-icons/tb";
 import { FaWifi } from "react-icons/fa";
 import { MdSignalCellularAlt } from "react-icons/md";
+import { FaFlutter } from "react-icons/fa6";
+import { VscVscode } from "react-icons/vsc";
+import { FaStripe } from "react-icons/fa";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { VscEditorLayout } from "react-icons/vsc";
+import { SiGooglemaps } from "react-icons/si";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaBitbucket } from "react-icons/fa6";
+import { ImWhatsapp } from "react-icons/im";
+import { LuBrain } from "react-icons/lu";
+import { SiAsana } from "react-icons/si";
+import { SiJira } from "react-icons/si";
+import { FaTrello } from "react-icons/fa";
+import { GrTest } from "react-icons/gr";
+import { MdOutlineMotionPhotosOn } from "react-icons/md";
+import { GoBrowser } from "react-icons/go";
+import { MdPhoneIphone } from "react-icons/md";
+import { SiAxios } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiGoogleauthenticator } from "react-icons/si";
+import { MdOutlineManageHistory } from "react-icons/md";
+import { CiImageOn } from "react-icons/ci";
+import { MdOutlineArchitecture } from "react-icons/md";
 
 
 // Icon mapping
@@ -260,7 +283,30 @@ const iconMap = {
   "file-text": FiFileText,
   "battery" :TbBatteryFilled,
   "wifi":FaWifi,
-  "signal" :MdSignalCellularAlt
+  "signal" :MdSignalCellularAlt,
+  "flutter": FaFlutter,
+  "vscode": VscVscode,
+  "stripe": FaStripe,
+  "artificial-intelligence": GiArtificialIntelligence,
+  "cursor" : VscEditorLayout,
+  "google-maps": SiGooglemaps,
+  "x-twitter": FaXTwitter,
+  "bitbucket": FaBitbucket,
+  "whatsapp": ImWhatsapp,
+  "brain": LuBrain,
+  "asana": SiAsana,
+  'jira': SiJira,
+  'trello': FaTrello,
+  'test': GrTest,
+  'motion-photos': MdOutlineMotionPhotosOn,
+  'browser': GoBrowser,
+  'iphone': MdPhoneIphone,
+  'axios': SiAxios,
+  'tailwind': RiTailwindCssFill,
+  auth : SiGoogleauthenticator,
+  manager : MdOutlineManageHistory,
+  image : CiImageOn,
+  architecture : MdOutlineArchitecture 
 };
 
 const Icon = ({ name, size = 24, className = "", ...props }) => {

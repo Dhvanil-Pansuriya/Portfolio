@@ -38,12 +38,12 @@ export const ThemeProvider = ({ children }) => {
     'mobile app development': {
       name: 'Mobile App Development',
       icon: <Icon name="mobile" size={30} className="text-gray-900" />,
-      description: 'iOS & Android Development'
+      description: 'Mobile App Development'
     },
     'pinal': {
       name: 'Pinal Portfolio',
       icon: <Icon name="code" size={30} className="text-gray-900" />,
-      description: 'Development Lead Portfolio'
+      description: 'Project Manager & Full Stack Developer'
     },
     'dhvanil': {
       name: 'Dhvanil Portfolio',

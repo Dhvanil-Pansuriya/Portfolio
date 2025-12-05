@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Pinal Ramoliya",
   image: require("../assets/images/pinal_ramoliya.png"),
   resume: require("../assets/doc/PHP_Resume_Pinal_Ramoliya_Resume.pdf"),
-  title: "Development Lead",
+  title: "Project Manager & Full Stack Developer",
   subtitle: "Complex Problem-Solver with Analytical Mindset",
   email: "pinaltkothiya@gmail.com",
   phone: "+91 (7622905891)",
@@ -15,6 +15,38 @@ export const personalInfo = {
     gitlab: "https://gitlab.com/pinaltkothiya",
     linkedin: "https://www.linkedin.com/in/pinal-kothiya-a6b61014a/",
   },
+  coreStrengths: [
+    {
+      title: "Project Leadership",
+      description:
+        "Leads multi-team projects with clear planning, coordination, and on-time delivery.",
+    },
+    {
+      title: "Full Stack Development",
+      description:
+        "Expert in PHP, Laravel, Yii2, Vue, React, Node.js, and scalable database design.",
+    },
+    {
+      title: "System Architecture",
+      description:
+        "Designs secure, scalable, and high-performance systems with complex integrations.",
+    },
+    {
+      title: "Team Mentorship",
+      description:
+        "Guides developers, improves code quality, and builds productive engineering teams.",
+    },
+    {
+      title: "MySQL Expertise",
+      description:
+        "Strong in MySQL query writing, optimization, indexing, and large database performance.",
+    },
+    {
+      title: "Problem Solving",
+      description:
+        "Quickly identifies issues and delivers stable, reliable, and optimized solutions.",
+    },
+  ],
 };
 
 export const skills = {
@@ -113,6 +145,109 @@ export const projects = [
     status: "Active",
   },
   {
+    name: "Daikin Remote Monitoring System (RMS)",
+    description:
+      "Daikin Remote Monitoring System (RMS) enables building owners to monitor, diagnose, and optimize their VRV/VRF air-conditioning systems in real time. It enhances efficiency, predicts issues before breakdowns, and ensures maximum energy savings with 24/7 intelligent monitoring.",
+    features: [
+      "Real-time fault detection with predictive analytics to prevent breakdowns.",
+      "24/7 remote monitoring and instant alerts for abnormalities or malfunctions.",
+      "Energy & efficiency dashboard with continuous performance tracking.",
+      "Advanced diagnostics to identify deviations from expected HVAC behavior.",
+      "Auto-optimization of VRV systems to maintain peak efficiency and reduce operational hours.",
+      "Historical reports and weekly/monthly automatic reporting for performance insights.",
+      "Smart exception handling to detect equipment running outside intended hours or settings",
+    ],
+    technologies: [
+      "Yii2",
+      "React",
+      "View.js",
+      "MySql",
+      "Oracle",
+      "IoT Integration",
+      "Dynamodb",
+    ],
+    duration: "Ongoing",
+    status: "Active",
+  },
+  {
+    name: "GetDoolen - Training Video",
+    description:
+      "Developed a cross-platform training video application using React Native, enabling users to sign up, log in, and access a wide range of educational video content. The app includes features like personalized queues, interactive quizzes, and complete account management to enhance learning and user engagement.",
+    features: [
+      "User authentication (Login & Signup)",
+      "Video streaming and playback",
+      "Create and manage personalized video queues",
+      "Interactive quiz modules after each training session",
+      "Push notifications for new content and updates",
+      "Profile view and update",
+      "Delete account option for data privacy",
+      "Smooth and intuitive UI/UX for better user engagement",
+    ],
+    technologies: [
+      "Next.js",
+      "JavaScript",
+      "Redux",
+      "Firebase Push Notifications",
+      "Node.js",
+      "MongoDB",
+    ],
+    duration: "Ongoing",
+    status: "Active",
+  },
+  {
+    name: "Beauty eBooking - Salon & Spa Appointment Platform",
+    description:
+      "Built a full-featured online salon and spa booking platform that allows users to discover beauty professionals, browse services, and schedule appointments seamlessly. The platform streamlines service management for salons and enhances customer experience with real-time availability, secure payments, and personalized profiles.",
+    features: [
+      "User authentication (Login & Signup)",
+      "Browse salons, spas, and beauty professionals",
+      "Search and filter services by category and location",
+      "Real-time appointment booking and scheduling",
+      "Service provider dashboard for managing bookings",
+      "Customer profile management and booking history",
+      "Secure online payments",
+      "Email/SMS notifications for confirmations and reminders",
+      "Responsive and modern UI/UX",
+    ],
+    technologies: [
+      "Laravel",
+      "Vue.js",
+      "MySQL",
+      "Twilio SMS Integration",
+      "Stripe/Payment Gateway",
+    ],
+    duration: "Ongoing",
+    status: "Active",
+  },
+  {
+    name: "The MDLINK",
+    description:
+      "Healthcare platform enabling patients to book appointments with doctors, featuring Twilio API integration for communication and notifications.",
+    features: [
+      "Doctor appointment booking",
+      "Patient management system",
+      "SMS and call notifications",
+      "Doctor availability management",
+      "Appointment reminders",
+      "Medical record integration",
+    ],
+    technologies: ["Laravel", "jQuery", "Twilio API", "PHP", "MySQL"],
+  },
+  {
+    name: "Gardens By The Bay",
+    description:
+      "Built a comprehensive ticket management system for The Gardens attraction, handling visitor bookings and attraction management.",
+    features: [
+      "Ticket booking and management",
+      "Visitor tracking and analytics",
+      "Attraction scheduling",
+      "Payment processing",
+      "Reporting and analytics",
+      "Customer support integration",
+    ],
+    technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "Payment Gateway"],
+  },
+  {
     name: "Wetruss",
     description:
       "Developed M2M shopping portal that manages merchant product stock and orders with a modern React frontend powered by Laravel API.",
@@ -140,20 +275,7 @@ export const projects = [
     ],
     technologies: ["Vue.js", "PDFTron WebViewer", "JavaScript", "PHP", "MySQL"],
   },
-  {
-    name: "Gardens By The Bay",
-    description:
-      "Built a comprehensive ticket management system for The Gardens attraction, handling visitor bookings and attraction management.",
-    features: [
-      "Ticket booking and management",
-      "Visitor tracking and analytics",
-      "Attraction scheduling",
-      "Payment processing",
-      "Reporting and analytics",
-      "Customer support integration",
-    ],
-    technologies: ["Laravel", "PHP", "MySQL", "JavaScript", "Payment Gateway"],
-  },
+
   {
     name: "Tours4fun",
     description:
@@ -201,45 +323,6 @@ export const projects = [
       "User account and order history",
     ],
     technologies: ["Yii2", "jQuery", "PHP", "MySQL", "Payment Integration"],
-  },
-  {
-    name: "The MDLINK",
-    description:
-      "Healthcare platform enabling patients to book appointments with doctors, featuring Twilio API integration for communication and notifications.",
-    features: [
-      "Doctor appointment booking",
-      "Patient management system",
-      "SMS and call notifications",
-      "Doctor availability management",
-      "Appointment reminders",
-      "Medical record integration",
-    ],
-    technologies: ["Laravel", "jQuery", "Twilio API", "PHP", "MySQL"],
-  },
-  {
-    name: "GetDoolen - Training Video App",
-    description:
-      "Developed a cross-platform training video application using React Native, enabling users to sign up, log in, and access a wide range of educational video content. The app includes features like personalized queues, interactive quizzes, and complete account management to enhance learning and user engagement.",
-    features: [
-      "User authentication (Login & Signup)",
-      "Video streaming and playback",
-      "Create and manage personalized video queues",
-      "Interactive quiz modules after each training session",
-      "Push notifications for new content and updates",
-      "Profile view and update",
-      "Delete account option for data privacy",
-      "Smooth and intuitive UI/UX for better user engagement",
-    ],
-    technologies: [
-      "React Native",
-      "JavaScript",
-      "Redux",
-      "Firebase",
-      "Node.js",
-      "React Navigation",
-    ],
-    duration: "Ongoing",
-    status: "Active",
   },
 ];
 

@@ -40,9 +40,9 @@ const getDoolen = {
       },
     ],
 
-    techStack: "/images/case-studies/getdoolen/tech-stack-diagram.png",
-    userFlow: "/images/case-studies/getdoolen/user-flow-diagram.png",
-    results: "/images/case-studies/getdoolen/results-analytics.png",
+    // techStack: "/images/case-studies/getdoolen/tech-stack-diagram.png",
+    // userFlow: "/images/case-studies/getdoolen/user-flow-diagram.png",
+    // results: "/images/case-studies/getdoolen/results-analytics.png",
   },
   executiveSummary: {
     summary:

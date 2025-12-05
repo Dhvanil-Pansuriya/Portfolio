@@ -228,9 +228,10 @@ const Hero = ({ personalInfo }) => {
                 const iconMap = {
                   github: "github",
                   linkedin: "linkedin",
-                  twitter: "twitter",
+                  x: "x-twitter",
                   bitbucket: "bitbucket",
-                  gitlab: "gitlab"
+                  gitlab: "gitlab",
+                  whatsapp : "whatsapp"
                 };
                 
                 const iconName = iconMap[platform] || platform;

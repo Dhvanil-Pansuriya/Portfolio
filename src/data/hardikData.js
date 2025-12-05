@@ -12,9 +12,11 @@ const basePersonalInfo = {
   education: "B.E. (CSE) from BIT Varnama, Baroda in 2013 with 6.92 CGPA",
   socialLinks: {
     github: "https://github.com/hardikramoliya",
-    twitter: "https://github.com/hardikramoliya",
+    x: "https://x.com/hardikramoliya",
     linkedin: "https://www.linkedin.com/in/rhardik/",
-    bitbucket: "https://bitbucket.org/hardikramoliya/"
+    bitbucket: "https://bitbucket.org/hardikramoliya/",
+    whatsapp:
+      "https://wa.me/+919924274295?text=Hello%2C%20I%E2%80%99m%20contacting%20you%20through%20your%20portfolio%20website.%20I%20would%20like%20to%20discuss%20my%20project%20requirement.",
   },
 };
 
@@ -26,6 +28,41 @@ const androidData = {
     subtitle: "Native Android App Specialist",
     objective:
       "As a professional Android developer, I wish to work diligently, contributing to the growth of my organization and gain knowledge and experience for my own development, hence creating a win-win situation for both of us.",
+    journey:
+      "My journey began with a simple curiosity for technology, long before I understood what coding really meant. From building small experiments to leading full-scale mobile app projects, every step came with challenges - long nights, failed builds, and moments where giving up felt easier. But passion kept me going. Today, I've grown from an individual developer into someone who builds solutions that impact businesses globally. I now lead ePhoenix, a team that focuses on delivering high-quality mobile and web applications. My goal is simple: create meaningful software, help clients grow, and continue evolving every single day",
+
+    coreStrengths: [
+      {
+        title: "Technical Excellence",
+        description:
+          "Skilled in React Native, Kotlin, Swift, and backend tech like Node.js, MySQL and MongoDB.",
+      },
+      {
+        title: "Problem-Solving & Delivery",
+        description:
+          "Quick at identifying issues and delivering stable, scalable solutions with strong debugging skills.",
+      },
+      {
+        title: "Client & Project Success",
+        description:
+          "Focus on client needs, clear communication, and converting ideas into real, working products.",
+      },
+      {
+        title: "Leadership & Ownership",
+        description:
+          "Leads end-to-end development with strong teamwork, mentoring, and full ownership mindset.",
+      },
+      {
+        title: "Quality & Reliability",
+        description:
+          "Writes clean, maintainable code with attention to UI/UX and long-term app performance.",
+      },
+      {
+        title: "Cross-Platform Development",
+        description:
+          "Builds high-performance cross-platform apps using React Native.",
+      },
+    ],
   },
 
   skills: {
@@ -319,48 +356,126 @@ const mobileAppData = {
   personalInfo: {
     ...basePersonalInfo,
     title: "Mobile App Developer",
-    subtitle: "iOS & Android Development Specialist",
+    subtitle: "iOS & Android Deployment Specialist",
     objective:
-      "As a professional mobile app developer, I wish to work diligently, contributing to the growth of my organization and gain knowledge and experience for my own development, hence creating a win-win situation for both of us.",
+      "I specialize in creating fast, reliable, and user-friendly mobile applications using modern technologies. My approach is straightforward: understand the client's goals, deliver high-quality solutions, and support them throughout the product lifecycle. I strive to bring technical excellence and practical business understanding together, ensuring every project delivers measurable value.",
+    journey:
+      "My journey began with a simple curiosity for technology, long before I understood what coding really meant. From building small experiments to leading full-scale mobile app projects, every step came with challenges - long nights, failed builds, and moments where giving up felt easier. But passion kept me going. Today, I've grown from an individual developer into someone who builds solutions that impact businesses globally. I now lead ePhoenix, a team that focuses on delivering high-quality mobile and web applications. My goal is simple: create meaningful software, help clients grow, and continue evolving every single day",
+
+    coreStrengths: [
+      {
+        title: "Technical Excellence",
+        description:
+          "Skilled in React Native, Kotlin, Swift, and backend tech like Node.js, MySQL and MongoDB.",
+      },
+      {
+        title: "Problem-Solving & Delivery",
+        description:
+          "Quick at identifying issues and delivering stable, scalable solutions with strong debugging skills.",
+      },
+      {
+        title: "Client & Project Success",
+        description:
+          "Focus on client needs, clear communication, and converting ideas into real, working products.",
+      },
+      {
+        title: "Leadership & Ownership",
+        description:
+          "Leads end-to-end development with strong teamwork, mentoring, and full ownership mindset.",
+      },
+      {
+        title: "Quality & Reliability",
+        description:
+          "Writes clean, maintainable code with attention to UI/UX and long-term app performance.",
+      },
+      {
+        title: "Cross-Platform Development",
+        description:
+          "Builds high-performance cross-platform apps using React Native.",
+      },
+    ],
   },
 
   skills: {
-    languages: ["Swift", "Objective-C", "Kotlin", "Java", "JSON Parsing"],
+    languages: [
+      "React Native",
+      "Flutter",
+      "TypeScript",
+      "Swift",
+      "Objective-C",
+      "Kotlin",
+      "Java",
+    ],
     tools: [
+      "VS Code",
+      "Cursor",
       "Xcode",
       "Android Studio",
       "Git",
-      "CocoaPods",
-      "Swift Package Manager",
-      "Instruments",
       "App Store Connect",
-      "Google Play Console",
       "TestFlight",
+      "Google Play Console",
+      "Google Play Closed Beta Tester",
+      "Google Play Open Beta Tester",
+      "Asana",
+      "Jira",
+      "Trello",
+      "Remote Test Lab (Samsung, Genymotion)",
+      "BrowserStack",
     ],
     frameworks: [
-      "iOS SDK",
       "Android SDK",
-      "UIKit",
+      "iOS SDK",
       "SwiftUI",
-      "Core Data",
-      "Room Database",
-      "Core Animation",
-      "AVFoundation",
-      "MapKit",
+      "Compose UI",
       "Google Maps",
+      "Geo Location API",
+      "MapKit",
       "Firebase",
+      "Firebase Auth",
+      "Firebase Analytics",
+      "Firebase Crashlytics",
+      "Firebase Cloud Messaging (FCM)",
+      "Expo Notifications",
+      "Axios",
+      "Zustand",
+      "React Query for API Caching",
+      "Redux Toolkit",
+      "React Query/TanStack Query",
+      "React Navigation/React Expo Router",
+      "Native Base",
+      "React Native Elements",
+      "React Native Device Info",
+      "React Localization",
+      "MomentJS",
+      "DayJS",
+      "Tailwind RN",
+      "JWT Authentication",
+      "BLE Manager",
       "Retrofit",
+      "Gson",
+      "Hilt/Dagger",
+      "WorkManager",
+      "Lottie Animations",
+      "Glide/Coil Image Loading",
     ],
-    databases: ["CloudKit", "Firebase", "SQLite", "Room Database"],
+    databases: [
+      "Room Database",
+      "SQLite",
+      "MMKV",
+      "RealmDB",
+      "AsyncStorage",
+      "Firebase Firestore",
+    ],
     others: [
+      "AWS",
+      "Stripe",
+      "AI Integration",
       "REST APIs",
-      "Auto Layout",
       "MVC/MVVM",
-      "Grand Central Dispatch",
-      "Push Notifications",
+      "Clean Architecture",
       "In-App Purchases",
       "Material Design",
-      "Human Interface Guidelines",
     ],
   },
 
@@ -382,7 +497,7 @@ const mobileAppData = {
     },
     {
       organization: "Intuz Solutions PVT. LTD.",
-      designation: "iOS Developer",
+      designation: "Mobile App Developer",
       duration: "May 2017 - July 2019",
       description:
         "Worked on enterprise iOS applications with focus on scalability, security, and performance optimization.",
@@ -396,7 +511,7 @@ const mobileAppData = {
     },
     {
       organization: "Impero IT Services",
-      designation: "iOS Developer",
+      designation: "Android Developer",
       duration: "Jul 2015 - April 2017",
       description:
         "Developed iOS applications with focus on user experience and Apple's design guidelines compliance.",
@@ -410,7 +525,7 @@ const mobileAppData = {
     },
     {
       organization: "Horizzon Web info Pvt. Ltd.",
-      designation: "iOS Developer",
+      designation: "Android Developer",
       duration: "Aug 2013 - June 2015",
       description:
         "Started iOS development career, learning Swift and iOS development fundamentals with focus on building solid foundation.",
@@ -439,29 +554,166 @@ const mobileAppData = {
 
   projects: [
     {
-      name: "MyMotive iOS",
+      name: "MyMotive",
       description:
-        "A comprehensive iOS app providing users with control over their knee pain relief therapy. Built with SwiftUI and Core Data for optimal performance and user experience.",
+        "MyMotive works together with the Motive device to deliver personalized lower-back and knee relief therapy. The app lets users start therapy sessions, manage treatments, and track progress all in one place.",
       features: [
-        "SwiftUI-based modern interface",
-        "Core Data for local storage",
-        "HealthKit integration for health data",
-        "Core Bluetooth for device connectivity",
-        "Push notifications for therapy reminders",
-        "Charts and analytics for progress tracking",
+        "Start & Control Therapy Sessions - Launch therapy sessions directly from the app when paired with the Motive device, simplifying treatment at home.",
+        "Progress Tracking & History - Log session history and view progress over time to monitor improvements and keep track of therapy schedules. ",
+        "Personalized Therapy Plans - Manage personalized treatment plans tailored to user's needs (e.g., lower-back or knee therapy) for better recovery support.",
       ],
       technologies: [
-        "Swift",
-        "SwiftUI",
-        "Core Data",
-        "HealthKit",
+        "React Native",
+        "Type Script",
+        "IoT",
+        "FireStore",
         "Core Bluetooth",
         "Charts",
       ],
       appStore: "https://apps.apple.com/us/app/mymotive/id6443784536",
+      playStore:
+        "https://play.google.com/store/apps/details?id=com.mymotive.mymotive&pcampaignid=web_share",
     },
     {
-      name: "Aero Crew iOS",
+      name: "City Break Apartments (CBA) - Guest App",
+      description:
+        "CBA is a guest-facing app for City Break Apartments in Dublin, offering remote check-in, digital keys, booking extras, and reservation management for a smoother stay. It replaces traditional key handling with a mobile-first experience, improving both guest convenience and operational efficiency.",
+      features: [
+        "Remote check-in and digital key access to apartments via mobile",
+        "View and manage reservations, stay details, and important instructions ",
+        "Book extras such as early check-in, late checkout, shuttle service, and add-ons (latest versions)",
+        "Support for multiple properties and apartment details (photos, info, location)",
+        "Push notifications for check-in info, stay updates, and offers",
+        "Guest support links (help, FAQ, contact)",
+        "Stripe integration for secure payments for bookings, extras, and add-ons",
+      ],
+      technologies: [
+        "Digital key / Bluetooth lock integration",
+        "Firebase Push Notifications",
+        "React Native",
+        "TypeScript",
+        "React Expo Navigation",
+        "Stripe",
+        "REST backend",
+      ],
+      duration: "Ongoing",
+      status: "Active",
+      playStore:
+        "https://play.google.com/store/apps/details?id=com.citybreakapartments.guestapp&pcampaignid=web_share",
+      appStore:
+        "https://apps.apple.com/in/app/city-break-apartments/id6742106330",
+    },
+    {
+      name: "GetDoolen - Training Video",
+      description:
+        "Developed a cross-platform training video application using React Native, enabling users to sign up, log in, and access a wide range of educational video content. The app includes features like personalized queues, interactive quizzes, and complete account management to enhance learning and user engagement.",
+      features: [
+        "User authentication (Login & Signup)",
+        "Video streaming and playback",
+        "Create and manage personalized video queues",
+        "Interactive quiz modules after each training session",
+        "Push notifications for new content and updates",
+        "Profile view and update",
+        "Delete account option for data privacy",
+        "Smooth and intuitive UI/UX for better user engagement",
+      ],
+      technologies: [
+        "React Native",
+        "TypeScript",
+        "Firebase",
+        "React Native Video player",
+      ],
+      duration: "Ongoing",
+      status: "Active",
+      website: "https://www.getdoolen.com/",
+      playStore:
+        "https://play.google.com/store/apps/details?id=com.doolen.trainingplatform",
+      appStore: "https://apps.apple.com/us/app/training-platform/id6743212121",
+    },
+    {
+      name: "Frami - Activity & Rewards App",
+      description:
+        "Frami is a wellness and activity-tracking app that gamifies healthy habits with points, challenges, and rewards for individuals and employees. Users can connect wearables, log activities, and earn redeemable points through real-life physical activities",
+      features: [
+        "Activity tracking: manual logging, session recording, and wearable integrations (Garmin, Polar, Fitbit, etc.)",
+        "Gamification with points, challenges, and team activities",
+        "Reward store where users redeem points for partner coupons",
+        "Leaderboards, community challenges, and engagement features",
+        "User profile, history, progress tracking",
+        "Secure login, authentication, and session handling",
+        "Push notifications for activity reminders and challenge updates",
+        "Subscription/payment integration via Stripe (if applicable)",
+      ],
+      technologies: [
+        "Kotlin",
+        "MVVM Architecture",
+        "XML layouts / Jetpack components",
+        "Retrofit",
+        "OkHttp",
+        "Room Database",
+        "Dagger",
+        "Coroutines & Flow",
+        "Firebase Cloud Messaging (FCM)",
+        "Stripe Android SDK",
+        "Garmin",
+        "Polar",
+        "Fitbit APIs",
+      ],
+      duration: "Ongoing",
+      status: "Active",
+      playStore:
+        "https://play.google.com/store/apps/details?id=com.framiactivity.frami&pcampaignid=web_share",
+      appStore: "https://apps.apple.com/no/app/frami/id1596405937?l=nb",
+    },
+    {
+      name: "Global Pump - Pump Selection & Performance Analysis App",
+      description:
+        "We developed the Global Pump App, which allows users to filter pumps dynamically based on multiple dependent parameters and view the resulting pump list along with detailed performance graphs. The app parses data from SOAP 1.2 APIs, converts it into usable mobile-friendly structures, and presents it in an intuitive and interactive interface.",
+      features: [
+        "Pump Filtering: Users can enter required parameters (flow, head, efficiency, etc.) and the app automatically filters pumps based on interdependent criteria.",
+        "Graph Display: Shows pump performance curves and operating points using real-time parsed API data.",
+        "SOAP 1.2 Integration: Implemented full SOAP 1.2 API parsing to fetch pump catalogs, selection results, and curve data.",
+        "Dynamic Result Calculation: Processes raw XML response, transforms it into structured JSON, and computes selection logic on the mobile side",
+        "Seamless User Experience: Fast, accurate pump matching with clear visualization for industrial users.",
+      ],
+      technologies: [
+        "React Native",
+        "TypeScript",
+        "Axios",
+        "ExpressJS",
+        "NodeJS",
+        "PDF Viewer",
+        "SOAP 1.2",
+        "XML Parsing",
+        "Caching",
+      ],
+    },
+    {
+      name: "EventRAFT - Event Booking & Management App",
+      description:
+        "EventRAFT is a mobile application designed to simplify event discovery, booking, and management — offering users seamless access to a variety of events and venues. Users can browse upcoming events, book tickets, and manage their bookings all from their Android device.",
+      features: [
+        "Browse and search upcoming events by category, date, and location",
+        "Book tickets directly within the app and receive booking confirmation",
+        "User account management, booking history, and profile settings",
+        "Push notifications and reminders for upcoming events or ticket availability",
+        "Event details page with venue info, images, and event description",
+        "Secure payment integration for ticket purchases",
+        "Order history, ticket download/print options, and booking management",
+      ],
+      technologies: [
+        "Java",
+        "MVVM",
+        "Dagger",
+        "Retrofit / OkHttp",
+        "Room Database / SharedPreferences",
+        "Material Design components + XML layouts",
+        "Firebase Cloud Messaging (FCM)"
+      ],
+      playStore : "https://play.google.com/store/apps/details?id=com.eventraft.nxt&pcampaignid=web_share"
+    },
+    {
+      name: "Aero Crew",
       description:
         "A dual-platform iOS application connecting pilots with recruiters. Features separate interfaces with document management, payment integration, and real-time communication.",
       features: [
@@ -473,16 +725,16 @@ const mobileAppData = {
         "PDF generation for reports and receipts",
       ],
       technologies: [
-        "Swift",
-        "UIKit",
-        "Core Data",
-        "Stripe SDK",
-        "PDFKit",
-        "EventKit",
+        "React Native",
+        "Stripe",
+        "ReactJS ES5",
+        "Chat SDK",
+        "Firebase FCM",
+        "PDF Viewer",
       ],
     },
     {
-      name: "Junobaby iOS",
+      name: "Junobaby",
       description:
         "An iOS healthcare app for pregnant women, providing comprehensive care with doctor consultations, appointment booking, and health tracking features.",
       features: [
@@ -493,17 +745,10 @@ const mobileAppData = {
         "In-app purchases for premium features",
         "CloudKit for data synchronization",
       ],
-      technologies: [
-        "Swift",
-        "UIKit",
-        "HealthKit",
-        "AVFoundation",
-        "Core Data",
-        "CloudKit",
-      ],
+      technologies: ["Swift", "UIKit", "HealthKit", "AVFoundation", "CloudKit"],
     },
     {
-      name: "Artwork iOS",
+      name: "Artwork",
       description:
         "An online marketplace iOS app for handmade products with advanced image processing, real-time chat, and seamless user experience following Apple's design guidelines.",
       features: [
@@ -519,12 +764,11 @@ const mobileAppData = {
         "UIKit",
         "Core Image",
         "MessageKit",
-        "Core Data",
         "Core Spotlight",
       ],
     },
     {
-      name: "Boozer iOS",
+      name: "Boozer",
       description:
         "An iOS e-commerce app for liquor delivery with location services, payment processing, and delivery tracking optimized for iOS ecosystem.",
       features: [
@@ -535,17 +779,10 @@ const mobileAppData = {
         "Core Data for cart management",
         "Background app refresh for tracking",
       ],
-      technologies: [
-        "Swift",
-        "UIKit",
-        "MapKit",
-        "Core Location",
-        "Apple Pay",
-        "Core Data",
-      ],
+      technologies: ["Swift", "UIKit", "MapKit", "Core Location", "Apple Pay"],
     },
     {
-      name: "Heuro iOS",
+      name: "Heuro",
       description:
         "A social media iOS app focused on article sharing with rich text editing capabilities and seamless integration with iOS sharing ecosystem.",
       features: [
@@ -561,12 +798,11 @@ const mobileAppData = {
         "UIKit",
         "TextKit",
         "Social Framework",
-        "Core Data",
         "Core Spotlight",
       ],
     },
     {
-      name: "Cool Off iOS",
+      name: "Cool Off",
       description:
         "A revolutionary iOS app that automatically notifies users when weather conditions are optimal for turning off air conditioning, featuring weather integration and smart notifications.",
       features: [
@@ -588,7 +824,7 @@ const mobileAppData = {
       appStore: "https://play.google.com/store/apps/details?id=com.cooloff.app",
     },
     {
-      name: "Talky Life iOS",
+      name: "Talky Life",
       description:
         "A social networking iOS app with real-time features, following iOS design patterns and leveraging native iOS capabilities for optimal user experience.",
       features: [
@@ -602,7 +838,6 @@ const mobileAppData = {
       technologies: [
         "Swift",
         "UIKit",
-        "Core Data",
         "CloudKit",
         "Core Spotlight",
         "Accessibility",
@@ -612,13 +847,17 @@ const mobileAppData = {
   ],
 
   interests: [
-    "Native Mobile App Development",
+    "React Native Development",
     "iOS Development (Swift, SwiftUI)",
     "Android Development (Kotlin, Java)",
-    "Mobile Performance Optimization",
-    "Cross-Platform Development",
+    "Cross-Platform Mobile Apps",
+    "Kotlin MultiPlatform (KMP)",
+    "Performance Optimization",
     "Mobile UI/UX Design",
-    "Learning New Mobile Technologies",
+    "Bluetooth & IoT Integrations",
+    "AI-Powered Mobile Features",
+    "Payment & Subscription Systems",
+    "Exploring Modern Mobile Technologies",
   ],
 };
 
@@ -630,6 +869,41 @@ const reactNativeData = {
     subtitle: "Cross-Platform Mobile App Specialist",
     objective:
       "As a professional React Native developer, I wish to work diligently, contributing to the growth of my organization and gain knowledge and experience for my own development, hence creating a win-win situation for both of us.",
+    journey:
+      "My journey began with a simple curiosity for technology, long before I understood what coding really meant. From building small experiments to leading full-scale mobile app projects, every step came with challenges - long nights, failed builds, and moments where giving up felt easier. But passion kept me going. Today, I've grown from an individual developer into someone who builds solutions that impact businesses globally. I now lead ePhoenix, a team that focuses on delivering high-quality mobile and web applications. My goal is simple: create meaningful software, help clients grow, and continue evolving every single day",
+
+    coreStrengths: [
+      {
+        title: "Technical Excellence",
+        description:
+          "Skilled in React Native, Kotlin, Swift, and backend tech like Node.js, MySQL and MongoDB.",
+      },
+      {
+        title: "Problem-Solving & Delivery",
+        description:
+          "Quick at identifying issues and delivering stable, scalable solutions with strong debugging skills.",
+      },
+      {
+        title: "Client & Project Success",
+        description:
+          "Focus on client needs, clear communication, and converting ideas into real, working products.",
+      },
+      {
+        title: "Leadership & Ownership",
+        description:
+          "Leads end-to-end development with strong teamwork, mentoring, and full ownership mindset.",
+      },
+      {
+        title: "Quality & Reliability",
+        description:
+          "Writes clean, maintainable code with attention to UI/UX and long-term app performance.",
+      },
+      {
+        title: "Cross-Platform Development",
+        description:
+          "Builds high-performance cross-platform apps using React Native.",
+      },
+    ],
   },
 
   skills: {
@@ -817,7 +1091,7 @@ const reactNativeData = {
         "Article categorization and feeds",
         "User profiles and following system",
         "Real-time article updates",
-        "Social sharing (Facebook, Twitter, LinkedIn)",
+        "Social sharing (Facebook, X, LinkedIn)",
       ],
       technologies: [
         "React Native",

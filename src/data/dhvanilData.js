@@ -18,6 +18,33 @@ export const personalInfo = {
     leetcode: "https://leetcode.com/u/DhvanilPansuriya/",
     hackerrank: "https://www.hackerrank.com/profile/dhvanilpansuriy1",
   },
+  coreStrengths: [
+    {
+      title: "MERN Stack Expertise",
+      description:
+        "Skilled in building full-stack applications using React, Node.js, Express.js, and MongoDB.",
+    },
+    {
+      title: "Real-Time Application Development",
+      description:
+        "Experience developing live chat, notifications, and real-time features using Socket.IO.",
+    },
+    {
+      title: "API & Backend Development",
+      description:
+        "Strong in designing REST APIs, authentication systems, and scalable backend logic.",
+    },
+    {
+      title: "Frontend Design & Optimization",
+      description:
+        "Builds responsive, user-friendly interfaces using React.js, Tailwind CSS, and modern UI patterns.",
+    },
+    {
+      title: "Problem Solving & Debugging",
+      description:
+        "Quick at identifying issues, optimizing performance, and delivering reliable solutions.",
+    },
+  ],
 };
 
 export const skills = {
@@ -29,8 +56,16 @@ export const skills = {
     "Tailwind CSS",
     "Bootstrap",
   ],
-    databases: ["MongoDB", "MySQL", "Snowflake"],
-    tools: ["Git", "GitHub", "GitLab", "Bitbucket", "VS Code", "Vercel", "Postman"],
+  databases: ["MongoDB", "MySQL", "Snowflake"],
+  tools: [
+    "Git",
+    "GitHub",
+    "GitLab",
+    "Bitbucket",
+    "VS Code",
+    "Vercel",
+    "Postman",
+  ],
   others: [
     "MERN Stack Development",
     "REST APIs",
@@ -160,7 +195,14 @@ export const projects = [
       "Data processing and analysis",
       "Automated extraction processes",
     ],
-    technologies: ["Node.js", "Puppeteer", "SQL", "Snowflake", "JavaScript", "Express.js"],
+    technologies: [
+      "Node.js",
+      "Puppeteer",
+      "SQL",
+      "Snowflake",
+      "JavaScript",
+      "Express.js",
+    ],
   },
   {
     name: "GetDoolen Training",
@@ -175,7 +217,7 @@ export const projects = [
       "Notification management system",
     ],
     technologies: ["React.js", "Node.js", "JavaScript", "Notification APIs"],
-    website: "https://training.getdoolen.com/"
+    website: "https://training.getdoolen.com/",
   },
 ];
 

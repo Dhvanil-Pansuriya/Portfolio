@@ -4,7 +4,18 @@ import { useInView } from "react-intersection-observer";
 import Icon from "./Icon";
 import ImageWithEnhancedBackground from "./ImageWithEnhancedBackground";
 
-const About = ({ personalInfo, interests, education, certificates, achievements, hobbies, softSkills, languages, technicalSkills }) => {
+const About = ({
+  personalInfo,
+  interests,
+  education,
+  certificates,
+  achievements,
+  hobbies,
+  softSkills,
+  languages,
+  technicalSkills,
+  coreStrengths,
+}) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -37,27 +48,27 @@ const About = ({ personalInfo, interests, education, certificates, achievements,
   const getStats = () => {
     if (personalInfo.name === "Pinal Ramoliya") {
       return [
-        { number: "11+", label: "Years Experience", icon: "code" },
+        { number: "12+", label: "Years Experience", icon: "code" },
         { number: "100+", label: "Projects Completed", icon: "rocket" },
-        { number: "100%", label: "Client Satisfaction", icon: "heart" },
+        { number: "99%", label: "Client Acknowledgement", icon: "heart" },
       ];
     } else if (personalInfo.name === "Dhvanil Pansuriya") {
       return [
-        { number: "2+", label: "Years Experience", icon: "code" },
+        { number: "3+", label: "Years Experience", icon: "code" },
         { number: "7+", label: "Projects Completed", icon: "rocket" },
         { number: "110+", label: "Problems Solved", icon: "lightbulb" },
       ];
     } else if (personalInfo.name === "Deep Surti") {
       return [
-        { number: "1.5+", label: "Years Experience", icon: "code" },
+        { number: "2+", label: "Years Experience", icon: "code" },
         { number: "4+", label: "Projects Completed", icon: "rocket" },
-        { number: "100%", label: "Client Satisfaction", icon: "heart" },
+        { number: "99%", label: "Client Acknowledgement", icon: "heart" },
       ];
     }
     return [
-      { number: "11+", label: "Years Experience", icon: "code" },
-      { number: "50+", label: "Projects Completed", icon: "rocket" },
-      { number: "100%", label: "Client Satisfaction", icon: "heart" },
+      { number: "12+", label: "Years Experience", icon: "code" },
+      { number: "100+", label: "Projects Completed", icon: "rocket" },
+      { number: "99%", label: "Client Acknowledgement", icon: "heart" },
     ];
   };
 
@@ -206,7 +217,9 @@ const About = ({ personalInfo, interests, education, certificates, achievements,
                     <span className="truncate">My Journey</span>
                   </h3>
                   <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
-                    {personalInfo.objective}
+                    {personalInfo.journey
+                      ? personalInfo.journey
+                      : personalInfo.objective}
                   </p>
 
                   <div className="space-y-3 sm:space-y-4">
@@ -261,11 +274,11 @@ const About = ({ personalInfo, interests, education, certificates, achievements,
                 >
                   <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2 sm:gap-3">
                     <Icon
-                      name="heart"
+                      name="brain"
                       size={20}
                       className="text-accent-500 sm:w-6 sm:h-6"
                     />
-                    <span className="truncate">What I Love</span>
+                    <span className="truncate">What I Do ?</span>
                   </h3>
                   <div className="flex flex-wrap gap-2 sm:gap-3">
                     {interests.map((interest, index) => (
@@ -353,54 +366,26 @@ const About = ({ personalInfo, interests, education, certificates, achievements,
                     <span className="truncate">Core Strengths</span>
                   </h4>
                   <ul className="space-y-3 sm:space-y-4 text-gray-600">
-                    <li className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div className="min-w-0">
-                        <span className="font-semibold text-gray-800 text-sm sm:text-base">
-                          Clean, maintainable code
-                        </span>
-                        <p className="text-xs sm:text-sm text-gray-600 mt-1">
-                          Writing code that's easy to read, understand, and
-                          maintain
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div className="min-w-0">
-                        <span className="font-semibold text-gray-800 text-sm sm:text-base">
-                          Modern development practices
-                        </span>
-                        <p className="text-xs sm:text-sm text-gray-600 mt-1">
-                          Following industry best practices and latest
-                          technologies
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div className="min-w-0">
-                        <span className="font-semibold text-gray-800 text-sm sm:text-base">
-                          Responsive & user-friendly designs
-                        </span>
-                        <p className="text-xs sm:text-sm text-gray-600 mt-1">
-                          Creating interfaces that work seamlessly across all
-                          devices
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <div className="min-w-0">
-                        <span className="font-semibold text-gray-800 text-sm sm:text-base">
-                          Continuous learning mindset
-                        </span>
-                        <p className="text-xs sm:text-sm text-gray-600 mt-1">
-                          Always staying updated with emerging technologies and
-                          trends
-                        </p>
-                      </div>
-                    </li>
+                    {personalInfo.coreStrengths?.map((strength, index) => (
+                      <li
+                        key={index}
+                        className="flex items-start gap-2 sm:gap-3"
+                      >
+                        <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
+
+                        <div className="min-w-0">
+                          <span className="font-semibold text-gray-800 text-sm sm:text-base">
+                            {strength.title}
+                          </span>
+
+                          {strength.description && (
+                            <p className="text-xs sm:text-sm text-gray-600 mt-1">
+                              {strength.description}
+                            </p>
+                          )}
+                        </div>
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
 

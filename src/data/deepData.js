@@ -17,12 +17,46 @@ export const personalInfo = {
     github: "https://github.com/deepsurti", // You can update this with actual links
     linkedin: "https://www.linkedin.com/in/deep-surti-24227928b",
   },
+  coreStrengths: [
+    {
+      title: "Mobile Development Expertise",
+      description:
+        "Skilled in Kotlin, Jetpack Compose, and React Native for building high-quality mobile apps.",
+    },
+    {
+      title: "Cross-Platform Development",
+      description:
+        "Experience developing Android and cross-platform apps, currently learning Kotlin Multiplatform.",
+    },
+    {
+      title: "API & Real-Time Integrations",
+      description:
+        "Strong in API integration, real-time communication, video calling, and third-party SDKs.",
+    },
+    {
+      title: "Offline & Data Management",
+      description:
+        "Builds reliable offline-first apps using Room, SQLite, and efficient data syncing systems.",
+    },
+    {
+      title: "UI/UX & App Performance",
+      description:
+        "Focuses on clean UI design, smooth interactions, and optimized mobile app performance.",
+    },
+  ],
 };
 
 export const skills = {
   languages: ["Kotlin", "JavaScript", "HTML", "CSS"],
   frameworks: ["Jetpack Compose", "React Native", "XML"],
-  tools: ["Android Studio", "Visual Studio Code", "Git", "Github", "Bitbucket", "Postman"],
+  tools: [
+    "Android Studio",
+    "Visual Studio Code",
+    "Git",
+    "Github",
+    "Bitbucket",
+    "Postman",
+  ],
   databases: ["SQLite", "Room Database", "Firebase"],
   others: [
     "Mobile App Development",
@@ -105,7 +139,7 @@ export const projects = [
   {
     name: "Doolen - Training Video App (React Native)",
     description:
-    "Built a personalized training video platform with custom content queue system tailored to user preferences and interactive quizzes with score tracking.",
+      "Built a personalized training video platform with custom content queue system tailored to user preferences and interactive quizzes with score tracking.",
     features: [
       "Personalized training video platform",
       "Custom content queue system based on user preferences",
@@ -123,7 +157,8 @@ export const projects = [
       "Redux",
       "AsyncStorage",
     ],
-    playStore: "https://play.google.com/store/apps/details?id=com.doolen.trainingplatform"
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.doolen.trainingplatform",
   },
   {
     name: "School Survey App (Kotlin)",

@@ -50,7 +50,7 @@ const AppLayout = ({ children }) => {
     <div className="min-h-screen">
       <Analytics />
       <Navigation />
-      <ThemeSelector />
+      {/* <ThemeSelector /> */}
       <ScrollToTop />
       <ChatButton />
       {children}

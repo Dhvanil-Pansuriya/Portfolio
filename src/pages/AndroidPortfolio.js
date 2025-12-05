@@ -17,6 +17,7 @@ import {
   androidExperiences as experiences,
   androidProjects as projects,
   androidInterests as interests,
+  androidCoreStrengths as coreStrengths,
 } from "../data/hardikData.js";
 import Footer from "../components/Footer";
 
