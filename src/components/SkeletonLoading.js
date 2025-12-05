@@ -52,16 +52,17 @@ const SkeletonText = ({ width = "w-full", height = "h-4", delay = 0 }) => (
   <SkeletonBox className={`${width} ${height}`} delay={delay} />
 );
  
-// Enhanced Navigation Skeleton - matches real Navigation component exactly
+// Enhanced Navigation Skeleton - Updated to match new Navigation with 2-line text
 const NavigationSkeleton = () => (
   <nav className="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md shadow-lg">
     <div className="container mx-auto px-6">
       <div className="flex items-center justify-between h-16">
-        {/* Logo skeleton */}
+        {/* Logo skeleton - Updated with 2 lines */}
         <div className="flex items-center space-x-2">
-          <SkeletonCircle size="w-10 h-10" delay={0} />
-          <div className="hidden sm:block">
-            <SkeletonText width="w-32" height="h-6" delay={0} />
+          <SkeletonCircle size="w-14 h-14" delay={0} />
+          <div className="hidden sm:flex flex-col gap-1">
+            <SkeletonText width="w-48" height="h-4" delay={0} />
+            <SkeletonText width="w-32" height="h-3" delay={0} />
           </div>
         </div>
  
@@ -85,38 +86,50 @@ const NavigationSkeleton = () => (
   </nav>
 );
  
-// Enhanced Hero Section with beautiful animations
+// Enhanced Hero Section - Removed theme badge, starts directly with name
 const HeroSkeleton = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-16">
     <div className="container mx-auto px-6 py-20">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-        {/* Text content with stagger */}
+        {/* Text content with stagger - NO theme badge */}
         <motion.div 
           className="flex-1 space-y-6 max-w-2xl"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <SkeletonText width="w-24" height="h-6" delay={0.2} />
-          <SkeletonText width="w-full" height="h-12" delay={0.25} />
-          <SkeletonText width="w-5/6" height="h-12" delay={0.3} />
+          {/* Removed theme badge skeleton - starts directly with name */}
+          <SkeletonText width="w-full" height="h-12" delay={0.2} />
+          <SkeletonText width="w-5/6" height="h-8" delay={0.25} />
+          <SkeletonText width="w-4/5" height="h-6" delay={0.3} />
           <div className="space-y-3 pt-4">
             <SkeletonText width="w-full" height="h-5" delay={0.35} />
             <SkeletonText width="w-11/12" height="h-5" delay={0.4} />
             <SkeletonText width="w-10/12" height="h-5" delay={0.45} />
           </div>
-          {/* CTA buttons */}
-          <div className="flex flex-wrap gap-4 pt-6">
-            <SkeletonBox className="w-40 h-12 rounded-md" delay={0.5} />
-            <SkeletonBox className="w-40 h-12 rounded-md" delay={0.55} />
+          
+          {/* Contact Info Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+            <SkeletonBox className="w-full h-16 rounded" delay={0.5} />
+            <SkeletonBox className="w-full h-16 rounded" delay={0.55} />
           </div>
+          <div className="grid grid-cols-1 gap-4">
+            <SkeletonBox className="w-full h-16 rounded" delay={0.6} />
+          </div>
+          
+          {/* CTA buttons */}
+          <div className="flex flex-wrap gap-4 pt-4">
+            <SkeletonBox className="w-40 h-12 rounded-md" delay={0.65} />
+            <SkeletonBox className="w-40 h-12 rounded-md" delay={0.7} />
+          </div>
+          
           {/* Social links */}
           <div className="flex gap-3 pt-4">
             {[1, 2, 3, 4].map((item, index) => (
-              <SkeletonCircle 
+              <SkeletonBox 
                 key={item} 
-                size="w-10 h-10" 
-                delay={0.6 + index * 0.05}
+                className="w-14 h-14 rounded" 
+                delay={0.75 + index * 0.05}
               />
             ))}
           </div>

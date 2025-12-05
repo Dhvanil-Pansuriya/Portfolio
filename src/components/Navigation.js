@@ -104,14 +104,11 @@ const Navigation = () => {
 
   return (
     <>
-      {/* Desktop Navigation */}
-      <motion.nav
+      {/* Desktop Navigation - No slide animation */}
+      <nav
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled ? "bg-white/90 backdrop-blur-md shadow-lg" : "bg-transparent"
         }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ type: "spring", stiffness: 100 }}
         role="navigation"
         aria-label="Main Navigation"
       >
@@ -124,12 +121,13 @@ const Navigation = () => {
               tabIndex={0}
               aria-label="Portfolio Logo"
             >
-              <div className="w-10 h-10 flex items-center justify-center text-white font-bold text-lg">
+              <div className="w-14 h-14 flex items-center justify-center text-white font-bold text-lg">
                 {currentThemeInfo.icon}
               </div>
               <div className="hidden sm:block">
-                <div className="font-bold text-gray-800">
-                  {getPortfolioName()}
+                <div className="font-bold text-gray-800 flex flex-col">
+                  <div>{currentThemeInfo.description}</div>
+                  <div className="font-normal text-sm -mt-1">{getPortfolioName()}</div>
                 </div>
               </div>
             </motion.div>
@@ -190,7 +188,7 @@ const Navigation = () => {
             </motion.button>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Mobile Menu */}
       <AnimatePresence>

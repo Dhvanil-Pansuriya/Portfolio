@@ -7,7 +7,7 @@ export const personalInfo = {
   title: "React & Node.js Developer",
   subtitle: "MERN Stack Development Specialist",
   email: "dhvanil.p@ephoenixsolutions.com",
-  phone: "+91 8799020150",
+  phone: "+91 99242 74295",
   location: "Ahmadabad, Gujarat, India",
   objective:
     "Passionate MERN stack developer with hands-on experience in building real-time applications and web solutions. Dedicated to creating efficient, scalable applications while continuously learning and adapting to new technologies.",
@@ -17,6 +17,8 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/dhvanil-pansuriya",
     leetcode: "https://leetcode.com/u/DhvanilPansuriya/",
     hackerrank: "https://www.hackerrank.com/profile/dhvanilpansuriy1",
+    whatsapp:
+      "https://wa.me/+919924274295?text=Hello%20Dhvanil%2C%20I%E2%80%99m%20contacting%20you%20through%20your%20portfolio%20website.%20I%20would%20like%20to%20discuss%20my%20project%20requirement.",
   },
   coreStrengths: [
     {

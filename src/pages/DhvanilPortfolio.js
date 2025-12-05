@@ -33,7 +33,7 @@ const DhvanilPortfolio = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title={`${personalInfo.name} - React & Node.js Developer Portfolio`}
+        title={`${personalInfo.name} - MERN Stack Developer Portfolio`}
         description="Passionate MERN stack developer with hands-on experience in building real-time applications and web solutions. Specialized in React.js, Node.js, and full-stack development."
         keywords="React Developer, Node.js Developer, MERN Stack, Full Stack Developer, JavaScript, MongoDB, Express.js, Web Development, Portfolio"
       />

@@ -127,10 +127,10 @@ const Hero = ({ personalInfo }) => {
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left">
             <motion.div variants={itemVariants} className="mb-6">
-              <span className="inline-flex items-center gap-2 px-6 py-3 card-professional text-primary-700 text-sm font-medium mb-6">
+              {/* <span className="inline-flex items-center gap-2 px-6 py-3 card-professional text-primary-700 text-sm font-medium mb-6">
                 {currentThemeInfo.icon}
                 <span>{currentThemeInfo.description}</span>
-              </span>
+              </span> */}
               <h1 className="text-5xl lg:text-7xl font-bold mb-4">
                 <span className="gradient-text">{personalInfo.name}</span>
               </h1>

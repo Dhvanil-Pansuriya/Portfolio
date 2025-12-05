@@ -20,6 +20,501 @@ const basePersonalInfo = {
   },
 };
 
+// ===== COMMON PROJECTS ARRAY =====
+// Single source of truth for all projects
+// displayedIn: ["android", "mobileApp", "reactNative"]
+const allProjects = [
+  {
+    name: "MyMotive",
+    description:
+      "MyMotive works together with the Motive device to deliver personalized lower-back and knee relief therapy. The app lets users start therapy sessions, manage treatments, and track progress all in one place.",
+    features: [
+      "Start & Control Therapy Sessions - Launch therapy sessions directly from the app when paired with the Motive device, simplifying treatment at home.",
+      "Progress Tracking & History - Log session history and view progress over time to monitor improvements and keep track of therapy schedules.",
+      "Personalized Therapy Plans - Manage personalized treatment plans tailored to user's needs (e.g., lower-back or knee therapy) for better recovery support.",
+    ],
+    technologies: [
+      "React Native",
+      "Type Script",
+      "IoT",
+      "FireStore",
+      "Core Bluetooth",
+      "Charts",
+    ],
+    appStore: "https://apps.apple.com/us/app/mymotive/id6443784536",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.mymotive.mymotive&pcampaignid=web_share",
+    displayedIn: ["mobileApp", "reactNative"],
+  },
+  {
+    name: "City Break Apartments (CBA) - Guest App",
+    description:
+      "CBA is a guest-facing app for City Break Apartments in Dublin, offering remote check-in, digital keys, booking extras, and reservation management for a smoother stay. It replaces traditional key handling with a mobile-first experience, improving both guest convenience and operational efficiency.",
+    features: [
+      "Remote check-in and digital key access to apartments via mobile",
+      "View and manage reservations, stay details, and important instructions",
+      "Book extras such as early check-in, late checkout, shuttle service, and add-ons (latest versions)",
+      "Support for multiple properties and apartment details (photos, info, location)",
+      "Push notifications for check-in info, stay updates, and offers",
+      "Guest support links (help, FAQ, contact)",
+      "Stripe integration for secure payments for bookings, extras, and add-ons",
+    ],
+    technologies: [
+      "Digital key / Bluetooth lock integration",
+      "Firebase Push Notifications",
+      "React Native",
+      "TypeScript",
+      "React Expo Navigation",
+      "Stripe",
+      "REST backend",
+    ],
+    duration: "Ongoing",
+    status: "Active",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.citybreakapartments.guestapp&pcampaignid=web_share",
+    appStore:
+      "https://apps.apple.com/in/app/city-break-apartments/id6742106330",
+    displayedIn: ["mobileApp"],
+  },
+  {
+    name: "GetDoolen - Training Video",
+    description:
+      "Developed a cross-platform training video application using React Native, enabling users to sign up, log in, and access a wide range of educational video content. The app includes features like personalized queues, interactive quizzes, and complete account management to enhance learning and user engagement.",
+    features: [
+      "User authentication (Login & Signup)",
+      "Video streaming and playback",
+      "Create and manage personalized video queues",
+      "Interactive quiz modules after each training session",
+      "Push notifications for new content and updates",
+      "Profile view and update",
+      "Delete account option for data privacy",
+      "Smooth and intuitive UI/UX for better user engagement",
+    ],
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "Firebase",
+      "React Native Video player",
+    ],
+    duration: "Ongoing",
+    status: "Active",
+    website: "https://www.getdoolen.com/",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.doolen.trainingplatform",
+    appStore: "https://apps.apple.com/us/app/training-platform/id6743212121",
+    displayedIn: ["mobileApp"],
+  },
+  {
+    name: "Frami - Activity & Rewards App",
+    description:
+      "Frami is a wellness and activity-tracking app that gamifies healthy habits with points, challenges, and rewards for individuals and employees. Users can connect wearables, log activities, and earn redeemable points through real-life physical activities",
+    features: [
+      "Activity tracking: manual logging, session recording, and wearable integrations (Garmin, Polar, Fitbit, etc.)",
+      "Gamification with points, challenges, and team activities",
+      "Reward store where users redeem points for partner coupons",
+      "Leaderboards, community challenges, and engagement features",
+      "User profile, history, progress tracking",
+      "Secure login, authentication, and session handling",
+      "Push notifications for activity reminders and challenge updates",
+      "Subscription/payment integration via Stripe (if applicable)",
+    ],
+    technologies: [
+      "Kotlin",
+      "MVVM Architecture",
+      "XML layouts / Jetpack components",
+      "Retrofit",
+      "OkHttp",
+      "Room Database",
+      "Dagger",
+      "Coroutines & Flow",
+      "Firebase Cloud Messaging (FCM)",
+      "Stripe Android SDK",
+      "Garmin",
+      "Polar",
+      "Fitbit APIs",
+    ],
+    duration: "Ongoing",
+    status: "Active",
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.framiactivity.frami&pcampaignid=web_share",
+    appStore: "https://apps.apple.com/no/app/frami/id1596405937?l=nb",
+    displayedIn: ["mobileApp"],
+  },
+  {
+    name: "Global Pump - Pump Selection & Performance Analysis App",
+    description:
+      "We developed the Global Pump App, which allows users to filter pumps dynamically based on multiple dependent parameters and view the resulting pump list along with detailed performance graphs. The app parses data from SOAP 1.2 APIs, converts it into usable mobile-friendly structures, and presents it in an intuitive and interactive interface.",
+    features: [
+      "Pump Filtering: Users can enter required parameters (flow, head, efficiency, etc.) and the app automatically filters pumps based on interdependent criteria.",
+      "Graph Display: Shows pump performance curves and operating points using real-time parsed API data.",
+      "SOAP 1.2 Integration: Implemented full SOAP 1.2 API parsing to fetch pump catalogs, selection results, and curve data.",
+      "Dynamic Result Calculation: Processes raw XML response, transforms it into structured JSON, and computes selection logic on the mobile side",
+      "Seamless User Experience: Fast, accurate pump matching with clear visualization for industrial users.",
+    ],
+    technologies: [
+      "React Native",
+      "TypeScript",
+      "Axios",
+      "ExpressJS",
+      "NodeJS",
+      "PDF Viewer",
+      "SOAP 1.2",
+      "XML Parsing",
+      "Caching",
+    ],
+    displayedIn: ["mobileApp"],
+  },
+  {
+    name: "EventRAFT - Event Booking & Management App",
+    description:
+      "EventRAFT is a mobile application designed to simplify event discovery, booking, and management — offering users seamless access to a variety of events and venues. Users can browse upcoming events, book tickets, and manage their bookings all from their Android device.",
+    features: [
+      "Browse and search upcoming events by category, date, and location",
+      "Book tickets directly within the app and receive booking confirmation",
+      "User account management, booking history, and profile settings",
+      "Push notifications and reminders for upcoming events or ticket availability",
+      "Event details page with venue info, images, and event description",
+      "Secure payment integration for ticket purchases",
+      "Order history, ticket download/print options, and booking management",
+    ],
+    technologies: [
+      "Java",
+      "MVVM",
+      "Dagger",
+      "Retrofit / OkHttp",
+      "Room Database / SharedPreferences",
+      "Material Design components + XML layouts",
+      "Firebase Cloud Messaging (FCM)",
+    ],
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.eventraft.nxt&pcampaignid=web_share",
+    displayedIn: ["mobileApp"],
+  },
+  {
+    name: "QModi",
+    description:
+      "A Kotlin-based Android app for tracking drivers during goods transportation. Features real-time location tracking, route optimization, and geofencing for enhanced logistics management.",
+    features: [
+      "Real-time GPS tracking",
+      "Route optimization algorithms",
+      "Geofencing and alerts",
+      "Driver performance analytics",
+      "Logistics management dashboard",
+      "Offline data synchronization",
+    ],
+    technologies: [
+      "Kotlin",
+      "Google Maps",
+      "GPS",
+      "Room Database",
+      "Retrofit",
+      "MVVM",
+    ],
+    playStore:
+      "https://play.google.com/store/apps/details?id=in.csias.tcclient",
+    displayedIn: ["android"],
+  },
+  {
+    name: "Frami Activity",
+    description:
+      "A B2B2C employee engagement platform built in Kotlin that motivates users to stay active through a gamified rewards program with activity tracking and social features.",
+    features: [
+      "Activity recording and tracking",
+      "Gamified rewards system",
+      "Social bonus points",
+      "Laptop connectivity for data sync",
+      "Manual activity logging",
+      "Team challenges and leaderboards",
+    ],
+    technologies: [
+      "Kotlin",
+      "Room Database",
+      "Retrofit",
+      "Firebase",
+      "MVVM",
+      "Custom Views",
+    ],
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.framiactivity.frami",
+    displayedIn: ["android"],
+  },
+  {
+    name: "MDI",
+    description:
+      "A comprehensive Kotlin-based enterprise management app featuring employee management, inventory tracking, attendance monitoring, and task management with reporting capabilities.",
+    features: [
+      "Employee management system",
+      "Inventory tracking and management",
+      "Attendance and performance tracking",
+      "Task assignment and progress monitoring",
+      "Comprehensive reporting system",
+      "Data export and analytics",
+    ],
+    technologies: [
+      "Kotlin",
+      "Room Database",
+      "MVVM",
+      "Charts Library",
+      "Retrofit",
+      "Material Design",
+    ],
+    displayedIn: ["android"],
+  },
+  {
+    name: "MAE Support",
+    description:
+      "A Kotlin-based sales tracking application for employees to generate and track sales, identify prospects, and manage client relationships with comprehensive analytics.",
+    features: [
+      "Sales tracking and analytics",
+      "Lead and prospect management",
+      "Client relationship management",
+      "Performance dashboards",
+      "Sales report generation",
+      "Target tracking and achievements",
+    ],
+    technologies: [
+      "Kotlin",
+      "Room Database",
+      "Charts",
+      "Retrofit",
+      "MVVM",
+      "Material Design",
+    ],
+    playStore: "https://play.google.com/store/apps/details?id=com.maesupport",
+    displayedIn: ["android"],
+  },
+  {
+    name: "MDLink",
+    description:
+      "A Kotlin-based healthcare app for pregnant women providing comprehensive care from first week to delivery with video consultations, appointments, and medical services.",
+    features: [
+      "Appointment booking system",
+      "Video, audio, and chat consultations (Twilio)",
+      "Digital prescription management",
+      "Medical product ordering",
+      "Pregnancy tracking and tips",
+      "Doctor-patient communication",
+    ],
+    technologies: [
+      "Kotlin",
+      "Twilio SDK",
+      "Room Database",
+      "Retrofit",
+      "MVVM",
+      "Firebase",
+    ],
+    playStore: "https://play.google.com/store/apps/details?id=com.mdlinkhealth",
+    displayedIn: ["android"],
+  },
+  {
+    name: "Bite Customer/Cook/Driver",
+    description:
+      "A comprehensive food delivery ecosystem with separate Android apps for customers, cooks, and drivers, featuring order management, payment processing, and delivery tracking.",
+    features: [
+      "Multi-app ecosystem (Customer/Cook/Driver)",
+      "Order management system",
+      "Real-time order tracking",
+      "Payment integration",
+      "Restaurant management tools",
+      "Delivery coordination system",
+    ],
+    technologies: [
+      "Kotlin",
+      "Google Maps",
+      "Firebase",
+      "Retrofit",
+      "Room Database",
+      "MVVM",
+    ],
+    playStore:
+      "https://play.google.com/store/apps/details?id=com.bite.customer",
+    displayedIn: ["android"],
+  },
+  {
+    name: "GrainFather",
+    description:
+      "An Android app for the Grainfather brewing system, making grain brewing simple and fun with recipe management, brewing process control, and step-by-step guidance.",
+    features: [
+      "Brewing process automation",
+      "Recipe creation and management",
+      "Step-by-step brewing guidance",
+      "Temperature and timing control",
+      "Brewing history and analytics",
+      "Community recipe sharing",
+    ],
+    technologies: [
+      "Android SDK",
+      "Bluetooth",
+      "Custom Views",
+      "SQLite",
+      "Material Design",
+    ],
+    playStore: "https://play.google.com/store/apps/details?id=com.grainfather",
+    displayedIn: ["android"],
+  },
+  {
+    name: "Payfrit",
+    description:
+      "A mobile wallet Android app with beacon technology for automatic payment detection, money transfer capabilities, and online food ordering with seamless payment integration.",
+    features: [
+      "Mobile wallet functionality",
+      "Beacon-based automatic payments",
+      "Money transfer between users",
+      "Online food ordering",
+      "Credit card and bank account linking",
+      "Transaction history and analytics",
+    ],
+    technologies: [
+      "Android SDK",
+      "Beacon Technology",
+      "NFC",
+      "Payment APIs",
+      "SQLite",
+    ],
+    playStore: "https://play.google.com/store/apps/details?id=com.payfrit",
+    displayedIn: ["android"],
+  },
+  {
+    name: "Aero Crew",
+    description:
+      "A dual-platform application connecting pilots with recruiters. Features separate interfaces with document management, payment integration, and real-time communication.",
+    features: [
+      "Dual user interface (Pilot/Recruiter)",
+      "Document scanner and management",
+      "Stripe payment integration",
+      "Push notifications and real-time updates",
+      "Calendar integration for appointments",
+      "PDF generation for reports and receipts",
+    ],
+    technologies: [
+      "React Native",
+      "Stripe",
+      "ReactJS ES5",
+      "Chat SDK",
+      "Firebase FCM",
+      "PDF Viewer",
+    ],
+    displayedIn: ["mobileApp", "reactNative"],
+  },
+  {
+    name: "Junobaby",
+    description:
+      "A healthcare app for pregnant women, providing comprehensive care with doctor consultations, appointment booking, and health tracking features.",
+    features: [
+      "Video calling with AVFoundation",
+      "HealthKit integration for health tracking",
+      "Core Data for appointment management",
+      "Push notifications for reminders",
+      "In-app purchases for premium features",
+      "CloudKit for data synchronization",
+    ],
+    technologies: ["Swift", "UIKit", "HealthKit", "AVFoundation", "CloudKit"],
+    displayedIn: ["mobileApp", "reactNative"],
+  },
+  {
+    name: "Artwork",
+    description:
+      "An online marketplace app for handmade products with advanced image processing, real-time chat, and seamless user experience.",
+    features: [
+      "Advanced image processing and filters",
+      "Real-time messaging with MessageKit",
+      "Core Data for offline functionality",
+      "Search with Core Spotlight integration",
+      "Social sharing with Activity View Controller",
+      "Custom camera integration",
+    ],
+    technologies: [
+      "Swift",
+      "UIKit",
+      "Core Image",
+      "MessageKit",
+      "Core Spotlight",
+    ],
+    displayedIn: ["mobileApp", "reactNative"],
+  },
+  {
+    name: "Boozer",
+    description:
+      "An e-commerce app for liquor delivery with location services, payment processing, and delivery tracking.",
+    features: [
+      "MapKit for location services",
+      "Core Location for precise tracking",
+      "Apple Pay integration",
+      "Push notifications for order updates",
+      "Core Data for cart management",
+      "Background app refresh for tracking",
+    ],
+    technologies: ["Swift", "UIKit", "MapKit", "Core Location", "Apple Pay"],
+    displayedIn: ["mobileApp", "reactNative"],
+  },
+  {
+    name: "Heuro",
+    description:
+      "A social media app focused on article sharing with rich text editing capabilities and seamless integration with sharing ecosystem.",
+    features: [
+      "Rich text editor with TextKit",
+      "Social framework integration",
+      "Core Data for article storage",
+      "Share extensions for system-wide sharing",
+      "Spotlight search integration",
+      "Dark mode support",
+    ],
+    technologies: [
+      "Swift",
+      "UIKit",
+      "TextKit",
+      "Social Framework",
+      "Core Spotlight",
+    ],
+    displayedIn: ["mobileApp", "reactNative"],
+  },
+  {
+    name: "Cool Off",
+    description:
+      "A revolutionary app that automatically notifies users when weather conditions are optimal for turning off air conditioning, featuring weather integration and smart notifications.",
+    features: [
+      "WeatherKit integration for accurate forecasts",
+      "Location-based weather monitoring",
+      "Smart notification scheduling",
+      "Energy usage tracking and analytics",
+      "Widget support for quick weather info",
+      "Siri Shortcuts integration",
+    ],
+    technologies: [
+      "Swift",
+      "SwiftUI",
+      "WeatherKit",
+      "WidgetKit",
+      "SiriKit",
+      "Core Location",
+    ],
+    appStore: "https://play.google.com/store/apps/details?id=com.cooloff.app",
+    displayedIn: ["mobileApp"],
+  },
+  {
+    name: "Talky Life",
+    description:
+      "A social networking app with real-time features, following design patterns and leveraging native capabilities for optimal user experience.",
+    features: [
+      "Real-time messaging and updates",
+      "Core Data with CloudKit sync",
+      "Advanced search with Core Spotlight",
+      "Rich media sharing capabilities",
+      "Push notifications for social interactions",
+      "Accessibility support (VoiceOver, Dynamic Type)",
+    ],
+    technologies: [
+      "Swift",
+      "UIKit",
+      "CloudKit",
+      "Core Spotlight",
+      "Accessibility",
+    ],
+    appStore: "https://play.google.com/store/apps/details?id=com.talky",
+    displayedIn: ["mobileApp"],
+  },
+];
+
 // ===== ANDROID PORTFOLIO =====
 const androidData = {
   personalInfo: {
@@ -66,27 +561,85 @@ const androidData = {
   },
 
   skills: {
-    languages: ["Kotlin", "Java"],
-    tools: ["Android Studio", "Git", "Jira"],
-    frameworks: [
-      "MVVM Architecture",
-      "RxJava",
-      "Retrofit",
-      "Firebase",
-      "Google Maps",
-      "In-App Purchase",
-      "Push Notifications (FCM)",
-      "Material Design",
+    languages: [
+      "React Native",
+      "Flutter",
+      "TypeScript",
+      "Swift",
+      "Objective-C",
+      "Kotlin",
+      "Java",
     ],
-    databases: ["Room Database", "SQLite"],
-    others: [
+    tools: [
+      "VS Code",
+      "Cursor",
+      "Xcode",
+      "Android Studio",
+      "Git",
+      "App Store Connect",
+      "TestFlight",
+      "Google Play Console",
+      "Google Play Closed Beta Tester",
+      "Google Play Open Beta Tester",
+      "Asana",
+      "Jira",
+      "Trello",
+      "Remote Test Lab (Samsung, Genymotion)",
+      "BrowserStack",
+    ],
+    frameworks: [
       "Android SDK",
-      "Custom Views",
-      "Bluetooth Low Energy (BLE)",
-      "Beacon Technology",
-      "Performance Optimization",
-      "Debugging",
-      "Play Store Publishing",
+      "iOS SDK",
+      "SwiftUI",
+      "Compose UI",
+      "Google Maps",
+      "Geo Location API",
+      "MapKit",
+      "Firebase",
+      "Firebase Auth",
+      "Firebase Analytics",
+      "Firebase Crashlytics",
+      "Firebase Cloud Messaging (FCM)",
+      "Expo Notifications",
+      "Axios",
+      "Zustand",
+      "React Query for API Caching",
+      "Redux Toolkit",
+      "React Query/TanStack Query",
+      "React Navigation/React Expo Router",
+      "Native Base",
+      "React Native Elements",
+      "React Native Device Info",
+      "React Localization",
+      "MomentJS",
+      "DayJS",
+      "Tailwind RN",
+      "JWT Authentication",
+      "BLE Manager",
+      "Retrofit",
+      "Gson",
+      "Hilt/Dagger",
+      "WorkManager",
+      "Lottie Animations",
+      "Glide/Coil Image Loading",
+    ],
+    databases: [
+      "Room Database",
+      "SQLite",
+      "MMKV",
+      "RealmDB",
+      "AsyncStorage",
+      "Firebase Firestore",
+    ],
+    others: [
+      "AWS",
+      "Stripe",
+      "AI Integration",
+      "REST APIs",
+      "MVC/MVVM",
+      "Clean Architecture",
+      "In-App Purchases",
+      "Material Design",
     ],
   },
 
@@ -156,187 +709,6 @@ const androidData = {
         "Learned Java programming and Android basics",
         "Gained hands-on experience with Android Studio",
       ],
-    },
-  ],
-
-  projects: [
-    {
-      name: "QModi",
-      description:
-        "A Kotlin-based Android app for tracking drivers during goods transportation. Features real-time location tracking, route optimization, and geofencing for enhanced logistics management.",
-      features: [
-        "Real-time GPS tracking",
-        "Route optimization algorithms",
-        "Geofencing and alerts",
-        "Driver performance analytics",
-        "Logistics management dashboard",
-        "Offline data synchronization",
-      ],
-      technologies: [
-        "Kotlin",
-        "Google Maps",
-        "GPS",
-        "Room Database",
-        "Retrofit",
-        "MVVM",
-      ],
-      playStore:
-        "https://play.google.com/store/apps/details?id=in.csias.tcclient",
-    },
-    {
-      name: "Frami Activity",
-      description:
-        "A B2B2C employee engagement platform built in Kotlin that motivates users to stay active through a gamified rewards program with activity tracking and social features.",
-      features: [
-        "Activity recording and tracking",
-        "Gamified rewards system",
-        "Social bonus points",
-        "Laptop connectivity for data sync",
-        "Manual activity logging",
-        "Team challenges and leaderboards",
-      ],
-      technologies: [
-        "Kotlin",
-        "Room Database",
-        "Retrofit",
-        "Firebase",
-        "MVVM",
-        "Custom Views",
-      ],
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.framiactivity.frami",
-    },
-    {
-      name: "MDI",
-      description:
-        "A comprehensive Kotlin-based enterprise management app featuring employee management, inventory tracking, attendance monitoring, and task management with reporting capabilities.",
-      features: [
-        "Employee management system",
-        "Inventory tracking and management",
-        "Attendance and performance tracking",
-        "Task assignment and progress monitoring",
-        "Comprehensive reporting system",
-        "Data export and analytics",
-      ],
-      technologies: [
-        "Kotlin",
-        "Room Database",
-        "MVVM",
-        "Charts Library",
-        "Retrofit",
-        "Material Design",
-      ],
-    },
-    {
-      name: "MAE Support",
-      description:
-        "A Kotlin-based sales tracking application for employees to generate and track sales, identify prospects, and manage client relationships with comprehensive analytics.",
-      features: [
-        "Sales tracking and analytics",
-        "Lead and prospect management",
-        "Client relationship management",
-        "Performance dashboards",
-        "Sales report generation",
-        "Target tracking and achievements",
-      ],
-      technologies: [
-        "Kotlin",
-        "Room Database",
-        "Charts",
-        "Retrofit",
-        "MVVM",
-        "Material Design",
-      ],
-      playStore: "https://play.google.com/store/apps/details?id=com.maesupport",
-    },
-    {
-      name: "MDLink",
-      description:
-        "A Kotlin-based healthcare app for pregnant women providing comprehensive care from first week to delivery with video consultations, appointments, and medical services.",
-      features: [
-        "Appointment booking system",
-        "Video, audio, and chat consultations (Twilio)",
-        "Digital prescription management",
-        "Medical product ordering",
-        "Pregnancy tracking and tips",
-        "Doctor-patient communication",
-      ],
-      technologies: [
-        "Kotlin",
-        "Twilio SDK",
-        "Room Database",
-        "Retrofit",
-        "MVVM",
-        "Firebase",
-      ],
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.mdlinkhealth",
-    },
-    {
-      name: "Bite Customer/Cook/Driver",
-      description:
-        "A comprehensive food delivery ecosystem with separate Android apps for customers, cooks, and drivers, featuring order management, payment processing, and delivery tracking.",
-      features: [
-        "Multi-app ecosystem (Customer/Cook/Driver)",
-        "Order management system",
-        "Real-time order tracking",
-        "Payment integration",
-        "Restaurant management tools",
-        "Delivery coordination system",
-      ],
-      technologies: [
-        "Kotlin",
-        "Google Maps",
-        "Firebase",
-        "Retrofit",
-        "Room Database",
-        "MVVM",
-      ],
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.bite.customer",
-    },
-    {
-      name: "GrainFather",
-      description:
-        "An Android app for the Grainfather brewing system, making grain brewing simple and fun with recipe management, brewing process control, and step-by-step guidance.",
-      features: [
-        "Brewing process automation",
-        "Recipe creation and management",
-        "Step-by-step brewing guidance",
-        "Temperature and timing control",
-        "Brewing history and analytics",
-        "Community recipe sharing",
-      ],
-      technologies: [
-        "Android SDK",
-        "Bluetooth",
-        "Custom Views",
-        "SQLite",
-        "Material Design",
-      ],
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.grainfather",
-    },
-    {
-      name: "Payfrit",
-      description:
-        "A mobile wallet Android app with beacon technology for automatic payment detection, money transfer capabilities, and online food ordering with seamless payment integration.",
-      features: [
-        "Mobile wallet functionality",
-        "Beacon-based automatic payments",
-        "Money transfer between users",
-        "Online food ordering",
-        "Credit card and bank account linking",
-        "Transaction history and analytics",
-      ],
-      technologies: [
-        "Android SDK",
-        "Beacon Technology",
-        "NFC",
-        "Payment APIs",
-        "SQLite",
-      ],
-      playStore: "https://play.google.com/store/apps/details?id=com.payfrit",
     },
   ],
 
@@ -552,300 +924,6 @@ const mobileAppData = {
     },
   ],
 
-  projects: [
-    {
-      name: "MyMotive",
-      description:
-        "MyMotive works together with the Motive device to deliver personalized lower-back and knee relief therapy. The app lets users start therapy sessions, manage treatments, and track progress all in one place.",
-      features: [
-        "Start & Control Therapy Sessions - Launch therapy sessions directly from the app when paired with the Motive device, simplifying treatment at home.",
-        "Progress Tracking & History - Log session history and view progress over time to monitor improvements and keep track of therapy schedules. ",
-        "Personalized Therapy Plans - Manage personalized treatment plans tailored to user's needs (e.g., lower-back or knee therapy) for better recovery support.",
-      ],
-      technologies: [
-        "React Native",
-        "Type Script",
-        "IoT",
-        "FireStore",
-        "Core Bluetooth",
-        "Charts",
-      ],
-      appStore: "https://apps.apple.com/us/app/mymotive/id6443784536",
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.mymotive.mymotive&pcampaignid=web_share",
-    },
-    {
-      name: "City Break Apartments (CBA) - Guest App",
-      description:
-        "CBA is a guest-facing app for City Break Apartments in Dublin, offering remote check-in, digital keys, booking extras, and reservation management for a smoother stay. It replaces traditional key handling with a mobile-first experience, improving both guest convenience and operational efficiency.",
-      features: [
-        "Remote check-in and digital key access to apartments via mobile",
-        "View and manage reservations, stay details, and important instructions ",
-        "Book extras such as early check-in, late checkout, shuttle service, and add-ons (latest versions)",
-        "Support for multiple properties and apartment details (photos, info, location)",
-        "Push notifications for check-in info, stay updates, and offers",
-        "Guest support links (help, FAQ, contact)",
-        "Stripe integration for secure payments for bookings, extras, and add-ons",
-      ],
-      technologies: [
-        "Digital key / Bluetooth lock integration",
-        "Firebase Push Notifications",
-        "React Native",
-        "TypeScript",
-        "React Expo Navigation",
-        "Stripe",
-        "REST backend",
-      ],
-      duration: "Ongoing",
-      status: "Active",
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.citybreakapartments.guestapp&pcampaignid=web_share",
-      appStore:
-        "https://apps.apple.com/in/app/city-break-apartments/id6742106330",
-    },
-    {
-      name: "GetDoolen - Training Video",
-      description:
-        "Developed a cross-platform training video application using React Native, enabling users to sign up, log in, and access a wide range of educational video content. The app includes features like personalized queues, interactive quizzes, and complete account management to enhance learning and user engagement.",
-      features: [
-        "User authentication (Login & Signup)",
-        "Video streaming and playback",
-        "Create and manage personalized video queues",
-        "Interactive quiz modules after each training session",
-        "Push notifications for new content and updates",
-        "Profile view and update",
-        "Delete account option for data privacy",
-        "Smooth and intuitive UI/UX for better user engagement",
-      ],
-      technologies: [
-        "React Native",
-        "TypeScript",
-        "Firebase",
-        "React Native Video player",
-      ],
-      duration: "Ongoing",
-      status: "Active",
-      website: "https://www.getdoolen.com/",
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.doolen.trainingplatform",
-      appStore: "https://apps.apple.com/us/app/training-platform/id6743212121",
-    },
-    {
-      name: "Frami - Activity & Rewards App",
-      description:
-        "Frami is a wellness and activity-tracking app that gamifies healthy habits with points, challenges, and rewards for individuals and employees. Users can connect wearables, log activities, and earn redeemable points through real-life physical activities",
-      features: [
-        "Activity tracking: manual logging, session recording, and wearable integrations (Garmin, Polar, Fitbit, etc.)",
-        "Gamification with points, challenges, and team activities",
-        "Reward store where users redeem points for partner coupons",
-        "Leaderboards, community challenges, and engagement features",
-        "User profile, history, progress tracking",
-        "Secure login, authentication, and session handling",
-        "Push notifications for activity reminders and challenge updates",
-        "Subscription/payment integration via Stripe (if applicable)",
-      ],
-      technologies: [
-        "Kotlin",
-        "MVVM Architecture",
-        "XML layouts / Jetpack components",
-        "Retrofit",
-        "OkHttp",
-        "Room Database",
-        "Dagger",
-        "Coroutines & Flow",
-        "Firebase Cloud Messaging (FCM)",
-        "Stripe Android SDK",
-        "Garmin",
-        "Polar",
-        "Fitbit APIs",
-      ],
-      duration: "Ongoing",
-      status: "Active",
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.framiactivity.frami&pcampaignid=web_share",
-      appStore: "https://apps.apple.com/no/app/frami/id1596405937?l=nb",
-    },
-    {
-      name: "Global Pump - Pump Selection & Performance Analysis App",
-      description:
-        "We developed the Global Pump App, which allows users to filter pumps dynamically based on multiple dependent parameters and view the resulting pump list along with detailed performance graphs. The app parses data from SOAP 1.2 APIs, converts it into usable mobile-friendly structures, and presents it in an intuitive and interactive interface.",
-      features: [
-        "Pump Filtering: Users can enter required parameters (flow, head, efficiency, etc.) and the app automatically filters pumps based on interdependent criteria.",
-        "Graph Display: Shows pump performance curves and operating points using real-time parsed API data.",
-        "SOAP 1.2 Integration: Implemented full SOAP 1.2 API parsing to fetch pump catalogs, selection results, and curve data.",
-        "Dynamic Result Calculation: Processes raw XML response, transforms it into structured JSON, and computes selection logic on the mobile side",
-        "Seamless User Experience: Fast, accurate pump matching with clear visualization for industrial users.",
-      ],
-      technologies: [
-        "React Native",
-        "TypeScript",
-        "Axios",
-        "ExpressJS",
-        "NodeJS",
-        "PDF Viewer",
-        "SOAP 1.2",
-        "XML Parsing",
-        "Caching",
-      ],
-    },
-    {
-      name: "EventRAFT - Event Booking & Management App",
-      description:
-        "EventRAFT is a mobile application designed to simplify event discovery, booking, and management — offering users seamless access to a variety of events and venues. Users can browse upcoming events, book tickets, and manage their bookings all from their Android device.",
-      features: [
-        "Browse and search upcoming events by category, date, and location",
-        "Book tickets directly within the app and receive booking confirmation",
-        "User account management, booking history, and profile settings",
-        "Push notifications and reminders for upcoming events or ticket availability",
-        "Event details page with venue info, images, and event description",
-        "Secure payment integration for ticket purchases",
-        "Order history, ticket download/print options, and booking management",
-      ],
-      technologies: [
-        "Java",
-        "MVVM",
-        "Dagger",
-        "Retrofit / OkHttp",
-        "Room Database / SharedPreferences",
-        "Material Design components + XML layouts",
-        "Firebase Cloud Messaging (FCM)"
-      ],
-      playStore : "https://play.google.com/store/apps/details?id=com.eventraft.nxt&pcampaignid=web_share"
-    },
-    {
-      name: "Aero Crew",
-      description:
-        "A dual-platform iOS application connecting pilots with recruiters. Features separate interfaces with document management, payment integration, and real-time communication.",
-      features: [
-        "Dual user interface (Pilot/Recruiter)",
-        "Document scanner and management",
-        "Stripe payment integration",
-        "Push notifications and real-time updates",
-        "Calendar integration for appointments",
-        "PDF generation for reports and receipts",
-      ],
-      technologies: [
-        "React Native",
-        "Stripe",
-        "ReactJS ES5",
-        "Chat SDK",
-        "Firebase FCM",
-        "PDF Viewer",
-      ],
-    },
-    {
-      name: "Junobaby",
-      description:
-        "An iOS healthcare app for pregnant women, providing comprehensive care with doctor consultations, appointment booking, and health tracking features.",
-      features: [
-        "Video calling with AVFoundation",
-        "HealthKit integration for health tracking",
-        "Core Data for appointment management",
-        "Push notifications for reminders",
-        "In-app purchases for premium features",
-        "CloudKit for data synchronization",
-      ],
-      technologies: ["Swift", "UIKit", "HealthKit", "AVFoundation", "CloudKit"],
-    },
-    {
-      name: "Artwork",
-      description:
-        "An online marketplace iOS app for handmade products with advanced image processing, real-time chat, and seamless user experience following Apple's design guidelines.",
-      features: [
-        "Advanced image processing and filters",
-        "Real-time messaging with MessageKit",
-        "Core Data for offline functionality",
-        "Search with Core Spotlight integration",
-        "Social sharing with Activity View Controller",
-        "Custom camera integration",
-      ],
-      technologies: [
-        "Swift",
-        "UIKit",
-        "Core Image",
-        "MessageKit",
-        "Core Spotlight",
-      ],
-    },
-    {
-      name: "Boozer",
-      description:
-        "An iOS e-commerce app for liquor delivery with location services, payment processing, and delivery tracking optimized for iOS ecosystem.",
-      features: [
-        "MapKit for location services",
-        "Core Location for precise tracking",
-        "Apple Pay integration",
-        "Push notifications for order updates",
-        "Core Data for cart management",
-        "Background app refresh for tracking",
-      ],
-      technologies: ["Swift", "UIKit", "MapKit", "Core Location", "Apple Pay"],
-    },
-    {
-      name: "Heuro",
-      description:
-        "A social media iOS app focused on article sharing with rich text editing capabilities and seamless integration with iOS sharing ecosystem.",
-      features: [
-        "Rich text editor with TextKit",
-        "Social framework integration",
-        "Core Data for article storage",
-        "Share extensions for system-wide sharing",
-        "Spotlight search integration",
-        "Dark mode support",
-      ],
-      technologies: [
-        "Swift",
-        "UIKit",
-        "TextKit",
-        "Social Framework",
-        "Core Spotlight",
-      ],
-    },
-    {
-      name: "Cool Off",
-      description:
-        "A revolutionary iOS app that automatically notifies users when weather conditions are optimal for turning off air conditioning, featuring weather integration and smart notifications.",
-      features: [
-        "WeatherKit integration for accurate forecasts",
-        "Location-based weather monitoring",
-        "Smart notification scheduling",
-        "Energy usage tracking and analytics",
-        "Widget support for quick weather info",
-        "Siri Shortcuts integration",
-      ],
-      technologies: [
-        "Swift",
-        "SwiftUI",
-        "WeatherKit",
-        "WidgetKit",
-        "SiriKit",
-        "Core Location",
-      ],
-      appStore: "https://play.google.com/store/apps/details?id=com.cooloff.app",
-    },
-    {
-      name: "Talky Life",
-      description:
-        "A social networking iOS app with real-time features, following iOS design patterns and leveraging native iOS capabilities for optimal user experience.",
-      features: [
-        "Real-time messaging and updates",
-        "Core Data with CloudKit sync",
-        "Advanced search with Core Spotlight",
-        "Rich media sharing capabilities",
-        "Push notifications for social interactions",
-        "Accessibility support (VoiceOver, Dynamic Type)",
-      ],
-      technologies: [
-        "Swift",
-        "UIKit",
-        "CloudKit",
-        "Core Spotlight",
-        "Accessibility",
-      ],
-      appStore: "https://play.google.com/store/apps/details?id=com.talky",
-    },
-  ],
-
   interests: [
     "React Native Development",
     "iOS Development (Swift, SwiftUI)",
@@ -907,17 +985,85 @@ const reactNativeData = {
   },
 
   skills: {
-    Languages: ["JavaScript", "TypeScript"],
-    Frameworks: ["React Native", "Redux", "React Navigation", "Expo"],
-    Tools: ["Git", "Debugging"],
-    Databases: ["Firebase", "Real-time Database", "AsyncStorage", "AWS S3"],
-    Others: [
+    languages: [
+      "React Native",
+      "Flutter",
+      "TypeScript",
+      "Swift",
+      "Objective-C",
+      "Kotlin",
+      "Java",
+    ],
+    tools: [
+      "VS Code",
+      "Cursor",
+      "Xcode",
+      "Android Studio",
+      "Git",
+      "App Store Connect",
+      "TestFlight",
+      "Google Play Console",
+      "Google Play Closed Beta Tester",
+      "Google Play Open Beta Tester",
+      "Asana",
+      "Jira",
+      "Trello",
+      "Remote Test Lab (Samsung, Genymotion)",
+      "BrowserStack",
+    ],
+    frameworks: [
+      "Android SDK",
+      "iOS SDK",
+      "SwiftUI",
+      "Compose UI",
+      "Google Maps",
+      "Geo Location API",
+      "MapKit",
+      "Firebase",
+      "Firebase Auth",
+      "Firebase Analytics",
+      "Firebase Crashlytics",
+      "Firebase Cloud Messaging (FCM)",
+      "Expo Notifications",
+      "Axios",
+      "Zustand",
+      "React Query for API Caching",
+      "Redux Toolkit",
+      "React Query/TanStack Query",
+      "React Navigation/React Expo Router",
+      "Native Base",
+      "React Native Elements",
+      "React Native Device Info",
+      "React Localization",
+      "MomentJS",
+      "DayJS",
+      "Tailwind RN",
+      "JWT Authentication",
+      "BLE Manager",
+      "Retrofit",
+      "Gson",
+      "Hilt/Dagger",
+      "WorkManager",
+      "Lottie Animations",
+      "Glide/Coil Image Loading",
+    ],
+    databases: [
+      "Room Database",
+      "SQLite",
+      "MMKV",
+      "RealmDB",
+      "AsyncStorage",
+      "Firebase Firestore",
+    ],
+    others: [
+      "AWS",
+      "Stripe",
+      "AI Integration",
       "REST APIs",
-      "Push Notifications",
+      "MVC/MVVM",
+      "Clean Architecture",
       "In-App Purchases",
-      "Social Integration",
-      "Maps Integration",
-      "Performance Optimization",
+      "Material Design",
     ],
   },
 
@@ -975,134 +1121,6 @@ const reactNativeData = {
     },
   ],
 
-  projects: [
-    {
-      name: "MyMotive",
-      description:
-        "A comprehensive React Native app providing users with control over their knee pain relief therapy. Features therapy session management, progress monitoring, goal setting, and device integration.",
-      features: [
-        "Therapy session initiation and management",
-        "Progress tracking and analytics",
-        "Goal setting and achievement system",
-        "Bluetooth device integration",
-        "User-friendly interface for therapy management",
-      ],
-      technologies: [
-        "React Native",
-        "Redux",
-        "Bluetooth",
-        "Firebase",
-        "Push Notifications",
-      ],
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.mymotive.mymotive",
-      appStore: "https://apps.apple.com/us/app/mymotive/id6443784536",
-    },
-    {
-      name: "Aero Crew",
-      description:
-        "A dual-platform React Native application connecting pilots with recruiters. Features separate interfaces for pilots and recruiters with appointment management and payment integration.",
-      features: [
-        "Dual user interface (Pilot/Recruiter)",
-        "Appointment booking and management",
-        "Document upload and verification",
-        "Stripe payment integration",
-        "Real-time notifications",
-        "Expense tracking and billing",
-      ],
-      technologies: [
-        "React Native",
-        "Redux",
-        "Stripe",
-        "Firebase",
-        "Real-time Database",
-        "Push Notifications",
-      ],
-    },
-    {
-      name: "Junobaby",
-      description:
-        "A React Native healthcare app for pregnant women, providing comprehensive care from first week to delivery. Features doula hiring, gynecologist consultation, and payment processing.",
-      features: [
-        "Doula hiring and management",
-        "Doctor consultation booking",
-        "Real-time chat with healthcare providers",
-        "Stripe payment integration",
-        "Pregnancy tracking and tips",
-        "Appointment scheduling",
-      ],
-      technologies: [
-        "React Native",
-        "Redux",
-        "Stripe",
-        "Firebase",
-        "Real-time Chat",
-        "Push Notifications",
-      ],
-    },
-    {
-      name: "Artwork",
-      description:
-        "An online marketplace React Native app for handmade products, connecting buyers and sellers with chat functionality and customization options.",
-      features: [
-        "Product listing and browsing",
-        "Real-time chat between buyers and sellers",
-        "Custom product requests",
-        "Image upload and gallery",
-        "User authentication and profiles",
-        "Search and filter functionality",
-      ],
-      technologies: [
-        "React Native",
-        "Redux",
-        "Firebase",
-        "Real-time Chat",
-        "Image Processing",
-      ],
-    },
-    {
-      name: "Boozer",
-      description:
-        "A React Native e-commerce app for liquor delivery, featuring store registration, product catalog, payment processing, and delivery tracking.",
-      features: [
-        "Store registration and management",
-        "Product catalog with categories",
-        "Shopping cart and checkout",
-        "Stripe payment integration",
-        "Delivery tracking",
-        "Location-based store discovery",
-      ],
-      technologies: [
-        "React Native",
-        "Redux",
-        "Stripe",
-        "Maps",
-        "Geolocation",
-        "Push Notifications",
-      ],
-    },
-    {
-      name: "Heuro",
-      description:
-        "A social media React Native app focused on article and blog sharing with a rich text editor and social sharing capabilities.",
-      features: [
-        "Rich text editor for articles",
-        "Social media integration",
-        "Article categorization and feeds",
-        "User profiles and following system",
-        "Real-time article updates",
-        "Social sharing (Facebook, X, LinkedIn)",
-      ],
-      technologies: [
-        "React Native",
-        "Redux",
-        "Rich Text Editor",
-        "Social APIs",
-        "Firebase",
-      ],
-    },
-  ],
-
   interests: [
     "Cross-Platform Mobile Development",
     "React Native Ecosystem",
@@ -1113,40 +1131,56 @@ const reactNativeData = {
   ],
 };
 
+// ===== FILTERED PROJECTS BY PORTFOLIO =====
+// Filter projects based on displayedIn property
+const androidProjects = allProjects.filter((project) =>
+  project.displayedIn.includes("android")
+);
+
+const mobileAppProjects = allProjects.filter((project) =>
+  project.displayedIn.includes("mobileApp")
+);
+
+const reactNativeProjects = allProjects.filter((project) =>
+  project.displayedIn.includes("reactNative")
+);
+
 // ===== EXPORTS =====
 // Create alias for backward compatibility
 const iosData = mobileAppData;
+const iosProjects = mobileAppProjects;
+
 // Export the main data objects
-export { androidData, mobileAppData, iosData, reactNativeData };
+export { androidData, mobileAppData, iosData, reactNativeData, allProjects };
 
 // Export individual components for each platform
 export const androidPersonalInfo = androidData.personalInfo;
 export const androidSkills = androidData.skills;
 export const androidExperiences = androidData.experiences;
-export const androidProjects = androidData.projects;
 export const androidInterests = androidData.interests;
+export { androidProjects };
 
 export const mobileAppPersonalInfo = mobileAppData.personalInfo;
 export const mobileAppSkills = mobileAppData.skills;
 export const mobileAppExperiences = mobileAppData.experiences;
-export const mobileAppProjects = mobileAppData.projects;
 export const mobileAppInterests = mobileAppData.interests;
+export { mobileAppProjects };
 
 export const iosPersonalInfo = iosData.personalInfo;
 export const iosSkills = iosData.skills;
 export const iosExperiences = iosData.experiences;
-export const iosProjects = iosData.projects;
 export const iosInterests = iosData.interests;
+export { iosProjects };
 
 export const reactNativePersonalInfo = reactNativeData.personalInfo;
 export const reactNativeSkills = reactNativeData.skills;
 export const reactNativeExperiences = reactNativeData.experiences;
-export const reactNativeProjects = reactNativeData.projects;
 export const reactNativeInterests = reactNativeData.interests;
+export { reactNativeProjects };
 
 // Default exports for backward compatibility (defaults to Android)
 export const personalInfo = androidData.personalInfo;
 export const skills = androidData.skills;
 export const experiences = androidData.experiences;
-export const projects = androidData.projects;
+export const projects = androidProjects;
 export const interests = androidData.interests;

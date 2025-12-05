@@ -55,13 +55,13 @@ const About = ({
     } else if (personalInfo.name === "Dhvanil Pansuriya") {
       return [
         { number: "3+", label: "Years Experience", icon: "code" },
-        { number: "7+", label: "Projects Completed", icon: "rocket" },
+        { number: "10+", label: "Projects Completed", icon: "rocket" },
         { number: "110+", label: "Problems Solved", icon: "lightbulb" },
       ];
     } else if (personalInfo.name === "Deep Surti") {
       return [
         { number: "2+", label: "Years Experience", icon: "code" },
-        { number: "4+", label: "Projects Completed", icon: "rocket" },
+        { number: "10+", label: "Projects Completed", icon: "rocket" },
         { number: "99%", label: "Client Acknowledgement", icon: "heart" },
       ];
     }

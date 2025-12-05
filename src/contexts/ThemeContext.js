@@ -48,7 +48,7 @@ export const ThemeProvider = ({ children }) => {
     'dhvanil': {
       name: 'Dhvanil Portfolio',
       icon: <Icon name="react" size={30} className="text-gray-900" />,
-      description: 'React & Node.js Developer Portfolio'
+      description: 'MERN Stack Developer Portfolio'
     },
     'deep': {
       name: 'Deep Portfolio',

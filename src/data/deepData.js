@@ -7,7 +7,7 @@ export const personalInfo = {
   title: "Mobile Developer",
   subtitle: "Android & Cross-Platform Development Specialist",
   email: "deepsurti23@gmail.com",
-  phone: "+91 81603 45026",
+  phone: "+91 99242 74295",
   location: "Ahmedabad, Gujarat",
   objective:
     "I have hands-on experience as a Mobile Application Developer, working on Android app development using Kotlin and Jetpack Compose, as well as cross-platform apps using React Native. My role involved designing user-friendly interfaces, developing app features, integrating APIs, and ensuring smooth app performance. Currently, I am learning Kotlin Multiplatform to build apps that work on both Android and iOS with a shared codebase.",
@@ -16,6 +16,8 @@ export const personalInfo = {
   socialLinks: {
     github: "https://github.com/deepsurti", // You can update this with actual links
     linkedin: "https://www.linkedin.com/in/deep-surti-24227928b",
+     whatsapp:
+      "https://wa.me/+919924274295?text=Hello%20Deep%2C%20I%E2%80%99m%20contacting%20you%20through%20your%20portfolio%20website.%20I%20would%20like%20to%20discuss%20my%20project%20requirement.",
   },
   coreStrengths: [
     {
